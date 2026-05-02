@@ -1,0 +1,2561 @@
+{
+  "_id": {
+    "$oid": "69ce82ad87beca1d168ab288"
+  },
+  "calendarios_ai": 0,
+  "equipamentos": [
+    {
+      "_id": 1,
+      "tipo_equipamento": 1,
+      "nome": "6 - PLAINA WEINIG SCANNER",
+      "tipo_apontamento": "",
+      "meta_hora": 2175.66,
+      "capacidade_hora": 4740,
+      "meta_disponibilidade": 0.54,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 1,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        1
+      ],
+      "paradas": [
+        14,
+        15,
+        16,
+        19,
+        23,
+        24,
+        26,
+        41,
+        2,
+        3,
+        5,
+        11,
+        28,
+        29,
+        30,
+        31,
+        39,
+        42,
+        43,
+        38,
+        54,
+        55,
+        22,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        1
+      ],
+      "operacoes": [],
+      "tempo_padrao": 0.759493670886076,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 2,
+      "tipo_equipamento": 1,
+      "nome": "8 - PLAINA OMIL SCANNER",
+      "tipo_apontamento": "",
+      "meta_hora": 1569.78,
+      "capacidade_hora": 3420,
+      "meta_disponibilidade": 0.54,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 1,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        1
+      ],
+      "paradas": [
+        14,
+        15,
+        16,
+        19,
+        23,
+        24,
+        41,
+        2,
+        3,
+        5,
+        11,
+        13,
+        28,
+        29,
+        30,
+        31,
+        39,
+        42,
+        43,
+        38,
+        54,
+        55,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        1
+      ],
+      "operacoes": [],
+      "tempo_padrao": 1.0526315789473684,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 16,
+      "tipo_equipamento": 1,
+      "nome": "157 - MOLDUREIRA WEINIG",
+      "tipo_apontamento": "",
+      "meta_hora": 201.96,
+      "capacidade_hora": 1320,
+      "meta_disponibilidade": 0.18,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 1,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        2
+      ],
+      "paradas": [
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        27,
+        41,
+        2,
+        3,
+        5,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        39,
+        54,
+        43,
+        55,
+        38,
+        46,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1,
+        6
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        2
+      ],
+      "operacoes": [],
+      "tempo_padrao": 2.727272727272727,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 11,
+      "tipo_equipamento": 1,
+      "nome": "5 - MOLDUREIRA OMIL PROX. A GEL",
+      "tipo_apontamento": "",
+      "meta_hora": 158.76,
+      "capacidade_hora": 840,
+      "meta_disponibilidade": 0.21,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 1,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        2
+      ],
+      "paradas": [
+        16,
+        41,
+        2,
+        3,
+        11,
+        13,
+        28,
+        29,
+        30,
+        31,
+        38,
+        5,
+        54,
+        55,
+        18,
+        14,
+        15,
+        19,
+        22,
+        23,
+        24,
+        56,
+        53,
+        43,
+        39,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        2
+      ],
+      "operacoes": [],
+      "tempo_padrao": 4.285714285714286,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 3,
+      "tipo_equipamento": 1,
+      "nome": "7 - MOLDUREIRA OMIL CENTRAL desativada",
+      "tipo_apontamento": "",
+      "meta_hora": 292.74,
+      "capacidade_hora": 840,
+      "meta_disponibilidade": 0.41,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 1,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": false,
+      "grupos": [
+        2
+      ],
+      "paradas": [
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        41,
+        2,
+        3,
+        11,
+        13,
+        28,
+        29,
+        30,
+        31,
+        39,
+        38,
+        43,
+        53,
+        5,
+        54,
+        55,
+        18,
+        56,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2
+      ],
+      "calendarios": [],
+      "intervalos": [
+        2
+      ],
+      "operacoes": [],
+      "tempo_padrao": 4.285714285714286,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 12,
+      "tipo_equipamento": 1,
+      "nome": "9 - MOLDUREIRA OMIL CORREDOR",
+      "tipo_apontamento": "",
+      "meta_hora": 153,
+      "capacidade_hora": 720,
+      "meta_disponibilidade": 0.25,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 1,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        2
+      ],
+      "paradas": [
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        41,
+        2,
+        3,
+        13,
+        28,
+        29,
+        30,
+        31,
+        39,
+        38,
+        43,
+        11,
+        53,
+        5,
+        54,
+        55,
+        18,
+        56,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        2
+      ],
+      "operacoes": [],
+      "tempo_padrao": 5,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 7,
+      "tipo_equipamento": 2,
+      "nome": "36 - PERFILADEIRA CK01 - GRANDE",
+      "tipo_apontamento": "",
+      "meta_hora": 171.07,
+      "capacidade_hora": 300,
+      "meta_disponibilidade": 0.64,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        8,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        22,
+        23,
+        24,
+        28,
+        30,
+        31,
+        29,
+        38,
+        39,
+        5,
+        40,
+        11,
+        54,
+        55,
+        64,
+        69,
+        71,
+        72
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 12,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 6,
+      "tipo_equipamento": 2,
+      "nome": "40 - PERFILADEIRA CK02 - PEQUENA",
+      "tipo_apontamento": "",
+      "meta_hora": 98.46,
+      "capacidade_hora": 300,
+      "meta_disponibilidade": 0.39,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.3,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        8,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        22,
+        23,
+        24,
+        28,
+        30,
+        31,
+        29,
+        38,
+        39,
+        5,
+        11,
+        40,
+        54,
+        55,
+        64,
+        69,
+        72,
+        71
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 12,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 5,
+      "tipo_equipamento": 2,
+      "nome": "23 - PERFILADEIRA HOMAG",
+      "tipo_apontamento": "",
+      "meta_hora": 131.27,
+      "capacidade_hora": 300,
+      "meta_disponibilidade": 0.52,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        5,
+        8,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        22,
+        23,
+        24,
+        28,
+        30,
+        31,
+        29,
+        38,
+        39,
+        11,
+        40,
+        54,
+        55,
+        64,
+        69,
+        71,
+        72
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 12,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 4,
+      "tipo_equipamento": 2,
+      "nome": "24 - PERFILADEIRA KRAFT LINE",
+      "tipo_apontamento": "",
+      "meta_hora": 131.27,
+      "capacidade_hora": 300,
+      "meta_disponibilidade": 0.52,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        5,
+        8,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        22,
+        23,
+        24,
+        28,
+        30,
+        31,
+        29,
+        38,
+        39,
+        11,
+        40,
+        54,
+        55,
+        64,
+        69,
+        72,
+        71
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 12,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 8,
+      "tipo_equipamento": 3,
+      "nome": "79 - FURADEIRA BIESSE TECNO 7 desativada",
+      "tipo_apontamento": "",
+      "meta_hora": 305.79,
+      "capacidade_hora": 780,
+      "meta_disponibilidade": 0.44,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "PC",
+      "exibe_retrabalho": false,
+      "operacional": false,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        13,
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        38,
+        28,
+        29,
+        30,
+        31,
+        39,
+        11,
+        46,
+        43,
+        54,
+        55,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 4.615384615384615,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 9,
+      "tipo_equipamento": 3,
+      "nome": "FURADEIRA BIESSE TECNOLOGIC desativada",
+      "tipo_apontamento": "",
+      "meta_hora": 274.25,
+      "capacidade_hora": 540,
+      "meta_disponibilidade": 0.54,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.95,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "PC",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3,
+        2
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        8,
+        13,
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        27,
+        38,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        39,
+        5,
+        11,
+        34,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        1,
+        2,
+        3
+      ],
+      "calendarios": [],
+      "intervalos": [
+        1
+      ],
+      "operacoes": [],
+      "tempo_padrao": 6.666666666666667,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 10,
+      "tipo_equipamento": 3,
+      "nome": "39 - FURADEIRA NANXING 642",
+      "tipo_apontamento": "",
+      "meta_hora": 254.47,
+      "capacidade_hora": 840,
+      "meta_disponibilidade": 0.36,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.85,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "PC",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        13,
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        38,
+        28,
+        29,
+        30,
+        31,
+        39,
+        11,
+        43,
+        54,
+        55,
+        46,
+        63,
+        32,
+        34,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        5,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 4.285714285714286,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 14,
+      "tipo_equipamento": 3,
+      "nome": "154 - FURADEIRA F400-T LIDEAR",
+      "tipo_apontamento": "",
+      "meta_hora": 346.42,
+      "capacidade_hora": 720,
+      "meta_disponibilidade": 0.54,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "PC",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        11,
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        38,
+        28,
+        29,
+        30,
+        31,
+        39,
+        43,
+        54,
+        55,
+        46,
+        5,
+        32,
+        34,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        5,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 5,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 13,
+      "tipo_equipamento": 3,
+      "nome": "46 - FURADEIRA NANXING 232",
+      "tipo_apontamento": "",
+      "meta_hora": 291.89,
+      "capacidade_hora": 840,
+      "meta_disponibilidade": 0.39,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.99,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "PC",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        11,
+        13,
+        14,
+        15,
+        16,
+        19,
+        22,
+        23,
+        24,
+        38,
+        28,
+        29,
+        30,
+        31,
+        39,
+        43,
+        54,
+        55,
+        46,
+        64,
+        69
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        5,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        3
+      ],
+      "operacoes": [],
+      "tempo_padrao": 4.285714285714286,
+      "id_erp": "",
+      "ordem": 0
+    },
+    {
+      "_id": 15,
+      "tipo_equipamento": 4,
+      "nome": "52 - LINHA UV 01",
+      "tipo_apontamento": "UV",
+      "meta_hora": 228.56,
+      "capacidade_hora": 480,
+      "meta_disponibilidade": 0.62,
+      "aceitavel_disponibilidade": 0.3,
+      "meta_performance": 0.8,
+      "aceitavel_performance": 0.3,
+      "meta_qualidade": 0.96,
+      "aceitavel_qualidade": 0.1,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.3,
+      "meta_retrabalho": 0.05,
+      "aceitavel_retrabalho": 1,
+      "um": "M2",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        4
+      ],
+      "paradas": [
+        14,
+        19,
+        20,
+        24,
+        39,
+        43,
+        28,
+        29,
+        30,
+        31,
+        41,
+        2,
+        3,
+        5,
+        11,
+        54,
+        55,
+        16,
+        38,
+        57,
+        58,
+        40,
+        59,
+        60,
+        61,
+        64,
+        67,
+        68,
+        69,
+        70
+      ],
+      "retrabalhos": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "turnos": [
+        2,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        4,
+        5
+      ],
+      "operacoes": [],
+      "tempo_padrao": 7.5,
+      "id_erp": "",
+      "ordem": 0
+    }
+  ],
+  "equipamentos_ai": 16,
+  "funcionarios_ai": 0,
+  "gruposEquipamentos": [
+    {
+      "_id": 1,
+      "nome": "Scanner"
+    },
+    {
+      "_id": 2,
+      "nome": "Moldureiras"
+    },
+    {
+      "_id": 3,
+      "nome": "Usinagem"
+    },
+    {
+      "_id": 4,
+      "nome": "Pintura"
+    },
+    {
+      "_id": 5,
+      "nome": "Perfiladeiras"
+    }
+  ],
+  "gruposEquipamentos_ai": 5,
+  "intervalos": [
+    {
+      "_id": 1,
+      "nome": "ALMOÇO 1",
+      "inicio": 51600,
+      "fim": 55200,
+      "codigo_parada": 54,
+      "id_turno": 2,
+      "tempo": 3600,
+      "programada": false
+    },
+    {
+      "_id": 2,
+      "nome": "ALMOÇO 3",
+      "inicio": 52800,
+      "fim": 56400,
+      "codigo_parada": 54,
+      "id_turno": 2,
+      "tempo": 3600,
+      "programada": false
+    },
+    {
+      "_id": 3,
+      "nome": "ALMOÇO 4",
+      "inicio": 53400,
+      "fim": 57000,
+      "codigo_parada": 54,
+      "id_turno": 2,
+      "tempo": 3600,
+      "programada": false
+    },
+    {
+      "_id": 4,
+      "nome": "Almoço 5",
+      "inicio": 54000,
+      "fim": 57600,
+      "codigo_parada": 54,
+      "id_turno": 2,
+      "tempo": 3600,
+      "programada": false
+    },
+    {
+      "_id": 5,
+      "nome": "INÍCIO DE TURNO -LIGAR LINHA",
+      "inicio": 36000,
+      "fim": 37200,
+      "codigo_parada": 67,
+      "id_turno": 2,
+      "tempo": 1200,
+      "programada": false
+    }
+  ],
+  "intervalos_ai": 5,
+  "operacoes_ai": 0,
+  "ordemProducao_ai": 0,
+  "paradas": [
+    {
+      "_id": 41,
+      "nome": "Manutenção",
+      "descricao": "Manutenção",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 2,
+      "nome": "Elétrica",
+      "descricao": "Elétrica",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 3,
+      "nome": "Mecânica",
+      "descricao": "Mecânica",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 4,
+      "nome": "Pneumática",
+      "descricao": "Pneumática",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 5,
+      "nome": "Exaustão",
+      "descricao": "Exaustão",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 6,
+      "nome": "Máquina Insegura",
+      "descricao": "Máquina Insegura",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 7,
+      "nome": "Programação",
+      "descricao": "Programação",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 8,
+      "nome": "Não Permite Regulagem",
+      "descricao": "Equipamento Não Permite Regulagem",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 9,
+      "nome": "Sistema Hidráulico",
+      "descricao": "Sistema Hidráulico",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 10,
+      "nome": "Manutenção Corretiva",
+      "descricao": "Manutenção Corretiva",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 11,
+      "nome": "Manutenção Preventiva",
+      "descricao": "Manutenção Preventiva",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 12,
+      "nome": "Manutenção Preditiva",
+      "descricao": "Manutenção Preditiva",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 13,
+      "nome": "Melhoria",
+      "descricao": "Melhoria / Engenharia de Manutenção",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 14,
+      "nome": "Operacional",
+      "descricao": "Operacional",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 15,
+      "nome": "Banheiro /Água",
+      "descricao": "Banheiro /Água",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 16,
+      "nome": "Executando Outra Atividade",
+      "descricao": "Executando Outra Atividade",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(248, 236, 4)",
+      "corFonte": "rgb(11, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 17,
+      "nome": "Falta de Matéria Prima",
+      "descricao": "Falta de Matéria Prima",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(229, 248, 22)",
+      "corFonte": "rgb(11, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 18,
+      "nome": "Aguarda Pç p/ Fechar Odem",
+      "descricao": "Aguarda Peça Para Fechamento da Ordem",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(244, 248, 2)",
+      "corFonte": "rgb(0, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 19,
+      "nome": "Limpeza",
+      "descricao": "Limpeza",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 20,
+      "nome": "Substituição de Lixas",
+      "descricao": "Substituição de Lixas",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 21,
+      "nome": "Substituição de Material",
+      "descricao": "Substituição de Material",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 22,
+      "nome": "Movimentação",
+      "descricao": "Movimentação",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 23,
+      "nome": "Troca de Ferramentas",
+      "descricao": "Troca de Ferramentas por Desgaste",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 24,
+      "nome": "Verificar Qualidade",
+      "descricao": "Verificar Qualidade Operacional (durante a produção)",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 25,
+      "nome": "Setup",
+      "descricao": "Setup",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 26,
+      "nome": "Abastecer Óleo",
+      "descricao": "Abastecer Óleo",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 27,
+      "nome": "Almoço / Janta",
+      "descricao": "Almoço / Janta",
+      "planejada": true,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(237, 116, 9)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 28,
+      "nome": "Treinamento",
+      "descricao": "Treinamento",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 29,
+      "nome": "Treinamento RH",
+      "descricao": "Treinamento RH",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 28,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 30,
+      "nome": "Treinamento Qualidade",
+      "descricao": "Treinamento Qualidade",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 28,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 31,
+      "nome": "Treinamento Processos",
+      "descricao": "Treinamento Processos",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 28,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 32,
+      "nome": "Qualidade",
+      "descricao": "Qualidade",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 33,
+      "nome": "Protótipo",
+      "descricao": "Protótipo",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 32,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 34,
+      "nome": "Retrabalho",
+      "descricao": "Retrabalho",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 32,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 35,
+      "nome": "Reposição",
+      "descricao": "Reposição",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 32,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 36,
+      "nome": "Peças Trancadas / Quebradas",
+      "descricao": "Peças Trancadas / Quebradas",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 37,
+      "nome": "Parada do Scanner",
+      "descricao": "Parada do Scanner",
+      "planejada": false,
+      "setup": false,
+      "manutencao": true,
+      "categoria": 41,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 38,
+      "nome": "Falta de Peças",
+      "descricao": "Falta de Peças",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(248, 253, 2)",
+      "corFonte": "rgb(0, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 39,
+      "nome": "Ajuste",
+      "descricao": "Ajuste Operacional Durante O Processo",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 40,
+      "nome": "Trilho de Saída Cheio",
+      "descricao": "Trilho de Saída Cheio",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(249, 253, 9)",
+      "corFonte": "rgb(5, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 42,
+      "nome": "Parada do Scanner",
+      "descricao": "Parada do Scanner",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 43,
+      "nome": "Peça Trancada",
+      "descricao": "Peça Trancada",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 44,
+      "nome": "Ajuste do Setup",
+      "descricao": "Setup - Mudança de Item A para B",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(16, 158, 54)",
+      "corFonte": "rgb(253, 250, 250)",
+      "ordem": 0
+    },
+    {
+      "_id": 45,
+      "nome": "Quebra de Broca",
+      "descricao": "Quebra ou substituição de broca durante a produção",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 46,
+      "nome": "Sem Auxiliar",
+      "descricao": "Sem auxiliar (retirando as peças na saída)",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(253, 244, 0)",
+      "corFonte": "rgb(0, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 47,
+      "nome": "Aguarda Broca",
+      "descricao": "Aguarda Broca",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 44,
+      "corFundo": "rgb(32, 177, 30)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 48,
+      "nome": "Setup - Troca de Produto",
+      "descricao": "Setup - Troca de Produto",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 44,
+      "corFundo": "rgb(24, 163, 35)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 49,
+      "nome": "Ajuste do Setup",
+      "descricao": "Ajuste do Setup",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 44,
+      "corFundo": "rgb(27, 170, 36)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 50,
+      "nome": "Conferir Cotas",
+      "descricao": "Conferir Cotas",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 44,
+      "corFundo": "rgb(37, 165, 33)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 51,
+      "nome": "Aguarda Mesa de Medição",
+      "descricao": "Aguarda Mesa de Medição",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 44,
+      "corFundo": "rgb(27, 152, 35)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 52,
+      "nome": "Aguarda Programa",
+      "descricao": "Aguarda Programa",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 44,
+      "corFundo": "rgb(23, 165, 59)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 53,
+      "nome": "Peça Marcada",
+      "descricao": "Peça Marcada",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 54,
+      "nome": "Refeição",
+      "descricao": "INTERVALO PARA REFEIÇÃO",
+      "planejada": true,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(218, 96, 9)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 55,
+      "nome": "Programação",
+      "descricao": "Programação",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(220, 220, 34)",
+      "corFonte": "rgb(11, 0, 0)",
+      "ordem": 0
+    },
+    {
+      "_id": 56,
+      "nome": "Finger Colado",
+      "descricao": "Finger Colado",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 57,
+      "nome": "Mesa Cheia",
+      "descricao": "Mesa Cheia",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 58,
+      "nome": "Retorno de Fluxo",
+      "descricao": "Retorno de Fluxo",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 59,
+      "nome": "Esvaziar Linha",
+      "descricao": "Esvaziar Linha",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 60,
+      "nome": "Operando Linha UV 2",
+      "descricao": "Operando Linha UV 2",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 61,
+      "nome": "DESENVOLVIMENTO DE PRODUTO",
+      "descricao": "DESENVOLVIMENTO DE PRODUTO",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 62,
+      "nome": "Desenvolvimento de Produto",
+      "descricao": "Desenvolvimento de Produto",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 63,
+      "nome": "Conferência de Peças",
+      "descricao": "",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 64,
+      "nome": "Pré-Feriado",
+      "descricao": "Pré-Feriado",
+      "planejada": true,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 65,
+      "nome": "Reunião de Setor",
+      "descricao": "Reunião de Setor",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 55,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 66,
+      "nome": "Início de Turno",
+      "descricao": "Início de Turno",
+      "planejada": false,
+      "setup": false,
+      "manutencao": false,
+      "categoria": 14,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 67,
+      "nome": "INÍCIO DE TURNO -LIGAR LINHA",
+      "descricao": "INÍCIO DE TURNO-LIGAR LINHA",
+      "planejada": true,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 68,
+      "nome": "DESARME DE LIXADEIRA",
+      "descricao": "DESARME DE LIXADEIRA",
+      "planejada": true,
+      "setup": false,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 69,
+      "nome": "SETUP ",
+      "descricao": "SETUP",
+      "planejada": false,
+      "setup": true,
+      "manutencao": false,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 70,
+      "nome": "TROCA DE COR",
+      "descricao": "TROCA DE COR",
+      "planejada": false,
+      "setup": true,
+      "manutencao": false,
+      "categoria": 69,
+      "corFundo": "rgb(50, 50, 100)",
+      "corFonte": "white",
+      "ordem": 0
+    },
+    {
+      "_id": 71,
+      "nome": "SETUP INTERNO (10min)",
+      "descricao": "SETUP INTERNO (10min)",
+      "planejada": false,
+      "setup": true,
+      "manutencao": false,
+      "categoria": 69,
+      "corFundo": "rgb(0, 0, 255)",
+      "corFonte": "rgb(255, 255, 255)",
+      "ordem": 1
+    },
+    {
+      "_id": 72,
+      "nome": "SETUP EXTERNO (30min)",
+      "descricao": "SETUP EXTERNO (30min)",
+      "planejada": false,
+      "setup": true,
+      "manutencao": false,
+      "categoria": 69,
+      "corFundo": "rgb(0, 0, 255)",
+      "corFonte": "rgb(255, 255, 255)",
+      "ordem": 1
+    }
+  ],
+  "paradas_ai": 72,
+  "planoCorte_ai": 0,
+  "produtos_ai": 17,
+  "retrabalhos": [
+    {
+      "_id": 1,
+      "nome": "Retrabalho",
+      "descricao": "Retrabalho",
+      "descarte": false
+    },
+    {
+      "_id": 2,
+      "nome": "Marca de Scanner",
+      "descricao": "Marca de Scanner",
+      "descarte": false
+    },
+    {
+      "_id": 3,
+      "nome": "Falha de Pintura UV",
+      "descricao": "Falha de Pintura UV",
+      "descarte": false
+    },
+    {
+      "_id": 4,
+      "nome": "Retorno de Conserto",
+      "descricao": "Retorno de Conserto",
+      "descarte": false
+    },
+    {
+      "_id": 5,
+      "nome": "Pintado na cor Errada",
+      "descricao": "Pintado na cor Errada",
+      "descarte": false
+    },
+    {
+      "_id": 6,
+      "nome": "Falha de Espessura",
+      "descricao": "Falha de Espessura nas Extremidades",
+      "descarte": false
+    },
+    {
+      "_id": 7,
+      "nome": "Falha de Finger",
+      "descricao": "Falhado do Finger",
+      "descarte": false
+    },
+    {
+      "_id": 8,
+      "nome": "Retrabalho embalagem",
+      "descricao": "Retrabalho embalagem",
+      "descarte": false
+    }
+  ],
+  "retrabalhos_ai": 8,
+  "roteiros_ai": 0,
+  "timestamp": {
+    "$date": "2026-04-02T14:52:29.649Z"
+  },
+  "tiposEquipamentos": [
+    {
+      "_id": 1,
+      "nome": "Moldureiras",
+      "tipo_apontamento": "",
+      "meta_hora": 715.79,
+      "capacidade_hora": 1000,
+      "meta_disponibilidade": 0.83,
+      "aceitavel_disponibilidade": 0.08,
+      "meta_performance": 0.88,
+      "aceitavel_performance": 0.08,
+      "meta_qualidade": 0.98,
+      "aceitavel_qualidade": 0.02,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.1,
+      "meta_retrabalho": 0.02,
+      "aceitavel_retrabalho": 0.02,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3
+      ],
+      "paradas": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        41,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        36,
+        37,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        39
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        1,
+        2,
+        3
+      ],
+      "calendarios": [],
+      "intervalos": [
+        1
+      ],
+      "id_erp": "",
+      "tempo_padrao": 3.6,
+      "operacoes": [],
+      "ordem": 0
+    },
+    {
+      "_id": 2,
+      "nome": "Perfiladeiras",
+      "tipo_apontamento": "",
+      "meta_hora": 412.78,
+      "capacidade_hora": 780,
+      "meta_disponibilidade": 0.6,
+      "aceitavel_disponibilidade": 0.1,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.1,
+      "meta_qualidade": 0.98,
+      "aceitavel_qualidade": 0.05,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.1,
+      "meta_retrabalho": 0.02,
+      "aceitavel_retrabalho": 0.02,
+      "um": "ML",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3,
+        2
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        5,
+        8,
+        14,
+        15,
+        16,
+        19,
+        20,
+        22,
+        24,
+        25,
+        27,
+        28,
+        30,
+        31,
+        29,
+        32,
+        33,
+        34,
+        38,
+        39,
+        69,
+        71,
+        72,
+        11
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "calendarios": [],
+      "intervalos": [
+        1
+      ],
+      "id_erp": "",
+      "tempo_padrao": 4.615384615384615,
+      "operacoes": [],
+      "ordem": 0
+    },
+    {
+      "_id": 3,
+      "nome": "Furadeiras",
+      "tipo_apontamento": "",
+      "meta_hora": 1000,
+      "capacidade_hora": 1000,
+      "meta_disponibilidade": 0.6,
+      "aceitavel_disponibilidade": 0.1,
+      "meta_performance": 0.9,
+      "aceitavel_performance": 0.1,
+      "meta_qualidade": 0.98,
+      "aceitavel_qualidade": 0.05,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.1,
+      "meta_retrabalho": 0.02,
+      "aceitavel_retrabalho": 0.02,
+      "um": "PC",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        3,
+        2
+      ],
+      "paradas": [
+        41,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        38,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        39
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        1,
+        2,
+        3
+      ],
+      "calendarios": [],
+      "intervalos": [
+        1
+      ],
+      "tempo_padrao": 3.6,
+      "operacoes": []
+    },
+    {
+      "_id": 4,
+      "nome": "Linhas de Pintura",
+      "tipo_apontamento": "UV",
+      "meta_hora": 715.08,
+      "capacidade_hora": 999,
+      "meta_disponibilidade": 0.83,
+      "aceitavel_disponibilidade": 0.08,
+      "meta_performance": 0.88,
+      "aceitavel_performance": 0.08,
+      "meta_qualidade": 0.98,
+      "aceitavel_qualidade": 0.02,
+      "meta_meta": 1,
+      "aceitavel_meta": 0.1,
+      "meta_retrabalho": 0.02,
+      "aceitavel_retrabalho": 0.01,
+      "um": "M2",
+      "exibe_retrabalho": false,
+      "operacional": true,
+      "grupos": [
+        4
+      ],
+      "paradas": [
+        14,
+        15,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        39,
+        42,
+        43,
+        45,
+        53,
+        56,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        41,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        26,
+        36,
+        37,
+        44,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        54,
+        55,
+        16,
+        17,
+        18,
+        38,
+        40,
+        46
+      ],
+      "retrabalhos": [
+        1
+      ],
+      "turnos": [
+        2,
+        3,
+        1
+      ],
+      "calendarios": [],
+      "intervalos": [],
+      "id_erp": "",
+      "tempo_padrao": 3.6036036036036037,
+      "operacoes": [],
+      "ordem": 0
+    }
+  ],
+  "tiposEquipamentos_ai": 4,
+  "tiposProdutos_ai": 11,
+  "turnos": [
+    {
+      "_id": 1,
+      "dias": [
+        {
+          "dia": 2
+        },
+        {
+          "dia": 3
+        },
+        {
+          "dia": 4
+        },
+        {
+          "dia": 5
+        },
+        {
+          "dia": 6
+        },
+        {
+          "dia": 7
+        }
+      ],
+      "hora_inicio": {
+        "$date": "1970-01-01T08:00:00.000Z"
+      },
+      "hora_fim": {
+        "$date": "1970-01-01T10:00:00.000Z"
+      },
+      "intervalos": [],
+      "nome": "Extra - 5 as 7",
+      "extra": false
+    },
+    {
+      "_id": 2,
+      "dias": [
+        {
+          "dia": 2
+        },
+        {
+          "dia": 3
+        },
+        {
+          "dia": 4
+        },
+        {
+          "dia": 5
+        },
+        {
+          "dia": 6,
+          "hora_inicio": {
+            "$date": "1970-01-01T10:00:00.470Z"
+          },
+          "hora_fim": {
+            "$date": "1970-01-01T19:00:00.472Z"
+          }
+        }
+      ],
+      "hora_inicio": {
+        "$date": "1970-01-01T10:00:00.000Z"
+      },
+      "hora_fim": {
+        "$date": "1970-01-01T20:00:00.000Z"
+      },
+      "intervalos": [],
+      "nome": "Turno A",
+      "extra": false
+    },
+    {
+      "_id": 3,
+      "dias": [
+        {
+          "dia": 2
+        },
+        {
+          "dia": 3
+        },
+        {
+          "dia": 4
+        },
+        {
+          "dia": 5
+        },
+        {
+          "dia": 6,
+          "hora_inicio": {
+            "$date": "1970-01-01T19:00:00.550Z"
+          }
+        },
+        {
+          "dia": 7
+        }
+      ],
+      "hora_inicio": {
+        "$date": "1970-01-01T19:48:00.000Z"
+      },
+      "hora_fim": {
+        "$date": "1970-01-01T22:00:00.000Z"
+      },
+      "intervalos": [],
+      "nome": "Extra - 16:48 as 19",
+      "extra": false
+    },
+    {
+      "_id": 5,
+      "dias": [
+        {
+          "dia": 2
+        },
+        {
+          "dia": 3
+        },
+        {
+          "dia": 4
+        },
+        {
+          "dia": 5
+        },
+        {
+          "dia": 6,
+          "hora_inicio": {
+            "$date": "1970-01-01T18:50:00.882Z"
+          },
+          "hora_fim": {
+            "$date": "1970-01-02T03:37:00.882Z"
+          }
+        }
+      ],
+      "hora_inicio": {
+        "$date": "1970-01-01T19:50:00.000Z"
+      },
+      "hora_fim": {
+        "$date": "1970-01-02T05:13:00.000Z"
+      },
+      "intervalos": [],
+      "nome": "Turno B",
+      "extra": false
+    },
+    {
+      "_id": 6,
+      "dias": [
+        {
+          "dia": 6,
+          "hora_inicio": {
+            "$date": "1970-01-01T10:00:00.188Z"
+          },
+          "hora_fim": {
+            "$date": "1970-01-01T14:48:00.190Z"
+          }
+        }
+      ],
+      "hora_inicio": {
+        "$date": "1970-01-01T10:00:00.000Z"
+      },
+      "hora_fim": {
+        "$date": "1970-01-01T14:48:00.000Z"
+      },
+      "intervalos": [],
+      "nome": "Pré-Feriado 07h as 11:48",
+      "extra": false
+    }
+  ],
+  "turnos_ai": 6
+}

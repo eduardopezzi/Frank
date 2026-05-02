@@ -1,0 +1,96 @@
+ID: 24
+Arquivo: prometheus_24.json
+dados: {'_id': 24, 'nome': 'Manual 01', 'tipo_apontamento': 'MACHINELESS', 'ip': [], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 12
+Arquivo: prometheus_12.json
+dados: {'_id': 12, 'nome': 'Coladeira 09 Sulamericana', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.146'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1.97, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 13
+Arquivo: prometheus_13.json
+dados: {'_id': 13, 'nome': 'Furadeira Lidear Nova', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.203'], 'port': [502], 'canais': [2], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 1
+Arquivo: prometheus_1.json
+dados: {'_id': 1, 'nome': 'Embalagem 1', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.161'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0.7, 'filtro_sensor_fim': 0.5, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 6
+Arquivo: prometheus_6.json
+dados: {'_id': 6, 'nome': 'Coladeira 02 Sulamericana', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.201'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 3.195, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 14
+Arquivo: prometheus_14.json
+dados: {'_id': 14, 'nome': 'Furadeira Lidear Nova', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.203'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 22
+Arquivo: prometheus_22.json
+dados: {'_id': 22, 'nome': 'Fur 13 Lidear 3009', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.113'], 'port': [502], 'canais': [2], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 18
+Arquivo: prometheus_18.json
+dados: {'_id': 18, 'nome': 'Fur 09 Sulamericana 1524', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.189'], 'port': [502], 'canais': [3], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 19
+Arquivo: prometheus_19.json
+dados: {'_id': 19, 'nome': 'Fur 10 Serie Ouro', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.189'], 'port': [502], 'canais': [2], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 23
+Arquivo: prometheus_23.json
+dados: {'_id': 23, 'nome': 'Fur 14 Lidear F400', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.113'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 15
+Arquivo: prometheus_15.json
+dados: {'_id': 15, 'nome': 'Fur 06 Sulamericana 1530', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.163'], 'port': [502], 'canais': [3], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 7
+Arquivo: prometheus_7.json
+dados: {'_id': 7, 'nome': 'Coladeira 03 Nanxing', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.80'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 2.745, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 16
+Arquivo: prometheus_16.json
+dados: {'_id': 16, 'nome': 'Fur 07 Sulamericana 1582', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.163'], 'port': [502], 'canais': [2], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 4
+Arquivo: prometheus_4.json
+dados: {'_id': 4, 'nome': 'Linha UV 3', 'tipo_apontamento': 'ALTUS-XP-315-M2', 'ip': ['192.168.110.179'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 4.3, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 8
+Arquivo: prometheus_8.json
+dados: {'_id': 8, 'nome': 'Coladeira 04 Sulamericana', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.98'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1.89, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 20
+Arquivo: prometheus_20.json
+dados: {'_id': 20, 'nome': 'Fur 11 Sulamericana 1511', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.189'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 21
+Arquivo: prometheus_21.json
+dados: {'_id': 21, 'nome': 'Fur 12 Lidear 2806', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.113'], 'port': [502], 'canais': [3], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 9
+Arquivo: prometheus_9.json
+dados: {'_id': 9, 'nome': 'Coladeira 05 Sulamericana', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.117'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 2.012, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 5
+Arquivo: prometheus_5.json
+dados: {'_id': 5, 'nome': 'Coladeira 01 Nanxing', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.216'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 2.6, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 17
+Arquivo: prometheus_17.json
+dados: {'_id': 17, 'nome': 'Fur 08 Sulamericana 1523', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.163'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 10
+Arquivo: prometheus_10.json
+dados: {'_id': 10, 'nome': 'Coladeira 06 Biesse', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.131'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 1.585, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 2
+Arquivo: prometheus_2.json
+dados: {'_id': 2, 'nome': 'Embalagem 2', 'tipo_apontamento': 'ALTUS-XP-300-PC', 'ip': ['192.168.110.161'], 'port': [502], 'canais': [2], 'mesas': 1, 'filtro_sensor': 0.7, 'filtro_sensor_fim': 0.5, 'filtro_encoder': 0, 'afericao_encoder': 1, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 3
+Arquivo: prometheus_3.json
+dados: {'_id': 3, 'nome': 'Linha UV 2', 'tipo_apontamento': 'ALTUS-XP-315-M2', 'ip': ['192.168.110.86'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 4.23, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------
+ID: 11
+Arquivo: prometheus_11.json
+dados: {'_id': 11, 'nome': 'Coladeira 07 Sulamericana', 'tipo_apontamento': 'ALTUS-XP-300-ML', 'ip': ['192.168.110.158'], 'port': [502], 'canais': [1], 'mesas': 1, 'filtro_sensor': 0, 'filtro_sensor_fim': 0, 'filtro_encoder': 0, 'afericao_encoder': 2.04, 'largura_barra': 1360, 'barra_feixes': 544, 'filtro_barra': 10, 'auto_liberar': False, 'contar_setup': False, 'motivo_setup': 1, 'quantidade_setup_max': 15, 'simultaneo': False, 'peca_unica': True, 'parada_lote_concluido': False, 'verificacao_SISO': None, 'limite_tempo_stop': None, 'parada_automatica': 60, 'inverter_sinal': {'CANAIS': [0], 'START': False, 'MESA1': False, 'MESA2': False, 'STOP1': False, 'STOP2': False}}
+------------------------------------------------------------

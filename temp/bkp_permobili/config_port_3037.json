@@ -1,0 +1,28 @@
+{
+  "_id": 7,
+  "nome": "Linha de Embalagem",
+  "tipo_apontamento": "Panasonic-CLP-FP0H-7",
+  "parada_automatica": 60,
+  "operacional": true,
+  "parado": false,
+  "retrabalho": false,
+  "ip": [
+    "192.168.0.120"
+  ],
+  "port": [
+    570
+  ],
+  "filtro_sensor": 1,
+  "filtro_sensor_fim": 1,
+  "filtro_encoder": 0,
+  "afericao_encoder": 0,
+  "largura_barra": null,
+  "filtro_barra": null,
+  "contar_setup": false,
+  "motivo_setup": 1,
+  "auto_liberar": false,
+  "fator": 1,
+  "produto": null,
+  "regex_produto_codigo": "\\d{13}",
+  "quantidade_setup_max": 2
+}

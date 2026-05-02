@@ -1,0 +1,196 @@
+{
+  "sistema": "Sistema de Otimização de Carga de Usinagem",
+  "data_geracao": "2025-10-10T20:04:25-03:00",
+  "versao": "1.0",
+  "analise_escalonamento": {
+    "ordens": [
+      {
+        "id": 1,
+        "nome": "Peça Estrutural Principal",
+        "prioridade": 3,
+        "nivel_prioridade": "ALTA",
+        "prazo_horas": 12,
+        "equipamento": {
+          "id": 1,
+          "nome": "Torno CNC #1",
+          "tipo": "Torno CNC"
+        },
+        "tempo_setup_minutos": 450,
+        "ordem_pai": null,
+        "status": "EM PROCESSAMENTO",
+        "datas": {
+          "inicio": "2025-10-10T20:00:00-03:00",
+          "previsao_termino": "2025-10-11T08:00:00-03:00"
+        },
+        "metricas": {
+          "eficiencia_percentual": 87,
+          "utilizacao_capacidade": 75
+        }
+      },
+      {
+        "id": 2,
+        "nome": "Componente de Suporte",
+        "prioridade": 2,
+        "nivel_prioridade": "MEDIA",
+        "prazo_horas": 24,
+        "equipamento": {
+          "id": 2,
+          "nome": "Fresa Vertical #1",
+          "tipo": "Fresa Vertical"
+        },
+        "tempo_setup_minutos": 320,
+        "ordem_pai": null,
+        "status": "AGENDADO",
+        "datas": {
+          "previsao_inicio": "2025-10-11T08:30:00-03:00",
+          "previsao_termino": "2025-10-11T16:30:00-03:00"
+        },
+        "metricas": {
+          "eficiencia_percentual": 92,
+          "utilizacao_capacidade": 68
+        }
+      },
+      {
+        "id": 3,
+        "nome": "Acabamento Superficial",
+        "prioridade": 1,
+        "nivel_prioridade": "BAIXA",
+        "prazo_horas": 48,
+        "equipamento": {
+          "id": 3,
+          "nome": "Plana Lam. #1",
+          "tipo": "Plana Laminada"
+        },
+        "tempo_setup_minutos": 580,
+        "ordem_pai": null,
+        "status": "PENDENTE",
+        "datas": {
+          "previsao_inicio": "2025-10-11T16:45:00-03:00",
+          "previsao_termino": "2025-10-12T00:45:00-03:00"
+        },
+        "metricas": {
+          "eficiencia_percentual": 78,
+          "utilizacao_capacidade": 82
+        }
+      },
+      {
+        "id": 4,
+        "nome": "Sub-componente #2.1",
+        "prioridade": 3,
+        "nivel_prioridade": "ALTA",
+        "prazo_horas": 8,
+        "equipamento": {
+          "id": 4,
+          "nome": "Torno CNC #2",
+          "tipo": "Torno CNC"
+        },
+        "tempo_setup_minutos": 380,
+        "ordem_pai": 1,
+        "status": "AGENDADO",
+        "datas": {
+          "previsao_inicio": "2025-10-11T08:15:00-03:00",
+          "previsao_termino": "2025-10-11T16:15:00-03:00"
+        },
+        "metricas": {
+          "eficiencia_percentual": 91,
+          "utilizacao_capacidade": 70
+        }
+      },
+      {
+        "id": 5,
+        "nome": "Sub-componente #2.2",
+        "prioridade": 3,
+        "nivel_prioridade": "ALTA",
+        "prazo_horas": 6,
+        "equipamento": {
+          "id": 5,
+          "nome": "Serra Fita #1",
+          "tipo": "Serra Fita"
+        },
+        "tempo_setup_minutos": 420,
+        "ordem_pai": 1,
+        "status": "PENDENTE",
+        "datas": {
+          "previsao_inicio": "2025-10-11T16:30:00-03:00",
+          "previsao_termino": "2025-10-11T22:30:00-03:00"
+        },
+        "metricas": {
+          "eficiencia_percentual": 85,
+          "utilizacao_capacidade": 73
+        }
+      }
+    ]
+  },
+  "metricas_desempenho": {
+    "throughput_ordens_hora": 2.3,
+    "taxa_atraso_percentual": 0,
+    "utilizacao_media_equipamentos_percentual": 76,
+    "tempo_medio_setup_minutos": 430,
+    "eficiencia_media_percentual": 86.6,
+    "total_ordens": 5,
+    "ordens_concluidas": 1,
+    "ordens_em_processamento": 2,
+    "ordens_pendentes": 2,
+    "ordens_atrasadas": 0
+  },
+  "equipamentos_utilizados": [
+    {
+      "id": 1,
+      "nome": "Torno CNC #1",
+      "tipo": "Torno CNC",
+      "ordens_atribuidas": [1],
+      "carga_total": 1
+    },
+    {
+      "id": 2,
+      "nome": "Fresa Vertical #1",
+      "tipo": "Fresa Vertical",
+      "ordens_atribuidas": [2],
+      "carga_total": 1
+    },
+    {
+      "id": 3,
+      "nome": "Plana Lam. #1",
+      "tipo": "Plana Laminada",
+      "ordens_atribuidas": [3],
+      "carga_total": 1
+    },
+    {
+      "id": 4,
+      "nome": "Torno CNC #2",
+      "tipo": "Torno CNC",
+      "ordens_atribuidas": [4],
+      "carga_total": 1
+    },
+    {
+      "id": 5,
+      "nome": "Serra Fita #1",
+      "tipo": "Serra Fita",
+      "ordens_atribuidas": [5],
+      "carga_total": 1
+    }
+  ],
+  "recomendacoes": [
+    {
+      "tipo": "OTIMIZAÇÃO",
+      "descricao": "Considerar paralelizar ORDEM #3 com ORDEM #5",
+      "prioridade": "ALTA"
+    },
+    {
+      "tipo": "MELHORIA",
+      "descricao": "Otimizar tempo de setup do equipamento Plaina Lam. #1",
+      "prioridade": "MEDIA"
+    },
+    {
+      "tipo": "MONITORAMENTO",
+      "descricao": "Monitorar dependências entre ordens pai e filhas",
+      "prioridade": "ALTA"
+    }
+  ],
+  "resumo": {
+    "status_geral": "OPERACIONAL",
+    "performance": "OTIMIZADA",
+    "alertas": [],
+    "proximas_manutencoes": []
+  }
+}

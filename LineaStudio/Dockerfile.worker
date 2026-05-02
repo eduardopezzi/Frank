@@ -1,0 +1,61 @@
+# ─── Cycles Rendering Engine — Worker Container ──────────────────
+# Uses official Blender image + Celery for task processing
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV BLENDER_VERSION=4.0
+ENV BLENDER_PATH=/usr/local/blender/blender
+
+WORKDIR /app
+
+# System dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    curl \
+    wget \
+    xz-utils \
+    libx11-6 \
+    libxi6 \
+    libxxf86vm1 \
+    libxfixes3 \
+    libxrender1 \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libxkbcommon0 \
+    libsm6 \
+    libice6 \
+    python3 \
+    python3-pip \
+    python3-venv \
+    unzip \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Download and install Blender 4.0
+RUN wget -q https://download.blender.org/release/Blender4.0/blender-4.0.0-linux-x64.tar.xz \
+    -O /tmp/blender.tar.xz && \
+    mkdir -p /usr/local/blender && \
+    tar -xf /tmp/blender.tar.xz --strip-components=1 -C /usr/local/blender && \
+    rm /tmp/blender.tar.xz
+
+# Python dependencies (for Celery worker — runs in system Python, not Blender's)
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Copy worker code
+COPY worker/ ./worker/
+COPY app/ ./app/
+COPY catalog/ ./catalog/
+
+# Create storage directories
+RUN mkdir -p uploads outputs && chmod 777 uploads outputs
+
+# Environment
+ENV BLENDER_PATH=/usr/local/blender/blender
+ENV PYTHONUNBUFFERED=1
+
+# Run Celery worker
+CMD ["celery", "-A", "worker.celery_app", "worker", \
+     "--loglevel=info", \
+     "--concurrency=1", \
+     "--max-tasks-per-child=5"]

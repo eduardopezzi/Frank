@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PBR Material",
+  "description": "Schema for Physically Based Rendering materials (glTF 2.0 Metallic-Roughness workflow)",
+  "type": "object",
+  "required": ["material_id", "name", "category", "pbr_properties"],
+  "properties": {
+    "material_id": {
+      "type": "string",
+      "description": "Unique identifier (e.g., wood_taco_01)",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["wood", "metal", "concrete", "glass", "wall", "floor", "fabric", "stone", "plastic", "ceramic", "other"],
+      "description": "Material category"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Search tags for filtering"
+    },
+    "description": {
+      "type": "string",
+      "description": "Material description"
+    },
+    "pbr_properties": {
+      "type": "object",
+      "properties": {
+        "base_color": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0, "maximum": 1 },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "Base color as RGBA (0.0–1.0)"
+        },
+        "metallic": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Metallic factor"
+        },
+        "roughness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Roughness factor"
+        },
+        "emission": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Emission strength"
+        },
+        "emission_color": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0, "maximum": 1 },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Emission color as RGB"
+        },
+        "alpha": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Opacity"
+        },
+        "ior": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 3,
+          "description": "Index of refraction"
+        },
+        "transmission": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Transmission for transparent materials"
+        },
+        "base_color_map": { "type": ["string", "null"] },
+        "roughness_map": { "type": ["string", "null"] },
+        "metallic_map": { "type": ["string", "null"] },
+        "normal_map": { "type": ["string", "null"] },
+        "displacement_map": { "type": ["string", "null"] },
+        "ao_map": { "type": ["string", "null"] }
+      }
+    },
+    "sketchup_material_name": {
+      "type": ["string", "null"],
+      "description": "Corresponding material name in SketchUp for auto-mapping"
+    }
+  }
+}

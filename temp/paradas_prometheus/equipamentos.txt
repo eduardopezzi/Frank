@@ -1,0 +1,25 @@
+ID|Nome|Parada_Automatica
+1|Embalagem 1|60
+2|Embalagem 2|60
+3|Linha UV 2|60
+4|Linha UV 3|60
+5|Coladeira 01 Nanxing|60
+6|Coladeira 02 Sulamericana|60
+7|Coladeira 03 Nanxing|60
+8|Coladeira 04 Sulamericana|60
+9|Coladeira 05 Sulamericana|60
+10|Coladeira 06 Biesse|60
+11|Coladeira 07 Sulamericana|60
+12|Coladeira 09 Sulamericana|60
+13|Furadeira Lidear Nova|60
+14|Furadeira Lidear Nova|60
+15|Fur 06 Sulamericana 1530|60
+16|Fur 07 Sulamericana 1582|60
+17|Fur 08 Sulamericana 1523|30
+18|Fur 09 Sulamericana 1524|60
+19|Fur 10 Serie Ouro|60
+20|Fur 11 Sulamericana 1511|60
+21|Fur 12 Lidear 2806|60
+22|Fur 13 Lidear 3009|60
+23|Fur 14 Lidear F400|60
+24|Manual 01|60

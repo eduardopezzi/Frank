@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycles | Render Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            CYCLES <span>CORE</span>
+        </div>
+        <div class="header-status">
+            <span id="api-status" class="job-status status-completed">Online</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-area">
+            <div class="card fade-in">
+                <h2>Novo Render</h2>
+                
+                <div class="dropzone" id="dropzone">
+                    <div class="dropzone-icon">📥</div>
+                    <p>Arraste seu arquivo <strong>.glb</strong>, <strong>.gltf</strong>, <strong>.obj</strong>, <strong>.dae</strong> ou <strong>.skp</strong> aqui</p>
+                    <p style="font-size: 0.8rem;">ou clique para selecionar</p>
+                    <input type="file" id="file-input" accept=".glb,.gltf,.obj,.dae,.skp">
+                </div>
+
+                <div id="file-info" style="margin-top: 1rem; display: none;">
+                    <p id="filename" style="font-weight: 600;"></p>
+                    <p id="filesize" style="font-size: 0.8rem; color: var(--text-dim);"></p>
+                </div>
+
+                <div class="settings-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
+                    <div class="form-group">
+                        <label for="samples">Samples (Qualidade)</label>
+                        <input type="number" id="samples" value="64" min="1" max="1024">
+                    </div>
+                    <div class="form-group">
+                        <label for="device">Dispositivo</label>
+                        <select id="device">
+                            <option value="CPU">CPU (Estável)</option>
+                            <option value="GPU">GPU (Rápido)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-x">Largura (px)</label>
+                        <input type="number" id="res-x" value="1920">
+                    </div>
+                    <div class="form-group">
+                        <label for="res-y">Altura (px)</label>
+                        <input type="number" id="res-y" value="1080">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="camera">Ângulo da Câmera</label>
+                    <select id="camera">
+                        <option value="auto">Automático (Smart Frame)</option>
+                        <option value="perspective">Perspectiva</option>
+                        <option value="front">Frente</option>
+                        <option value="top">Topo</option>
+                        <option value="side">Lateral</option>
+                    </select>
+                </div>
+
+                <button id="btn-render" class="btn" disabled>Iniciar Renderização</button>
+            </div>
+
+            <div class="gallery-container fade-in" style="margin-top: 3rem;">
+                <h2 style="display: flex; justify-content: space-between; align-items: center;">
+                    Galeria de Resultados
+                    <button id="btn-refresh" style="background: none; border: none; color: var(--accent); cursor: pointer; font-size: 0.8rem;">Atualizar</button>
+                </h2>
+                <div class="gallery" id="results-gallery">
+                    <!-- Renders appear here -->
+                    <div id="no-results" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
+                        Nenhum render concluído ainda.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar fade-in" style="animation-delay: 0.2s;">
+            <div class="card" style="height: 100%;">
+                <h2>Fila de Processamento</h2>
+                <div class="jobs-list" id="jobs-list">
+                    <!-- Jobs appear here -->
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
