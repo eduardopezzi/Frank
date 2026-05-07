@@ -23,13 +23,13 @@ class TestHealthEndpoints:
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "healthy"
-        assert data["service"] == "cycles-rendering-engine"
+        assert data["service"] == "Frank-rendering-engine"
 
     def test_root_endpoint(self):
         response = client.get("/")
         assert response.status_code == 200
         data = response.json()
-        assert data["name"] == "Cycles Rendering Engine"
+        assert data["name"] == "Frank Rendering Engine"
         assert "docs" in data
 
 

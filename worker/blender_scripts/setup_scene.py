@@ -102,6 +102,54 @@ def auto_frame_camera(scene, camera_angle="auto"):
     return cam_obj
 
 
+def setup_custom_camera(scene, position, target, fov=60):
+    """
+    Create camera with exact position and look-at target from Three.js viewer.
+    
+    The position and target are already in Blender coordinates (Z-up),
+    converted from Three.js (Y-up) by the frontend.
+
+    Args:
+        scene: bpy.context.scene
+        position: [x, y, z] camera position in Blender coordinates
+        target: [x, y, z] look-at target in Blender coordinates
+        fov: Field of view in degrees
+    """
+    import bpy
+    from mathutils import Vector
+
+    # Calculate scene bounds for clipping planes
+    objects = [obj for obj in scene.objects if obj.type == "MESH"]
+    _, dimensions = get_scene_bounds(objects)
+    max_dim = max(dimensions.x, dimensions.y, dimensions.z)
+    if max_dim == 0:
+        max_dim = 2.0
+
+    # Create camera with FOV
+    cam_data = bpy.data.cameras.new("FrankCamera")
+    cam_data.lens_unit = 'FOV'
+    cam_data.angle = math.radians(fov)
+    cam_data.clip_start = max_dim * 0.001
+    cam_data.clip_end = max_dim * 100
+
+    cam_obj = bpy.data.objects.new("FrankCamera", cam_data)
+    scene.collection.objects.link(cam_obj)
+    scene.camera = cam_obj
+
+    # Set position
+    cam_obj.location = Vector(position)
+
+    # Point camera at target using track_quat (same approach as auto_frame_camera)
+    target_vec = Vector(target)
+    direction = target_vec - cam_obj.location
+    rot_quat = direction.to_track_quat("-Z", "Y")
+    cam_obj.rotation_euler = rot_quat.to_euler()
+
+    print(f"[Frank] Custom camera: pos={position}, target={target}, fov={fov}°")
+
+    return cam_obj
+
+
 def setup_three_point_lighting(scene, center, max_dim):
     """
     Create a professional 3-point lighting setup.
@@ -173,17 +221,25 @@ def setup_three_point_lighting(scene, center, max_dim):
     rim_obj.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
     lights.append(rim_obj)
 
+    # Global Top Light — ensures interiors aren't pitch black
+    global_data = bpy.data.lights.new(name="GlobalTopLight", type="AREA")
+    global_data.energy = max_dim * 50
+    global_data.size = max_dim * 2.0
+    global_data.color = (1.0, 1.0, 1.0)
+    
+    global_obj = bpy.data.objects.new("GlobalTopLight", global_data)
+    scene.collection.objects.link(global_obj)
+    global_obj.location = Vector((center.x, center.y, center.z + distance * 1.5))
+    global_obj.rotation_euler = (0, 0, 0) # Point straight down
+    lights.append(global_obj)
+
     return lights
 
 
 def setup_environment(scene, use_gradient=True):
     """
     Set up the world environment for rendering.
-    Uses a subtle gradient background by default.
-
-    Args:
-        scene: bpy.context.scene
-        use_gradient: If True, uses a gradient sky. If False, uses solid color.
+    Uses Nishita Sky by default for architectural realism.
     """
     import bpy
 
@@ -194,46 +250,41 @@ def setup_environment(scene, use_gradient=True):
     links = world.node_tree.links
 
     # Clear default nodes
-    for node in nodes:
-        nodes.remove(node)
+    nodes.clear()
 
-    if use_gradient:
-        # Gradient background (subtle studio look)
-        output_node = nodes.new("ShaderNodeOutputWorld")
-        output_node.location = (400, 0)
-
-        background = nodes.new("ShaderNodeBackground")
-        background.location = (200, 0)
-        background.inputs["Strength"].default_value = 0.5
-
-        gradient = nodes.new("ShaderNodeTexGradient")
-        gradient.location = (-200, 0)
-        gradient.gradient_type = "SPHERICAL"
-
-        mapping = nodes.new("ShaderNodeMapping")
-        mapping.location = (-400, 0)
-
-        tex_coord = nodes.new("ShaderNodeTexCoord")
-        tex_coord.location = (-600, 0)
-
-        color_ramp = nodes.new("ShaderNodeValToRGB")
-        color_ramp.location = (0, 0)
-        # Light gray to white gradient
-        color_ramp.color_ramp.elements[0].color = (0.85, 0.85, 0.88, 1.0)
-        color_ramp.color_ramp.elements[1].color = (0.95, 0.95, 0.97, 1.0)
-
-        links.new(tex_coord.outputs["Generated"], mapping.inputs["Vector"])
-        links.new(mapping.outputs["Vector"], gradient.inputs["Vector"])
-        links.new(gradient.outputs["Color"], color_ramp.inputs["Fac"])
-        links.new(color_ramp.outputs["Color"], background.inputs["Color"])
-        links.new(background.outputs["Background"], output_node.inputs["Surface"])
-    else:
-        # Simple solid background
-        output_node = nodes.new("ShaderNodeOutputWorld")
-        background = nodes.new("ShaderNodeBackground")
-        background.inputs["Color"].default_value = (0.9, 0.9, 0.92, 1.0)
-        background.inputs["Strength"].default_value = 0.5
-        links.new(background.outputs["Background"], output_node.inputs["Surface"])
+    output_node = nodes.new("ShaderNodeOutputWorld")
+    background = nodes.new("ShaderNodeBackground")
+    background.inputs["Strength"].default_value = 1.0
+    
+    # --- Nishita Sky (Better for Architecture) ---
+    sky = nodes.new("ShaderNodeTexSky")
+    sky.sky_type = 'NISHITA'
+    sky.sun_size = 0.545 # Real sun size in deg
+    sky.sun_intensity = 1.0
+    sky.sun_elevation = 0.45 # Golden hour look
+    sky.sun_rotation = 1.57
+    sky.altitude = 0.0
+    sky.air_density = 1.0
+    sky.dust_density = 1.0
+    sky.ozone_density = 1.0
+    
+    links.new(sky.outputs["Color"], background.inputs["Color"])
+    links.new(background.outputs["Background"], output_node.inputs["Surface"])
+    
+    # High Quality Engine Settings
+    if scene.render.engine == 'CYCLES':
+        scene.cycles.use_fast_gi = True
+        scene.cycles.fast_gi_method = 'ADD'
+        scene.cycles.ao_bounces = 2
+        scene.cycles.max_bounces = 12
+        scene.cycles.diffuse_bounces = 4
+        scene.cycles.glossy_bounces = 4
+        scene.cycles.transparent_max_bounces = 8
+    else: # EEVEE
+        scene.eevee.use_gtao = True
+        scene.eevee.gtao_distance = 2.0
+        scene.eevee.use_ssr = True # Screen Space Reflections
+        scene.eevee.use_bloom = True
 
 
 def apply_pbr_materials(materials_data):
@@ -349,17 +400,17 @@ def configure_render_engine(scene, device="CPU", samples=64):
                         dev.use = True
 
                     scene.cycles.device = "GPU"
-                    print(f"[Cycles] Using GPU with {compute_type}")
+                    print(f"[Frank] Using GPU with {compute_type}")
                     return
                 except Exception:
                     continue
 
             # Fallback to CPU
-            print("[Cycles] No GPU available, falling back to CPU")
+            print("[Frank] No GPU available, falling back to CPU")
             scene.cycles.device = "CPU"
         except Exception as e:
-            print(f"[Cycles] GPU setup failed: {e}, using CPU")
+            print(f"[Frank] GPU setup failed: {e}, using CPU")
             scene.cycles.device = "CPU"
     else:
         scene.cycles.device = "CPU"
-        print("[Cycles] Using CPU rendering")
+        print("[Frank] Using CPU rendering")

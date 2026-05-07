@@ -14,7 +14,7 @@ from app.config import settings
 # Default to SQLite for local development
 SQLALCHEMY_DATABASE_URL = os.getenv(
     "DATABASE_URL", 
-    f"sqlite:///./{settings.app_name}.db"
+    "sqlite:///./Frank.db"
 )
 
 # Create engine

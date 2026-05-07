@@ -29,17 +29,18 @@ class Settings(BaseSettings):
 
     # Render defaults
     render_samples: int = 64
-    render_resolution_x: int = 1920
-    render_resolution_y: int = 1080
+    render_resolution_x: int = 1280
+    render_resolution_y: int = 720
     render_device: str = "CPU"  # CPU or GPU
 
     # API
     api_host: str = "0.0.0.0"
     api_port: int = 8000
-    max_upload_size_mb: int = 100
+    max_upload_size_mb: int = 1000
 
     # Material catalog
     catalog_path: str = "./catalog/materials.json"
+    textures_dir: str = "./catalog/textures"
 
     @property
     def max_upload_size_bytes(self) -> int:
@@ -49,6 +50,7 @@ class Settings(BaseSettings):
         """Create upload and output directories if they don't exist."""
         Path(self.upload_dir).mkdir(parents=True, exist_ok=True)
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+        Path(self.textures_dir).mkdir(parents=True, exist_ok=True)
 
 
 # Singleton instance

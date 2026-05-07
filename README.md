@@ -1,4 +1,4 @@
-# 🎨 Cycles Rendering Engine API
+# 🎨 Frank Rendering Engine API
 
 Motor de renderização baseado no Blender Cycles com API REST, fila assíncrona, suporte a glTF/GLB e catálogo de materiais PBR.
 
@@ -57,7 +57,7 @@ cp .env.example .env
 
 ```bash
 # Via Docker
-docker run -d --name cycles-redis -p 6379:6379 redis:7-alpine
+docker run -d --name Frank-redis -p 6379:6379 redis:7-alpine
 
 # Ou se já tiver Redis instalado
 redis-server
@@ -204,16 +204,21 @@ O catálogo vem com materiais comuns para projetos de arquitetura:
 - [ ] Suporte a múltiplos ângulos de câmera
 - [ ] Upload de texturas customizadas
 - [ ] Webhook para notificação de render completo
-- [ ] Storage Cloud services (TBD - AWS S3, Google Cloud Storage, etc.) para produção
+- [ ] Storage Cloud services (TBD - AWS S3, Google Cloud 
+Storage, etc.) para produção
+- [ ] Authentication and Authorization: criate a user access with login and register and create a role admin. Think to use some google oauth to make it more easy to use. 
+    
 - [ ] UI/UX Improvement:
     - [ ] Responsive design
     - [ ] Drag and drop improvement
     - [ ] Notifications
-    - [ ] create a gallery of rendered images
-    - [ ] Add a feature to select a material from the catalog and apply it to the model
+    - [x] create a gallery of rendered images
+    - [x] Add a feature to select a material from the catalog and apply it to the model
     - [ ] create a feature to save the rendered image to a file
     - [ ] create a feature to rate the rendered image
     - [ ] create a feature to create projects and save the rendered images to the project and materials (PRB also)
+    - [x] 3D Preview interativo: visualização do modelo 3D com zoom, rotação e posicionamento de câmera para definir ângulo e enquadramento exatos antes do render
+    - [x] organizar as sessoes da pagina em abas: como aba com galeria dos rennders passados, aba com os materiais que serao utilizado no render ou projeto, fila de processos, etc 
 
 ## Licença
 

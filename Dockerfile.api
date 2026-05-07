@@ -1,4 +1,4 @@
-# ─── Cycles Rendering Engine — API Container ──────────────────────
+# ─── Frank Rendering Engine — API Container ──────────────────────
 FROM python:3.12-slim
 
 WORKDIR /app
@@ -17,9 +17,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ ./app/
 COPY worker/ ./worker/
 COPY catalog/ ./catalog/
+COPY alembic.ini .
+COPY alembic/ ./alembic/
 
 # Create runtime directories
-RUN mkdir -p uploads outputs
+RUN mkdir -p uploads outputs data
 
 # Expose port
 EXPOSE 8000

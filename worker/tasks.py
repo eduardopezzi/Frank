@@ -23,6 +23,10 @@ BLENDER_SCRIPT = str(
 BLENDER_PATH = os.getenv("BLENDER_PATH", "blender")
 BLENDER_TIMEOUT = int(os.getenv("BLENDER_TIMEOUT", "600"))
 
+CONVERT_SCRIPT = str(
+    Path(__file__).parent / "blender_scripts" / "convert_to_glb.py"
+)
+
 
 class RenderTask(Task):
     """Base class for render tasks with error handling."""
@@ -68,12 +72,17 @@ def render_glb_task(
     # Ensure output directory exists
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
 
-    # Serialize render settings for the Blender script
-    settings_json = json.dumps(render_settings or {})
-
+    # Serialize render settings to a temporary file to avoid "Argument list too long" error
+    settings_tmp_path = Path(input_path).parent / f"settings_{job_id}.json"
+    
+    # Enrich settings with paths for the worker
+    enhanced_settings = (render_settings or {}).copy()
+    enhanced_settings["textures_dir"] = str(Path("/app/catalog/textures").absolute())
+    
+    with open(settings_tmp_path, "w") as f:
+        json.dump(enhanced_settings, f)
+    
     # Build Blender CLI command
-    # blender -b (background) -P script.py -- input output settings
-    # NOTA: Removido --factory-startup para permitir carregamento de addons (sketchup_importer)
     cmd = [
         BLENDER_PATH,
         "-b",                      # Background mode (no GUI)
@@ -81,7 +90,7 @@ def render_glb_task(
         "--",                      # Separator for script arguments
         input_path,
         output_path,
-        settings_json,
+        str(settings_tmp_path),    # Pass file path instead of raw JSON
     ]
 
     logger.info(f"Executing: {' '.join(cmd)}")
@@ -110,16 +119,21 @@ def render_glb_task(
         raise RuntimeError(
             f"Render timed out after {BLENDER_TIMEOUT} seconds"
         )
-
     except subprocess.CalledProcessError as e:
         logger.error(f"Blender process failed: {e.stderr[-500:] if e.stderr else 'no stderr'}")
         raise RuntimeError(
-            f"Blender render failed: {e.stderr[-200:] if e.stderr else 'unknown error'}"
+            f"Blender render failed: {e.stderr[-500:] if e.stderr else 'unknown error'}"
         )
-
     except SoftTimeLimitExceeded:
         logger.error(f"Celery soft time limit exceeded: {job_id}")
         raise RuntimeError("Render exceeded the time limit")
+    except Exception as e:
+        logger.error(f"Unexpected error: {str(e)}")
+        raise e
+    finally:
+        # Cleanup settings file
+        if 'settings_tmp_path' in locals() and settings_tmp_path.exists():
+            settings_tmp_path.unlink()
 
     # Verify output was created
     if not Path(output_path).exists():
@@ -138,3 +152,39 @@ def render_glb_task(
         "output_file": output_path,
         "output_size_bytes": output_size,
     }
+@celery_app.task(
+    bind=True,
+    base=RenderTask,
+    name="worker.tasks.convert_to_glb",
+)
+def convert_to_glb_task(self, input_path: str, output_path: str):
+    """Convert any supported 3D format to GLB for preview."""
+    logger.info(f"Converting for preview: {input_path}")
+    
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    
+    cmd = [
+        BLENDER_PATH,
+        "-b",
+        "-P", CONVERT_SCRIPT,
+        "--",
+        input_path,
+        output_path,
+    ]
+    
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120, check=True)
+        logger.info(f"Blender conversion output:\n{result.stdout[-500:]}")
+        if result.stderr:
+            logger.warning(f"Blender conversion stderr:\n{result.stderr[-500:]}")
+        
+        if not Path(output_path).exists():
+            raise RuntimeError(f"Blender conversion completed but output file not found at {output_path}")
+            
+        return {"status": "success", "output": output_path}
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Conversion failed (exit {e.returncode}): {e.stderr[-500:] if e.stderr else 'no stderr'}")
+        raise RuntimeError(f"Blender conversion failed: {e.stderr[-200:] if e.stderr else 'unknown error'}")
+    except Exception as e:
+        logger.error(f"Conversion error: {str(e)}")
+        raise e

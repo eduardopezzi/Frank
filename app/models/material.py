@@ -58,6 +58,7 @@ class PBRProperties(BaseModel):
         le=1.0,
         description="Transmission factor for transparent materials",
     )
+    
 
     # Texture maps (file paths or URLs)
     base_color_map: Optional[str] = Field(

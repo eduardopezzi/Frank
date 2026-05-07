@@ -1,4 +1,4 @@
-# ─── Cycles Rendering Engine — Docker Compose ────────────────────
+# ─── Frank Rendering Engine — Docker Compose ────────────────────
 # Usage:
 #   docker-compose up -d            # Start all services
 #   docker-compose up -d --scale worker=3  # Start with 3 workers
@@ -9,7 +9,7 @@ services:
   # ─── Redis (Message Broker + Result Backend) ──────────────────
   redis:
     image: redis:7-alpine
-    container_name: cycles-redis
+    container_name: Frank-redis
     ports:
       - "6379:6379"
     volumes:
@@ -27,16 +27,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.api
-    container_name: cycles-api
+    container_name: Frank-api
     ports:
       - "8000:8000"
     environment:
       - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=sqlite:////app/data/Frank.db
       - UPLOAD_DIR=/app/uploads
       - OUTPUT_DIR=/app/outputs
       - RENDER_SAMPLES=64
-      - RENDER_RESOLUTION_X=1920
-      - RENDER_RESOLUTION_Y=1080
+      - RENDER_RESOLUTION_X=1280
+      - RENDER_RESOLUTION_Y=720
       - RENDER_DEVICE=CPU
     command: >
       sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
@@ -44,7 +45,7 @@ services:
       - uploads:/app/uploads
       - outputs:/app/outputs
       - ./catalog:/app/catalog
-      - ./cycles.db:/app/cycles.db
+      - Frank_db:/app/data
     depends_on:
       redis:
         condition: service_healthy
@@ -56,7 +57,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.worker
-    container_name: cycles-worker
+    container_name: Frank-worker
     environment:
       - REDIS_URL=redis://redis:6379/0
       - BLENDER_PATH=/usr/local/blender/blender
@@ -84,3 +85,4 @@ volumes:
   redis_data:
   uploads:
   outputs:
+  Frank_db:

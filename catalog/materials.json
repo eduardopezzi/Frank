@@ -1,257 +1,1962 @@
 [
   {
-    "material_id": "concrete_raw_01",
-    "name": "Concreto Aparente",
-    "category": "concrete",
-    "tags": ["exterior", "wall", "industrial", "modern"],
-    "description": "Concreto aparente com textura natural, típico de projetos modernos",
+    "material_id": "m_0130_gainsboro_mtl",
+    "name": "M_0130_Gainsboro",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.55, 0.53, 0.50, 1.0],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.85,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 18:59:41.455093",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "concrete_polished_01",
-    "name": "Concreto Polido",
-    "category": "concrete",
-    "tags": ["floor", "interior", "modern", "industrial"],
-    "description": "Concreto polido com acabamento liso, comum em pisos internos",
+    "material_id": "frontcolor_mtl",
+    "name": "FrontColor",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.60, 0.58, 0.55, 1.0],
-      "metallic": 0.02,
-      "roughness": 0.30,
-      "emission": 0.0,
-      "alpha": 1.0,
-      "ior": 1.45,
-      "transmission": 0.0
-    },
-    "sketchup_material_name": null
-  },
-  {
-    "material_id": "wood_taco_01",
-    "name": "Taco de Madeira",
-    "category": "wood",
-    "tags": ["floor", "interior", "warm", "classic"],
-    "description": "Piso de taco de madeira com tom quente, acabamento acetinado",
-    "pbr_properties": {
-      "base_color": [0.45, 0.28, 0.14, 1.0],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.35,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.048794",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "wood_mdf_01",
-    "name": "MDF Branco",
-    "category": "wood",
-    "tags": ["furniture", "interior", "cabinet", "modern"],
-    "description": "MDF com acabamento branco fosco, comum em móveis planejados",
+    "material_id": "pintura_parede_mtl",
+    "name": "pintura_parede",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.92, 0.91, 0.89, 1.0],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.45,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.089263",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "wood_plywood_01",
-    "name": "Compensado Naval",
-    "category": "wood",
-    "tags": ["furniture", "interior", "modern", "natural"],
-    "description": "Compensado naval com veios aparentes, acabamento natural",
+    "material_id": "ceramica_terracota_mtl",
+    "name": "ceramica_terracota",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.62, 0.45, 0.28, 1.0],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.50,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.093489",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "glass_clear_01",
-    "name": "Vidro Transparente",
-    "category": "glass",
-    "tags": ["window", "exterior", "interior", "transparent"],
-    "description": "Vidro transparente para janelas e fachadas",
+    "material_id": "translucent_glass_green_dark_mtl",
+    "name": "Translucent_Glass_Green_Dark",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.95, 0.97, 1.0, 0.1],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.02,
+      "roughness": 0.5,
       "emission": 0.0,
-      "alpha": 0.1,
-      "ior": 1.52,
-      "transmission": 0.95
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.142753",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "glass_tinted_01",
-    "name": "Vidro Fumê",
-    "category": "glass",
-    "tags": ["window", "exterior", "facade", "tinted"],
-    "description": "Vidro fumê para fachadas e divisórias",
+    "material_id": "color_m08_mtl",
+    "name": "Color_M08",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.15, 0.17, 0.20, 0.3],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.02,
+      "roughness": 0.5,
       "emission": 0.0,
-      "alpha": 0.3,
-      "ior": 1.52,
-      "transmission": 0.80
-    },
-    "sketchup_material_name": null
-  },
-  {
-    "material_id": "metal_stainless_01",
-    "name": "Aço Inox Escovado",
-    "category": "metal",
-    "tags": ["kitchen", "interior", "appliance", "modern"],
-    "description": "Aço inoxidável com acabamento escovado",
-    "pbr_properties": {
-      "base_color": [0.75, 0.76, 0.78, 1.0],
-      "metallic": 0.95,
-      "roughness": 0.35,
-      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.147098",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "metal_aluminum_01",
-    "name": "Alumínio Anodizado",
-    "category": "metal",
-    "tags": ["exterior", "window_frame", "modern", "facade"],
-    "description": "Alumínio com anodização natural, usado em esquadrias",
+    "material_id": "color_m00_mtl",
+    "name": "Color_M00",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.70, 0.72, 0.73, 1.0],
-      "metallic": 0.90,
-      "roughness": 0.25,
-      "emission": 0.0,
-      "alpha": 1.0,
-      "ior": 1.45,
-      "transmission": 0.0
-    },
-    "sketchup_material_name": null
-  },
-  {
-    "material_id": "wall_plaster_01",
-    "name": "Reboco Pintado Branco",
-    "category": "wall",
-    "tags": ["interior", "exterior", "wall", "classic"],
-    "description": "Parede com reboco e pintura acrílica branca",
-    "pbr_properties": {
-      "base_color": [0.95, 0.94, 0.93, 1.0],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.70,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.205799",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "wall_brick_01",
-    "name": "Tijolo à Vista",
-    "category": "wall",
-    "tags": ["interior", "exterior", "wall", "rustic", "industrial"],
-    "description": "Parede de tijolos aparentes com rejunte",
+    "material_id": "_translucent_glass_green_dark_1_mtl",
+    "name": "_Translucent_Glass_Green_Dark_1",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.55, 0.27, 0.15, 1.0],
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
       "metallic": 0.0,
-      "roughness": 0.80,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.265789",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "floor_ceramic_01",
-    "name": "Cerâmica Branca",
-    "category": "floor",
-    "tags": ["floor", "interior", "bathroom", "kitchen"],
-    "description": "Piso cerâmico branco com acabamento acetinado",
+    "material_id": "metal_seamed_mtl",
+    "name": "Metal_Seamed",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.92, 0.91, 0.90, 1.0],
-      "metallic": 0.02,
-      "roughness": 0.25,
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
       "ior": 1.45,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.318655",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "floor_porcelain_01",
-    "name": "Porcelanato Polido",
-    "category": "floor",
-    "tags": ["floor", "interior", "living_room", "luxury"],
-    "description": "Porcelanato polido com brilho, acabamento premium",
+    "material_id": "metal_rough_mtl",
+    "name": "Metal_Rough",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.85, 0.83, 0.80, 1.0],
-      "metallic": 0.05,
-      "roughness": 0.10,
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
-      "ior": 1.50,
-      "transmission": 0.0
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.371593",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "stone_granite_01",
-    "name": "Granito Preto",
-    "category": "stone",
-    "tags": ["countertop", "kitchen", "bathroom", "luxury"],
-    "description": "Granito preto polido para bancadas",
+    "material_id": "metal_corrogated_shiny_mtl",
+    "name": "Metal_Corrogated_Shiny",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.08, 0.08, 0.08, 1.0],
-      "metallic": 0.05,
-      "roughness": 0.15,
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
-      "ior": 1.55,
-      "transmission": 0.0
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.435051",
+    "updated_at": null,
     "sketchup_material_name": null
   },
   {
-    "material_id": "stone_marble_01",
-    "name": "Mármore Branco Carrara",
-    "category": "stone",
-    "tags": ["countertop", "floor", "bathroom", "luxury", "classic"],
-    "description": "Mármore branco Carrara com veios cinza, acabamento polido",
+    "material_id": "book_kem__1_mtl",
+    "name": "book_kem__1",
+    "category": "other",
+    "tags": [],
+    "description": null,
     "pbr_properties": {
-      "base_color": [0.93, 0.92, 0.91, 1.0],
-      "metallic": 0.02,
-      "roughness": 0.12,
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
       "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "alpha": 1.0,
-      "ior": 1.50,
-      "transmission": 0.02
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
     },
+    "created_at": "2026-05-04 19:00:51.483841",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho_mtl",
+    "name": "madeira_carvalho",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.536605",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_k07_mtl",
+    "name": "Color_K07",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.588059",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_4_mtl",
+    "name": "_4",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.642381",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho1__mtl",
+    "name": "madeira_carvalho1_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.692364",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "travertino_lixado2_mtl",
+    "name": "travertino_lixado2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.749975",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho4__mtl",
+    "name": "madeira_carvalho4_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.758953",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho10__mtl",
+    "name": "madeira_carvalho10_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.828666",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho20__mtl",
+    "name": "madeira_carvalho20_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.908598",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_mtl",
+    "name": "madeira",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:51.986897",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho24__mtl",
+    "name": "madeira_carvalho24_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.067401",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho33__mtl",
+    "name": "madeira_carvalho33_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.146303",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho36__mtl",
+    "name": "madeira_carvalho36_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.218148",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho42__mtl",
+    "name": "madeira_carvalho42_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.287943",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "pedra_marrom_mtl",
+    "name": "pedra_marrom",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.360911",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho47__mtl",
+    "name": "madeira_carvalho47_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.440113",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho87__mtl",
+    "name": "madeira_carvalho87_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.486677",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_01_mtl",
+    "name": "MADEIRA_01",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.538476",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "lareira_granite_b_80cm1_mtl",
+    "name": "Lareira_Granite_B_80cm1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.590389",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho97__mtl",
+    "name": "madeira_carvalho97_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.651408",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_auto_10_mtl",
+    "name": "_auto_10",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.699747",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho101__mtl",
+    "name": "madeira_carvalho101_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.755518",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho107__mtl",
+    "name": "madeira_carvalho107_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.819465",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_1_mtl",
+    "name": "_1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.868362",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_25_mtl",
+    "name": "_25",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.921853",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_color_m08_1_mtl",
+    "name": "_Color_M08_1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:52.973441",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "mirror_01_mtl",
+    "name": "Mirror_01",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.026290",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_e07_mtl",
+    "name": "Color_E07",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.082769",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_e11_mtl",
+    "name": "Color_E11",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.132833",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_e12_mtl",
+    "name": "Color_E12",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.185535",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "ceramica_mtl",
+    "name": "ceramica",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.241150",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_40_mtl",
+    "name": "_40",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.292215",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho118__mtl",
+    "name": "madeira_carvalho118_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.345888",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_translucent_glass_gray_1_mtl",
+    "name": "_Translucent_Glass_Gray_1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.399431",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_25_2547__mtl",
+    "name": "_25_2547_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.452278",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_b08_mtl",
+    "name": "Color_B08",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.509297",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "brusque_pu_caramelo_mtl",
+    "name": "Brusque_PU_Caramelo",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.599096",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_32_mtl",
+    "name": "_32",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.684681",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "metal_corrugated_shiny1__mtl",
+    "name": "Metal_Corrugated_Shiny1_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.759358",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "metal_dourado_fosco1_mtl",
+    "name": "metal_dourado_fosco1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.834574",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "m_0119_rosybrown_mtl",
+    "name": "M_0119_RosyBrown",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.902511",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "branco_brilho_mtl",
+    "name": "Branco_brilho",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:53.982490",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho120__mtl",
+    "name": "madeira_carvalho120_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-04 19:00:54.093654",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "wood__wood_jpg_mtl",
+    "name": "Wood__Wood_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-07 16:50:11.539379",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "wood_001_mtl",
+    "name": "Wood_001",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.7,
+        0.7,
+        0.7,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-07 16:50:11.551396",
+    "updated_at": null,
     "sketchup_material_name": null
   }
 ]

@@ -107,12 +107,12 @@ docker-compose logs worker -f
 
 ### Verificar instalação do addon no container
 ```bash
-docker exec -it cycles-worker ls -la /usr/local/blender/4.0/scripts/addons/sketchup_importer/
+docker exec -it Frank-worker ls -la /usr/local/blender/4.0/scripts/addons/sketchup_importer/
 ```
 
 ### Testar importação manual no container
 ```bash
-docker exec -it cycles-worker /usr/local/blender/blender -b -P /app/worker/blender_scripts/render_gltf.py -- /app/arquivo_teste.skp /app/output.png '{}'
+docker exec -it Frank-worker /usr/local/blender/blender -b -P /app/worker/blender_scripts/render_gltf.py -- /app/arquivo_teste.skp /app/output.png '{}'
 ```
 
 ## Notas Importantes
@@ -135,10 +135,10 @@ docker exec -it cycles-worker /usr/local/blender/blender -b -P /app/worker/blend
 1. Faça upload de um arquivo `.skp` pela API
 2. Verifique os logs do worker para confirmar:
    ```
-   [Cycles] Added /usr/local/blender/4.0/scripts/addons to sys.path
-   [Cycles] Refreshed addon modules
-   [Cycles] Enabling sketchup_importer addon...
-   [Cycles] sketchup_importer addon enabled
-   [Cycles] SKP file imported successfully
+   [Frank] Added /usr/local/blender/4.0/scripts/addons to sys.path
+   [Frank] Refreshed addon modules
+   [Frank] Enabling sketchup_importer addon...
+   [Frank] sketchup_importer addon enabled
+   [Frank] SKP file imported successfully
    ```
 3. O arquivo PNG deve ser gerado na pasta `outputs/`

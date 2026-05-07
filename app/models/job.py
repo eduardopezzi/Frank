@@ -21,7 +21,7 @@ class JobStatus(str, Enum):
 class RenderSettings(BaseModel):
     """Per-job render configuration (overrides defaults)."""
 
-    samples: int = Field(default=64, ge=1, le=4096, description="Number of Cycles samples")
+    samples: int = Field(default=64, ge=1, le=4096, description="Number of render samples")
     resolution_x: int = Field(default=1920, ge=100, le=7680, description="Output width in pixels")
     resolution_y: int = Field(default=1080, ge=100, le=4320, description="Output height in pixels")
     device: str = Field(default="CPU", pattern="^(CPU|GPU)$", description="Render device")
@@ -29,9 +29,23 @@ class RenderSettings(BaseModel):
         default="auto",
         description="Camera angle preset: auto, front, top, side, perspective",
     )
-    material_overrides: Optional[list[str]] = Field(
+    camera_position: Optional[list[float]] = Field(
         default=None,
-        description="List of material_ids from the catalog to apply",
+        description="Camera [x, y, z] position in Blender coordinates",
+    )
+    camera_target: Optional[list[float]] = Field(
+        default=None,
+        description="Camera look-at target [x, y, z] in Blender coordinates",
+    )
+    camera_fov: Optional[float] = Field(
+        default=None,
+        ge=10,
+        le=120,
+        description="Camera field of view in degrees",
+    )
+    material_overrides: Optional[dict[str, str]] = Field(
+        default=None,
+        description="Mapping of model part names to material_ids from the catalog",
     )
 
 

@@ -33,12 +33,13 @@ class Project(Base):
     materials = relationship("Material", secondary=project_materials, back_populates="projects")
 
 class RenderJob(Base):
-    # ... (remains same)
     __tablename__ = "render_jobs"
 
     id = Column(String, primary_key=True, index=True)
     project_id = Column(String, ForeignKey("projects.id"), nullable=True)
     status = Column(String, default="pending")
+    original_filename = Column(String, nullable=True)
+    file_size = Column(Integer, nullable=True)
     input_path = Column(String, nullable=False)
     output_path = Column(String, nullable=True)
     render_settings = Column(JSON, nullable=True)

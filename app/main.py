@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Cycles Rendering Engine",
+    title="Frank Rendering Engine",
     description=(
         "API REST para renderização de modelos 3D (.glb) "
         "via Blender Cycles com fila assíncrona e catálogo de materiais PBR."
@@ -41,12 +41,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Ensure directories exist before mounting
+settings.ensure_directories()
+
 # Routers
 app.include_router(render.router, prefix="/render", tags=["Rendering"])
 app.include_router(materials.router, prefix="/materials", tags=["Materials"])
 
 # Static files
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/textures", StaticFiles(directory=settings.textures_dir), name="textures")
 
 
 @app.get("/health", tags=["System"])
@@ -54,7 +58,7 @@ async def health_check():
     """Health check endpoint."""
     return {
         "status": "healthy",
-        "service": "cycles-rendering-engine",
+        "service": "Frank-rendering-engine",
         "version": "0.1.0",
     }
 

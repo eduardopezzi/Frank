@@ -1,4 +1,4 @@
-# ─── Cycles Rendering Engine — Worker Container ──────────────────
+# ─── Frank Rendering Engine — Worker Container ──────────────────
 # Uses official Blender image + Celery for task processing
 FROM ubuntu:22.04
 
@@ -37,6 +37,11 @@ RUN wget -q https://download.blender.org/release/Blender4.0/blender-4.0.0-linux-
     mkdir -p /usr/local/blender && \
     tar -xf /tmp/blender.tar.xz --strip-components=1 -C /usr/local/blender && \
     rm /tmp/blender.tar.xz
+
+# Install SketchUp importer addon for Blender 4.0
+RUN git clone https://github.com/martijnberger/sketchup_importer.git \
+    /usr/local/blender/4.0/scripts/addons/sketchup_importer && \
+    ls -la /usr/local/blender/4.0/scripts/addons/sketchup_importer/
 
 # Python dependencies (for Celery worker — runs in system Python, not Blender's)
 COPY requirements.txt .
