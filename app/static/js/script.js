@@ -298,13 +298,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
 
-                    await createMaterial({
-                        material_id: mtlMat.name.toLowerCase().replace(/[^a-z0-9]/g, '_') + '_' + (tag || 'mtl'),
-                        name: mtlMat.name,
-                        category: 'other',
-                        tags: tags,
-                        pbr_properties: pbrProps
-                    });
+                    try {
+                        const res = await fetch('/materials', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                material_id: mtlMat.name.toLowerCase().replace(/[^a-z0-9]/g, '_') + '_' + (tag || 'mtl'),
+                                name: mtlMat.name,
+                                category: 'other',
+                                tags: tags,
+                                pbr_properties: pbrProps
+                            })
+                        });
+                        if (!res.ok) {
+                            console.error(`[Frank] Falha ao criar material ${mtlMat.name}`);
+                        }
+                    } catch (e) {
+                        console.error('[Frank] Erro na requisição:', e);
+                    }
                 }
                 
                 let msg = `${newMaterials.length} materiais importados com sucesso!`;
@@ -418,9 +429,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const partMatClean = partMatLower.replace(/[^a-z0-9]/g, '_');
                 
                 match = allMaterials.find(m => {
-                    if (m.name.toLowerCase() === partMatLower) return true;
-                    if (m.material_id.toLowerCase() === partMatClean) return true;
-                    if (m.tags && m.tags.some(t => t.toLowerCase() === partMatLower || t.toLowerCase() === partMatClean)) return true;
+                    const mName = (m.name || '').toLowerCase();
+                    if (mName === partMatLower) return true;
+                    if ((m.material_id || '').toLowerCase() === partMatClean) return true;
+                    if (m.tags && m.tags.some(t => (t || '').toLowerCase() === partMatLower || (t || '').toLowerCase() === partMatClean)) return true;
                     return false;
                 });
                 if (match) {
@@ -522,26 +534,28 @@ document.addEventListener('DOMContentLoaded', () => {
             // 0. Try to match by the material name assigned in the 3D model (e.g. from usemtl in OBJ)
             let matchedMaterial = null;
             if (part.materialName) {
+                const pMatLower = (part.materialName || '').toLowerCase();
                 matchedMaterial = allMaterials.find(m => 
-                    m.name.toLowerCase() === part.materialName.toLowerCase() ||
-                    m.sketchup_material_name?.toLowerCase() === part.materialName.toLowerCase()
+                    (m.name || '').toLowerCase() === pMatLower ||
+                    (m.sketchup_material_name || '').toLowerCase() === pMatLower
                 );
             }
 
             // 1. Try to match by mesh name exactly
-            if (!matchedMaterial) {
-                matchedMaterial = allMaterials.find(m => 
-                    m.name.toLowerCase() === part.name.toLowerCase() ||
-                    part.name.toLowerCase().includes(m.name.toLowerCase())
-                );
+            const pNameLower = (part.name || '').toLowerCase();
+            if (!matchedMaterial && pNameLower) {
+                matchedMaterial = allMaterials.find(m => {
+                    const mName = (m.name || '').toLowerCase();
+                    return mName === pNameLower || (mName && pNameLower.includes(mName));
+                });
             }
 
             // If not matched by name, check if mesh name matches an MTL entry, 
             // and if that MTL entry matches a catalog material
-            if (!matchedMaterial && mtlMaterials.length > 0) {
-                const mtlMatch = mtlMaterials.find(m => part.name.toLowerCase().includes(m.name.toLowerCase()));
+            if (!matchedMaterial && mtlMaterials.length > 0 && pNameLower) {
+                const mtlMatch = mtlMaterials.find(m => pNameLower.includes((m.name || '').toLowerCase()));
                 if (mtlMatch) {
-                    matchedMaterial = allMaterials.find(mat => mat.name.toLowerCase() === mtlMatch.name.toLowerCase());
+                    matchedMaterial = allMaterials.find(mat => (mat.name || '').toLowerCase() === (mtlMatch.name || '').toLowerCase());
                 }
             }
 
