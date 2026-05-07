@@ -81,13 +81,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (files.length === 0) return;
         
         const newFiles = Array.from(files);
+        let duplicates = 0;
         
         // Add to pool, replacing duplicates by name
         newFiles.forEach(nf => {
             const index = selectedFiles.findIndex(f => f.name === nf.name);
-            if (index > -1) selectedFiles[index] = nf;
+            if (index > -1) {
+                selectedFiles[index] = nf;
+                duplicates++;
+            }
             else selectedFiles.push(nf);
         });
+        
+        if (duplicates > 0) {
+            console.warn(`[Frank] Atenção: ${duplicates} arquivo(s) substituído(s) no pool por conflito de nome.`);
+        }
         
         // Find the main 3D model file
         const modelExtensions = ['glb', 'gltf', 'obj', 'dae', 'skp', 'fbx'];
