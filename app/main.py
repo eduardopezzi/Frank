@@ -10,7 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 from app.config import settings
-from app.routers import render, materials
+from app.routers import render, materials, ai_design
 
 
 @asynccontextmanager
@@ -47,6 +47,7 @@ settings.ensure_directories()
 # Routers
 app.include_router(render.router, prefix="/render", tags=["Rendering"])
 app.include_router(materials.router, prefix="/materials", tags=["Materials"])
+app.include_router(ai_design.router, prefix="/ai", tags=["AI Design"])
 
 # Static files
 app.mount("/static", StaticFiles(directory="app/static"), name="static")

@@ -18,6 +18,13 @@ jsonschema==4.24.0
 sqlalchemy==2.0.30
 alembic==1.13.1
 psycopg2-binary==2.9.9
+sentence-transformers==3.4.1
+Pillow==11.1.0
+
+# 3D & Math
+trimesh[all]==4.6.4
+numpy==2.2.3
+scipy==1.15.2
 
 # Testing
 pytest==8.3.5
