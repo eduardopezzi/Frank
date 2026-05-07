@@ -386,10 +386,15 @@ document.addEventListener('DOMContentLoaded', () => {
             let selectedMatId = '';
             let match = null;
             if (part.materialName) {
-                match = allMaterials.find(m => 
-                    m.name.toLowerCase() === part.materialName.toLowerCase() ||
-                    m.material_id.toLowerCase() === part.materialName.toLowerCase().replace(/[^a-z0-9]/g, '_')
-                );
+                const partMatLower = part.materialName.toLowerCase();
+                const partMatClean = partMatLower.replace(/[^a-z0-9]/g, '_');
+                
+                match = allMaterials.find(m => {
+                    if (m.name.toLowerCase() === partMatLower) return true;
+                    if (m.material_id.toLowerCase() === partMatClean) return true;
+                    if (m.tags && m.tags.some(t => t.toLowerCase() === partMatLower || t.toLowerCase() === partMatClean)) return true;
+                    return false;
+                });
                 if (match) {
                     console.log(`[Frank] Auto-matched part '${part.name}' (mat: ${part.materialName}) -> ${match.material_id}`);
                     selectedMatId = match.material_id;
@@ -401,18 +406,88 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            const btnLinkHtml = part.materialName ? 
+                `<button class="btn-link-tag" data-part="${part.name}" data-orig-mat="${part.materialName}" title="Memorizar este material para a tag '${part.materialName}'" style="padding:4px; font-size:12px; cursor:pointer; background:transparent; border:none;">💾</button>` : '';
+
             row.innerHTML = `
                 <span class="part-type-icon">${part.type === 'mesh' ? '📦' : '📁'}</span>
                 <span class="part-name" title="${part.name}">${part.name}</span>
                 <div class="part-swatch" id="swatch-${part.name}" style="background-color: ${selectedMatId ? 'var(--success)' : 'transparent'}"></div>
-                <select class="part-material-select" data-part="${part.name}">
-                    <option value="">Padrão do Modelo</option>
-                    ${allMaterials.map(m => `<option value="${m.material_id}" ${m.material_id === selectedMatId ? 'selected' : ''}>${m.name}</option>`).join('')}
-                </select>
+                <div style="display:flex; gap:0.2rem; align-items:center;">
+                    <select class="part-material-select" data-part="${part.name}">
+                        <option value="">Padrão do Modelo</option>
+                        ${allMaterials.map(m => `<option value="${m.material_id}" ${m.material_id === selectedMatId ? 'selected' : ''}>${m.name}</option>`).join('')}
+                    </select>
+                    ${btnLinkHtml}
+                </div>
             `;
 
             const select = row.querySelector('select');
-            
+            const btnLink = row.querySelector('.btn-link-tag');
+            if (btnLink) {
+                btnLink.style.display = selectedMatId ? 'inline-block' : 'none';
+                
+                btnLink.addEventListener('click', async (e) => {
+                    e.stopPropagation();
+                    const mid = select.value;
+                    const origMat = btnLink.dataset.origMat;
+                    if (!mid || !origMat) return;
+                    
+                    const matObj = allMaterials.find(m => m.material_id === mid);
+                    if (!matObj) return;
+                    
+                    const currentTags = matObj.tags || [];
+                    if (currentTags.includes(origMat)) {
+                        alert(`A tag '${origMat}' já está associada ao material '${matObj.name}'.`);
+                        return;
+                    }
+                    
+                    const newTags = [...currentTags, origMat];
+                    btnLink.disabled = true;
+                    btnLink.style.opacity = '0.5';
+                    try {
+                        const res = await fetch(`/materials/${mid}`, {
+                            method: 'PUT',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ tags: newTags })
+                        });
+                        if (res.ok) {
+                            alert(`Vínculo salvo! Sempre que o Frank encontrar a tag '${origMat}', ele usará '${matObj.name}'.`);
+                            await reloadMaterials();
+                        } else {
+                            throw new Error('Falha na API');
+                        }
+                    } catch (err) {
+                        console.error(err);
+                        alert('Erro ao salvar o vínculo.');
+                    } finally {
+                        btnLink.disabled = false;
+                        btnLink.style.opacity = '1';
+                    }
+                });
+            }
+
+            select.addEventListener('change', (e) => {
+                const mid = e.target.value;
+                const swatch = document.getElementById(`swatch-${part.name}`);
+                if (mid) {
+                    swatch.style.backgroundColor = 'var(--success)';
+                    const matObj = allMaterials.find(m => m.material_id === mid);
+                    if (matObj && viewer) {
+                        viewer.setPartMaterial(part.name, matObj.pbr_properties);
+                    }
+                } else {
+                    swatch.style.backgroundColor = 'transparent';
+                    if (viewer) {
+                        viewer.resetPartMaterial(part.name);
+                    }
+                }
+                
+                if (btnLink) {
+                    btnLink.style.display = mid ? 'inline-block' : 'none';
+                }
+            });
+
             // Highlight in viewer on hover
             row.addEventListener('mouseenter', () => {
                 if (viewer) viewer.highlightPart(part.name);
