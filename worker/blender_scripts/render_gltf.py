@@ -445,23 +445,30 @@ def main():
             f"Please convert your file to .glb, .gltf, .obj, or .dae format before uploading."
         )
     
-    # Importar arquivo baseado na extensão
-    if ext in [".glb", ".gltf"]:
-        print(f"[Frank] Importing {ext.upper()} file...")
-        bpy.ops.import_scene.gltf(filepath=abs_path)
-        print(f"[Frank] Successfully imported {ext.upper()} file")
-    elif ext == ".obj":
-        print(f"[Frank] Importing OBJ file...")
-        bpy.ops.wm.obj_import(filepath=abs_path)
-        print(f"[Frank] Successfully imported OBJ file")
-    elif ext == ".dae":
-        print(f"[Frank] Importing DAE (Collada) file...")
-        bpy.ops.wm.collada_import(filepath=abs_path)
-        print(f"[Frank] Successfully imported DAE file")
-    elif ext == ".skp":
-        print("[Frank] Importing SKP (SketchUp) file...")
-        _import_skp(abs_path)
-        print("[Frank] Successfully imported SKP file")
+    # Salva o CWD atual e muda para a pasta de uploads temporários
+    old_cwd = os.getcwd()
+    os.chdir(os.path.dirname(abs_path))
+    
+    try:
+        # Importar arquivo baseado na extensão
+        if ext in [".glb", ".gltf"]:
+            print(f"[Frank] Importing {ext.upper()} file...")
+            bpy.ops.import_scene.gltf(filepath=abs_path)
+            print(f"[Frank] Successfully imported {ext.upper()} file")
+        elif ext == ".obj":
+            print(f"[Frank] Importing OBJ file...")
+            bpy.ops.wm.obj_import(filepath=abs_path)
+            print(f"[Frank] Successfully imported OBJ file")
+        elif ext == ".dae":
+            print(f"[Frank] Importing DAE (Collada) file...")
+            bpy.ops.wm.collada_import(filepath=abs_path)
+            print(f"[Frank] Successfully imported DAE file")
+        elif ext == ".skp":
+            print("[Frank] Importing SKP (SketchUp) file...")
+            _import_skp(abs_path)
+            print("[Frank] Successfully imported SKP file")
+    finally:
+        os.chdir(old_cwd)
 
     # Count imported objects
     mesh_objects = [obj for obj in bpy.context.scene.objects if obj.type == "MESH"]
