@@ -498,6 +498,7 @@ export class Frank3DViewer {
 
     setPartMaterial(name, pbrProps) {
         if (!this.model) return;
+        pbrProps = pbrProps || {};
         
         this.model.traverse((child) => {
             if (child.isMesh) {
