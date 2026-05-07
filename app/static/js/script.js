@@ -234,9 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tags = tag ? [tag] : [];
 
                 btn.disabled = true;
-                btn.textContent = 'Importando...';
                 
-                for (const mtlMat of newMaterials) {
+                let textureErrors = [];
+
+                for (let i = 0; i < newMaterials.length; i++) {
+                    const mtlMat = newMaterials[i];
+                    btn.textContent = `Importando ${i + 1}/${newMaterials.length}...`;
+                    
                     const pbrProps = {
                         base_color: mtlMat.diffuse || [0.7, 0.7, 0.7, 1],
                         metallic: 0,
@@ -255,8 +259,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                     if (res.ok) {
                                         const data = await res.json();
                                         pbrProps[key] = data.filename;
+                                    } else {
+                                        textureErrors.push(basename);
                                     }
-                                } catch (err) { console.error(err); }
+                                } catch (err) {
+                                    console.error('[Frank] Upload error:', err);
+                                    textureErrors.push(basename);
+                                }
                             }
                         }
                     }
@@ -270,7 +279,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
                 
-                alert(`${newMaterials.length} materiais importados com sucesso!`);
+                let msg = `${newMaterials.length} materiais importados com sucesso!`;
+                if (textureErrors.length > 0) {
+                    msg += `\nAtenção: ${textureErrors.length} upload(s) de textura falharam.`;
+                    console.warn('[Frank] Falhas no upload de texturas:', textureErrors);
+                }
+                alert(msg);
+                
                 await reloadMaterials();
                 
                 if (viewer) {
