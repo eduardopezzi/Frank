@@ -203,26 +203,54 @@ document.addEventListener('DOMContentLoaded', () => {
             // Count missing textures
             let totalMaps = 0;
             let matchedMaps = 0;
-            newMaterials.forEach(m => {
+            
+            const materialsHtml = newMaterials.map(m => {
+                const maps = [];
                 if (m.maps) {
                     Object.values(m.maps).forEach(filename => {
                         totalMaps++;
-                        const basename = filename.split(/[/\\]/).pop().toLowerCase();
-                        if (selectedFiles.some(f => f.name.toLowerCase() === basename)) matchedMaps++;
+                        const basename = filename.split(/[/\\]/).pop();
+                        const found = selectedFiles.some(f => f.name.toLowerCase() === basename.toLowerCase());
+                        if (found) matchedMaps++;
+                        maps.push(`<span class="suggestion-map-badge" style="color:${found ? 'var(--success)' : 'var(--accent)'}">${basename}</span>`);
                     });
                 }
-            });
+                
+                return `
+                    <tr>
+                        <td style="padding: 4px;">${m.name}</td>
+                        <td style="padding: 4px; display: flex; flex-wrap: wrap; gap: 4px;">
+                            ${maps.length > 0 ? maps.join('') : '<span style="opacity:0.5; font-style:italic;">Sem texturas</span>'}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
 
             suggestionPanel.innerHTML = `
-                <div class="suggestion-text">
-                    📦 <strong>${newMaterials.length}</strong> novos materiais detectados.<br>
-                    <small style="color:${matchedMaps === totalMaps ? 'var(--success)' : 'var(--accent)'}">
-                        ${matchedMaps}/${totalMaps} texturas encontradas no pool.
-                    </small>
+                <div class="suggestion-header">
+                    <div class="suggestion-text">
+                        📦 <strong>${newMaterials.length}</strong> novos materiais detectados.<br>
+                        <small style="color:${matchedMaps === totalMaps ? 'var(--success)' : 'var(--accent)'}">
+                            ${matchedMaps}/${totalMaps} texturas encontradas no pool.
+                        </small>
+                    </div>
+                    <div class="suggestion-actions" style="display:flex; gap:0.5rem; align-items:center;">
+                        <input type="text" id="mtl-import-tag" placeholder="Tag (ex: Casa01)" class="search-input" style="width:120px; font-size:0.7rem; padding:4px;">
+                        <button class="btn-suggestion" id="btn-import-mtl" style="padding:4px 8px;">Importar Selecionados</button>
+                    </div>
                 </div>
-                <div class="suggestion-actions" style="display:flex; gap:0.5rem; align-items:center;">
-                    <input type="text" id="mtl-import-tag" placeholder="Tag (ex: Casa01)" class="search-input" style="width:120px; font-size:0.7rem; padding:4px;">
-                    <button class="btn-suggestion" id="btn-import-mtl" style="padding:4px 8px;">Importar Selecionados</button>
+                <div class="suggestion-list-container" style="max-height: 150px; overflow-y: auto; width: 100%;">
+                    <table class="suggestion-table" style="width: 100%; font-size: 0.7rem; text-align: left; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th style="padding: 4px;">Material</th>
+                                <th style="padding: 4px;">Mapeamento (Texturas)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${materialsHtml}
+                        </tbody>
+                    </table>
                 </div>
             `;
             suggestionPanel.style.display = 'flex';
