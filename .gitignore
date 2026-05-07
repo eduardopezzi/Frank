@@ -27,6 +27,7 @@ uploads/*
 outputs/*
 !uploads/.gitkeep
 !outputs/.gitkeep
+sample/
 
 # OS
 .DS_Store
