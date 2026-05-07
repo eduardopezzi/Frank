@@ -34,7 +34,7 @@ router = APIRouter()
 )
 async def submit_render(
     file: UploadFile = File(..., description="3D model file (.glb, .gltf, or .skp)"),
-    mtl_file: UploadFile = File(None, description="Optional .mtl file for OBJ models"),
+    extra_files: list[UploadFile] = File(None, description="Optional extra files (like .mtl and textures)"),
     samples: int = Form(default=None, description="Number of render samples"),
     resolution_x: int = Form(default=None, description="Output width in pixels"),
     resolution_y: int = Form(default=None, description="Output height in pixels"),
@@ -71,15 +71,17 @@ async def submit_render(
     try:
         input_path = storage_service.save_upload(content, file.filename)
         
-        # Save MTL if provided
-        if mtl_file:
-            mtl_content = await mtl_file.read()
-            # We must save it in the same directory as the OBJ
+        # Save extra files if provided
+        if extra_files:
             target_dir = os.path.dirname(input_path)
-            mtl_path = os.path.join(target_dir, mtl_file.filename)
-            with open(mtl_path, "wb") as f:
-                f.write(mtl_content)
-            logger.info(f"MTL file saved: {mtl_path}")
+            for extra in extra_files:
+                if not extra.filename: continue
+                # In FastAPI, an empty list element might be passed, so verify filename
+                extra_content = await extra.read()
+                extra_path = os.path.join(target_dir, extra.filename)
+                with open(extra_path, "wb") as f:
+                    f.write(extra_content)
+                logger.info(f"Extra file saved: {extra_path}")
             
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))

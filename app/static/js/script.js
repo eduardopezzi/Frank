@@ -406,9 +406,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            const btnLinkHtml = part.materialName ? 
-                `<button class="btn-link-tag" data-part="${part.name}" data-orig-mat="${part.materialName}" title="Memorizar este material para a tag '${part.materialName}'" style="padding:4px; font-size:12px; cursor:pointer; background:transparent; border:none;">💾</button>` : '';
-
             row.innerHTML = `
                 <span class="part-type-icon">${part.type === 'mesh' ? '📦' : '📁'}</span>
                 <span class="part-name" title="${part.name}">${part.name}</span>
@@ -418,56 +415,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <option value="">Padrão do Modelo</option>
                         ${allMaterials.map(m => `<option value="${m.material_id}" ${m.material_id === selectedMatId ? 'selected' : ''}>${m.name}</option>`).join('')}
                     </select>
-                    ${btnLinkHtml}
                 </div>
             `;
 
             const select = row.querySelector('select');
-            const btnLink = row.querySelector('.btn-link-tag');
-            if (btnLink) {
-                btnLink.style.display = selectedMatId ? 'inline-block' : 'none';
-                
-                btnLink.addEventListener('click', async (e) => {
-                    e.stopPropagation();
-                    const mid = select.value;
-                    const origMat = btnLink.dataset.origMat;
-                    if (!mid || !origMat) return;
-                    
-                    const matObj = allMaterials.find(m => m.material_id === mid);
-                    if (!matObj) return;
-                    
-                    const currentTags = matObj.tags || [];
-                    if (currentTags.includes(origMat)) {
-                        alert(`A tag '${origMat}' já está associada ao material '${matObj.name}'.`);
-                        return;
-                    }
-                    
-                    const newTags = [...currentTags, origMat];
-                    btnLink.disabled = true;
-                    btnLink.style.opacity = '0.5';
-                    try {
-                        const res = await fetch(`/materials/${mid}`, {
-                            method: 'PUT',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ tags: newTags })
-                        });
-                        if (res.ok) {
-                            alert(`Vínculo salvo! Sempre que o Frank encontrar a tag '${origMat}', ele usará '${matObj.name}'.`);
-                            await reloadMaterials();
-                        } else {
-                            throw new Error('Falha na API');
-                        }
-                    } catch (err) {
-                        console.error(err);
-                        alert('Erro ao salvar o vínculo.');
-                    } finally {
-                        btnLink.disabled = false;
-                        btnLink.style.opacity = '1';
-                    }
-                });
-            }
 
-            select.addEventListener('change', (e) => {
+            select.addEventListener('change', async (e) => {
                 const mid = e.target.value;
                 const swatch = document.getElementById(`swatch-${part.name}`);
                 if (mid) {
@@ -476,15 +429,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (matObj && viewer) {
                         viewer.setPartMaterial(part.name, matObj.pbr_properties);
                     }
+                    
+                    // Auto-Prompt for Material Learning
+                    if (matObj && part.materialName) {
+                        const origMat = part.materialName;
+                        const currentTags = matObj.tags || [];
+                        if (!currentTags.includes(origMat)) {
+                            if (confirm(`Deseja que o Frank memorize a tag '${origMat}' para sempre usar o material '${matObj.name}' automaticamente?`)) {
+                                const newTags = [...currentTags, origMat];
+                                try {
+                                    const res = await fetch(`/materials/${mid}`, {
+                                        method: 'PUT',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({ tags: newTags })
+                                    });
+                                    if (res.ok) {
+                                        console.log(`[Frank] Vínculo salvo: '${origMat}' -> '${matObj.name}'`);
+                                        await reloadMaterials();
+                                    }
+                                } catch (err) {
+                                    console.error("Erro ao salvar vínculo", err);
+                                }
+                            }
+                        }
+                    }
                 } else {
                     swatch.style.backgroundColor = 'transparent';
                     if (viewer) {
                         viewer.resetPartMaterial(part.name);
                     }
-                }
-                
-                if (btnLink) {
-                    btnLink.style.display = mid ? 'inline-block' : 'none';
                 }
             });
 
@@ -701,10 +674,20 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('camera_angle', document.getElementById('camera').value);
         }
 
-        // Include MTL file if available
+        // Append all extra files from the pool (textures, mtl, etc)
+        selectedFiles.forEach(f => {
+            if (f !== selectedFile) {
+                formData.append('extra_files', f);
+            }
+        });
+        
+        // Also include from mtl input if it was used separately
         const mtlInput = document.getElementById('mtl-file-input');
         if (mtlInput && mtlInput.files && mtlInput.files[0]) {
-            formData.append('mtl_file', mtlInput.files[0]);
+            const exists = selectedFiles.some(f => f.name === mtlInput.files[0].name);
+            if (!exists) {
+                formData.append('extra_files', mtlInput.files[0]);
+            }
         }
 
         const matIds = getSelectedMaterialIds();
