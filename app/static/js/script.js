@@ -462,39 +462,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
             select.addEventListener('change', async (e) => {
                 const mid = e.target.value;
-                const swatch = document.getElementById(`swatch-${part.name}`);
+                const swatch = row.querySelector('.part-swatch');
+                
                 if (mid) {
-                    swatch.style.backgroundColor = 'var(--success)';
                     const matObj = allMaterials.find(m => m.material_id === mid);
-                    if (matObj && viewer) {
-                        viewer.setPartMaterial(part.name, matObj.pbr_properties);
-                    }
                     
-                    // Auto-Prompt for Material Learning
-                    if (matObj && part.materialName) {
-                        const origMat = part.materialName;
-                        const currentTags = matObj.tags || [];
-                        if (!currentTags.includes(origMat)) {
-                            if (confirm(`Deseja que o Frank memorize a tag '${origMat}' para sempre usar o material '${matObj.name}' automaticamente?`)) {
-                                const newTags = [...currentTags, origMat];
-                                try {
-                                    const res = await fetch(`/materials/${mid}`, {
-                                        method: 'PUT',
-                                        headers: { 'Content-Type': 'application/json' },
-                                        body: JSON.stringify({ tags: newTags })
-                                    });
-                                    if (res.ok) {
-                                        console.log(`[Frank] Vínculo salvo: '${origMat}' -> '${matObj.name}'`);
-                                        await reloadMaterials();
+                    if (matObj) {
+                        // Apply to viewer
+                        if (viewer) {
+                            viewer.setPartMaterial(part.name, matObj.pbr_properties);
+                        }
+                        
+                        // Update swatch color
+                        const bc = matObj.pbr_properties?.base_color || [0.5, 0.5, 0.5, 1];
+                        swatch.style.background = `rgb(${Math.round(bc[0]*255)},${Math.round(bc[1]*255)},${Math.round(bc[2]*255)})`;
+                        swatch.style.borderColor = 'var(--accent)';
+                        row.classList.add('mapped');
+                        
+                        // Auto-Prompt for Material Learning
+                        if (part.materialName) {
+                            const origMat = part.materialName;
+                            const currentTags = matObj.tags || [];
+                            if (!currentTags.includes(origMat)) {
+                                if (confirm(`Deseja que o Frank memorize a tag '${origMat}' para sempre usar o material '${matObj.name}' automaticamente?`)) {
+                                    const newTags = [...currentTags, origMat];
+                                    try {
+                                        const res = await fetch(`/materials/${mid}`, {
+                                            method: 'PUT',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({ tags: newTags })
+                                        });
+                                        if (res.ok) {
+                                            console.log(`[Frank] Vínculo salvo: '${origMat}' -> '${matObj.name}'`);
+                                            await reloadMaterials();
+                                        }
+                                    } catch (err) {
+                                        console.error("Erro ao salvar vínculo", err);
                                     }
-                                } catch (err) {
-                                    console.error("Erro ao salvar vínculo", err);
                                 }
                             }
                         }
                     }
                 } else {
-                    swatch.style.backgroundColor = 'transparent';
+                    // Reset to default
+                    swatch.style.background = 'transparent';
+                    swatch.style.borderColor = 'var(--border)';
+                    row.classList.remove('mapped');
                     if (viewer) {
                         viewer.resetPartMaterial(part.name);
                     }
@@ -512,22 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (viewer) viewer.clearHighlight();
                 row.style.borderColor = 'var(--border)';
                 row.style.background = 'rgba(255, 255, 255, 0.03)';
-            });
-
-            select.addEventListener('change', (e) => {
-                const mid = e.target.value;
-                const swatch = row.querySelector('.part-swatch');
-                if (mid) {
-                    const m = allMaterials.find(x => x.material_id === mid);
-                    const bc = m.pbr_properties?.base_color || [0.5,0.5,0.5,1];
-                    swatch.style.background = `rgb(${Math.round(bc[0]*255)},${Math.round(bc[1]*255)},${Math.round(bc[2]*255)})`;
-                    swatch.style.borderColor = 'var(--accent)';
-                    row.classList.add('mapped');
-                } else {
-                    swatch.style.background = 'transparent';
-                    swatch.style.borderColor = 'var(--border)';
-                    row.classList.remove('mapped');
-                }
             });
 
             // --- Auto-Match Logic ---
@@ -559,13 +556,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            list.appendChild(row);
+
             if (matchedMaterial) {
                 select.value = matchedMaterial.material_id;
                 select.dispatchEvent(new Event('change'));
                 row.style.borderLeft = '4px solid var(--success)';
             }
-
-            list.appendChild(row);
         });
     }
 
