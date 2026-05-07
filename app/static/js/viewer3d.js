@@ -496,6 +496,54 @@ export class Frank3DViewer {
         });
     }
 
+    setPartMaterial(name, pbrProps) {
+        if (!this.model) return;
+        
+        this.model.traverse((child) => {
+            if (child.isMesh) {
+                if (child.name === name || (child.parent && child.parent.name === name)) {
+                    // Create a new material
+                    const bc = pbrProps.base_color || [0.7, 0.7, 0.7, 1];
+                    const colorStr = `rgb(${Math.round(bc[0]*255)},${Math.round(bc[1]*255)},${Math.round(bc[2]*255)})`;
+                    
+                    const newMat = new THREE.MeshStandardMaterial({
+                        color: new THREE.Color(colorStr),
+                        metalness: pbrProps.metallic !== undefined ? pbrProps.metallic : 0.0,
+                        roughness: pbrProps.roughness !== undefined ? pbrProps.roughness : 0.5
+                    });
+                    
+                    // We need to keep the original for resetPartMaterial
+                    if (!this.importedMaterials) {
+                        this.importedMaterials = new Map();
+                    }
+                    if (!this.importedMaterials.has(child.uuid)) {
+                        this.importedMaterials.set(child.uuid, this.originalMaterials.get(child.uuid));
+                    }
+                    
+                    child.material = newMat;
+                    // Update originalMaterials so clearHighlight restores this new material
+                    this.originalMaterials.set(child.uuid, newMat);
+                }
+            }
+        });
+    }
+
+    resetPartMaterial(name) {
+        if (!this.model || !this.importedMaterials) return;
+        
+        this.model.traverse((child) => {
+            if (child.isMesh) {
+                if (child.name === name || (child.parent && child.parent.name === name)) {
+                    const imported = this.importedMaterials.get(child.uuid);
+                    if (imported) {
+                        child.material = imported;
+                        this.originalMaterials.set(child.uuid, imported);
+                    }
+                }
+            }
+        });
+    }
+
     getModelStructure() {
         return this.structure || [];
     }
