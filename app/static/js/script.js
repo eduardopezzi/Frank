@@ -1,7 +1,7 @@
-import { Frank3DViewer } from './viewer3d.js?v=1.0.3';
-import { initTabs, switchTab, setBadge } from './tabs.js?v=1.0.3';
-import { initMaterials, getSelectedMaterialIds, removeSelection, getMaterialById, allMaterials, createMaterial, reloadMaterials, setRelevantMaterials } from './materials.js?v=1.0.3';
-import { MTLParser } from './mtl-parser.js?v=1.0.3';
+import { Frank3DViewer } from './viewer3d.js?v=1.0.4';
+import { initTabs, switchTab, setBadge } from './tabs.js?v=1.0.4';
+import { initMaterials, getSelectedMaterialIds, removeSelection, getMaterialById, allMaterials, createMaterial, reloadMaterials, setRelevantMaterials } from './materials.js?v=1.0.4';
+import { MTLParser } from './mtl-parser.js?v=1.0.4';
 
 document.addEventListener('DOMContentLoaded', () => {
     const dropzone = document.getElementById('dropzone');
