@@ -47,6 +47,8 @@ async def submit_render(
     db: Session = Depends(get_db),
 ):
     """Submit a .glb/.gltf/.skp file for rendering via Blender Cycles."""
+    
+    logger.info(f"[Frank] Received extra_files: {extra_files}")
 
     # Validate file extension
     if not file.filename:
@@ -61,6 +63,11 @@ async def submit_render(
 
     # Check file size
     content = await file.read()
+    
+    # Normalize line endings for OBJ/MTL to avoid Blender path resolution issues
+    if file.filename.lower().endswith(('.obj', '.mtl')):
+        content = content.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
+        
     if len(content) > settings.max_upload_size_bytes:
         raise HTTPException(
             status_code=413,
@@ -76,8 +83,12 @@ async def submit_render(
             target_dir = os.path.dirname(input_path)
             for extra in extra_files:
                 if not extra.filename: continue
-                # In FastAPI, an empty list element might be passed, so verify filename
                 extra_content = await extra.read()
+                
+                # Fix DOS line endings in MTL/OBJ files to avoid Blender path issues
+                if extra.filename.lower().endswith(('.mtl', '.obj')):
+                    extra_content = extra_content.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
+                
                 extra_path = os.path.join(target_dir, extra.filename)
                 with open(extra_path, "wb") as f:
                     f.write(extra_content)
