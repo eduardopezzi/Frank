@@ -219,7 +219,7 @@ export class Frank3DViewer {
     
     // ─── Model Loading ──────────────────────────────────────────
     
-    async loadFromFile(file) {
+    async loadFromFile(file, additionalFiles = []) {
         // Remove previous model
         if (this.model) {
             this.scene.remove(this.model);
@@ -236,7 +236,7 @@ export class Frank3DViewer {
                     await this._loadGLTF(url);
                     break;
                 case 'obj':
-                    await this._loadOBJ(url, file);
+                    await this._loadOBJ(url, file, additionalFiles);
                     break;
                 case 'dae':
                     await this._loadCollada(url, file);
@@ -275,42 +275,72 @@ export class Frank3DViewer {
         });
     }
 
-    _loadOBJ(url, file) {
+    _loadOBJ(url, file, additionalFiles = []) {
         return new Promise((resolve, reject) => {
-            // Read file as text and use parse() to avoid blob URL MIME issues
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                try {
-                    const loader = new OBJLoader();
-                    this.model = loader.parse(e.target.result);
-
-                    // Apply default PBR material to meshes without proper materials
-                    this.model.traverse((child) => {
-                        if (child.isMesh) {
-                            if (!child.material || child.material.type === 'MeshBasicMaterial' ||
-                                (child.material.type === 'MeshPhongMaterial' && !child.material.map)) {
-                                child.material = new THREE.MeshStandardMaterial({
-                                    color: 0x999999,
-                                    roughness: 0.5,
-                                    metalness: 0.1,
-                                });
-                            }
+            const mtlFile = additionalFiles.find(f => f.name.toLowerCase().endsWith('.mtl'));
+            
+            const parseOBJ = (materials = null) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const loader = new OBJLoader();
+                        if (materials) {
+                            loader.setMaterials(materials);
                         }
-                    });
+                        this.model = loader.parse(e.target.result);
 
-                    this._processLoadedModel();
+                        // Apply default PBR material to meshes without proper materials
+                        this.model.traverse((child) => {
+                            if (child.isMesh) {
+                                if (!child.material || child.material.type === 'MeshBasicMaterial' ||
+                                    (child.material.type === 'MeshPhongMaterial' && !child.material.map)) {
+                                    
+                                    // Preserve the material name parsed from the OBJ/MTL
+                                    const originalName = child.material ? child.material.name : child.name;
+                                    
+                                    child.material = new THREE.MeshStandardMaterial({
+                                        name: originalName, // VERY IMPORTANT: Keep the name so we can match it later!
+                                        color: 0x999999,
+                                        roughness: 0.5,
+                                        metalness: 0.1,
+                                    });
+                                }
+                            }
+                        });
+
+                        this._processLoadedModel();
+                        URL.revokeObjectURL(url);
+                        resolve();
+                    } catch (err) {
+                        URL.revokeObjectURL(url);
+                        reject(err);
+                    }
+                };
+                reader.onerror = () => {
                     URL.revokeObjectURL(url);
-                    resolve();
-                } catch (err) {
-                    URL.revokeObjectURL(url);
-                    reject(err);
-                }
+                    reject(new Error('Falha ao ler arquivo OBJ'));
+                };
+                reader.readAsText(file);
             };
-            reader.onerror = () => {
-                URL.revokeObjectURL(url);
-                reject(new Error('Falha ao ler arquivo OBJ'));
-            };
-            reader.readAsText(file);
+
+            if (mtlFile) {
+                const mtlReader = new FileReader();
+                mtlReader.onload = (e) => {
+                    try {
+                        const mtlLoader = new MTLLoader();
+                        const materials = mtlLoader.parse(e.target.result);
+                        materials.preload();
+                        parseOBJ(materials);
+                    } catch (err) {
+                        console.warn('[Frank3D] Failed to parse MTL, loading OBJ without materials', err);
+                        parseOBJ();
+                    }
+                };
+                mtlReader.onerror = () => parseOBJ();
+                mtlReader.readAsText(mtlFile);
+            } else {
+                parseOBJ();
+            }
         });
     }
 

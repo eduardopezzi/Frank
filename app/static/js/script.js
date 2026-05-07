@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropzone.querySelector('p').innerHTML = `Pronto: <strong>${modelFile.name}</strong><br><small style="color:var(--text-dim)">${selectedFiles.length} arquivos prontos para match</small>`;
 
         checkMtlSuggestions();
-        load3DPreview(modelFile);
+        load3DPreview(modelFile, selectedFiles);
 
         // Auto-parse MTL if present in the pool
         const mtlFile = selectedFiles.find(f => f.name.toLowerCase().endsWith('.mtl'));
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ─── 3D Preview ─────────────────────────────────────────────
-    async function load3DPreview(file) {
+    async function load3DPreview(file, additionalFiles = []) {
         const section = document.getElementById('viewer-section');
         const loading = document.getElementById('viewer-loading');
         const ext = file.name.split('.').pop().toLowerCase();
@@ -332,9 +332,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!res.ok) throw new Error('Falha na conversão para preview');
                 const blob = await res.blob();
                 const previewFile = new File([blob], 'preview.glb', { type: 'model/gltf-binary' });
-                await viewer.loadFromFile(previewFile);
+                await viewer.loadFromFile(previewFile, additionalFiles);
             } else {
-                await viewer.loadFromFile(file);
+                await viewer.loadFromFile(file, additionalFiles);
             }
 
             loading.style.display = 'none';
