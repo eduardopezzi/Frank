@@ -434,5 +434,185 @@ def configure_render_engine(scene, device="CPU", samples=64):
             print(f"[Frank] GPU setup failed: {e}, using CPU")
             scene.cycles.device = "CPU"
     else:
-        scene.cycles.device = "CPU"
         print("[Frank] Using CPU rendering")
+
+
+def apply_high_end_realism(target_objects, textures_path, hdri_path):
+    """
+    Expert-level PBR integration and Cycles optimization for Poly Haven assets.
+    
+    Args:
+        target_objects: List of bpy.types.Object to process
+        textures_path: Directory containing PBR textures (_diff_, _rough_, etc.)
+        hdri_path: Path to .hdr or .exr environment map
+    """
+    import bpy
+    import os
+    import math
+
+    scene = bpy.context.scene
+    
+    # --- 1. Cycles Engine & Color Management ---
+    scene.render.engine = 'CYCLES'
+    
+    # Force GPU Compute if possible
+    try:
+        scene.cycles.device = 'GPU'
+        # Get cycles preferences
+        prefs = bpy.context.preferences.addons['cycles'].preferences
+        prefs.get_devices()
+        
+        # Try to find the best available compute type (OPTIX > CUDA > METAL)
+        for c_type in ['OPTIX', 'CUDA', 'METAL', 'HIP']:
+            try:
+                prefs.compute_device_type = c_type
+                for dev in prefs.devices:
+                    dev.use = True
+                print(f"[Frank] GPU Compute enabled via {c_type}")
+                break
+            except:
+                continue
+    except Exception as e:
+        print(f"[Frank] GPU setup failed: {e}. Falling back to CPU.")
+        scene.cycles.device = 'CPU'
+
+    # Denoising (Force OpenImageDenoise)
+    scene.cycles.use_denoising = True
+    try:
+        scene.cycles.denoiser = 'OPENIMAGEDENOISE'
+    except:
+        pass
+    
+    # Color Management (Filmic High Contrast)
+    scene.view_settings.view_transform = 'Filmic'
+    scene.view_settings.look = 'Medium High Contrast'
+    scene.view_settings.exposure = 1.0
+
+    # --- 2. HDRI World Lighting ---
+    if hdri_path and os.path.exists(hdri_path):
+        if not scene.world:
+            scene.world = bpy.data.worlds.new("PolyHavenWorld")
+        scene.world.use_nodes = True
+        w_tree = scene.world.node_tree
+        w_nodes = w_tree.nodes
+        w_links = w_tree.links
+        
+        w_nodes.clear()
+        
+        w_out = w_nodes.new('ShaderNodeOutputWorld')
+        w_bg = w_nodes.new('ShaderNodeBackground')
+        w_bg.inputs['Strength'].default_value = 1.0
+        w_env = w_nodes.new('ShaderNodeTexEnvironment')
+        
+        try:
+            w_env.image = bpy.data.images.load(hdri_path)
+            w_links.new(w_env.outputs['Color'], w_bg.inputs['Color'])
+            w_links.new(w_bg.outputs['Background'], w_out.inputs['Surface'])
+            print(f"[Frank] Environment HDRI active: {os.path.basename(hdri_path)}")
+        except Exception as e:
+            print(f"[Frank] Error loading HDRI: {e}")
+
+    # --- 3. Geometry Refinement & PBR Mapping ---
+    for obj in target_objects:
+        if obj.type != 'MESH':
+            continue
+            
+        # 3.1 Surface Smoothing
+        # Set all polygons to smooth
+        for poly in obj.data.polygons:
+            poly.use_smooth = True
+        
+        # Auto Smooth (Legacy property for Blender 4.0 and below)
+        if hasattr(obj.data, "use_auto_smooth"):
+            obj.data.use_auto_smooth = True
+            obj.data.auto_smooth_angle = math.radians(30)
+            
+        # 3.2 Non-destructive Bevel
+        if "HighEndBevel" not in obj.modifiers:
+            bev = obj.modifiers.new(name="HighEndBevel", type='BEVEL')
+            bev.width = 0.005
+            bev.segments = 2
+            bev.limit_method = 'ANGLE'
+            bev.angle_limit = math.radians(30)
+
+        # 3.3 Intelligent PBR Mapping
+        for slot in obj.material_slots:
+            mat = slot.material
+            if not mat:
+                continue
+            
+            mat.use_nodes = True
+            m_nodes = mat.node_tree.nodes
+            m_links = mat.node_tree.links
+            m_nodes.clear()
+            
+            # Create core PBR nodes
+            node_out = m_nodes.new('ShaderNodeOutputMaterial')
+            node_pbr = m_nodes.new('ShaderNodeBsdfPrincipled')
+            node_pbr.location = (0, 0)
+            node_out.location = (300, 0)
+            m_links.new(node_pbr.outputs['BSDF'], node_out.inputs['Surface'])
+            
+            def find_tex(patterns):
+                if not os.path.isdir(textures_path):
+                    return None
+                for f in os.listdir(textures_path):
+                    if any(p.lower() in f.lower() for p in patterns):
+                        try:
+                            return bpy.data.images.load(os.path.join(textures_path, f))
+                        except:
+                            continue
+                return None
+
+            # Base Color & AO Integration
+            img_diff = find_tex(["_diff_", "_col_"])
+            img_ao = find_tex(["_ao_"])
+            
+            if img_diff:
+                tex_diff = m_nodes.new('ShaderNodeTexImage')
+                tex_diff.image = img_diff
+                tex_diff.image.colorspace_settings.name = 'sRGB'
+                tex_diff.location = (-600, 300)
+                
+                if img_ao:
+                    tex_ao = m_nodes.new('ShaderNodeTexImage')
+                    tex_ao.image = img_ao
+                    tex_ao.image.colorspace_settings.name = 'Non-Color'
+                    tex_ao.location = (-600, 0)
+                    
+                    # Multiply AO with Base Color
+                    node_mix = m_nodes.new('ShaderNodeMix')
+                    node_mix.data_type = 'RGBA'
+                    node_mix.blend_type = 'MULTIPLY'
+                    node_mix.inputs['Factor'].default_value = 1.0
+                    node_mix.location = (-300, 150)
+                    
+                    m_links.new(tex_diff.outputs['Color'], node_mix.inputs['A'])
+                    m_links.new(tex_ao.outputs['Color'], node_mix.inputs['B'])
+                    m_links.new(node_mix.outputs['Result'], node_pbr.inputs['Base Color'])
+                else:
+                    m_links.new(tex_diff.outputs['Color'], node_pbr.inputs['Base Color'])
+
+            # Roughness
+            img_rough = find_tex(["_rough_"])
+            if img_rough:
+                tex_rough = m_nodes.new('ShaderNodeTexImage')
+                tex_rough.image = img_rough
+                tex_rough.image.colorspace_settings.name = 'Non-Color'
+                tex_rough.location = (-300, -100)
+                m_links.new(tex_rough.outputs['Color'], node_pbr.inputs['Roughness'])
+
+            # Normal Mapping
+            img_nor = find_tex(["_nor_gl_", "_nor_"])
+            if img_nor:
+                tex_nor = m_nodes.new('ShaderNodeTexImage')
+                tex_nor.image = img_nor
+                tex_nor.image.colorspace_settings.name = 'Non-Color'
+                tex_nor.location = (-600, -350)
+                
+                node_nmap = m_nodes.new('ShaderNodeNormalMap')
+                node_nmap.location = (-300, -350)
+                m_links.new(tex_nor.outputs['Color'], node_nmap.inputs['Color'])
+                m_links.new(node_nmap.outputs['Normal'], node_pbr.inputs['Normal'])
+    
+    print(f"[Frank] High-end realism applied to {len(target_objects)} objects.")

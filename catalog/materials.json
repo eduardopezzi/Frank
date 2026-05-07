@@ -1893,7 +1893,9 @@
     "material_id": "wood__wood_jpg_mtl",
     "name": "Wood__Wood_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Wood__Wood_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -1921,14 +1923,16 @@
       "ao_map": null
     },
     "created_at": "2026-05-07 16:50:11.539379",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:20.546673",
     "sketchup_material_name": null
   },
   {
     "material_id": "wood_001_mtl",
     "name": "Wood_001",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Wood_001"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -1956,14 +1960,16 @@
       "ao_map": null
     },
     "created_at": "2026-05-07 16:50:11.551396",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:27:43.711638",
     "sketchup_material_name": null
   },
   {
     "material_id": "windowblue1__windowblue1_mtl",
     "name": "WindowBlue1__WindowBlue1",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "WindowBlue1__WindowBlue1"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -1991,14 +1997,16 @@
       "ao_map": "up_da3b3aca_WindowBlue1.jpg"
     },
     "created_at": "2026-05-07 18:32:35.827054",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:19.815673",
     "sketchup_material_name": null
   },
   {
     "material_id": "brick__greybricks_jpg_mtl",
     "name": "Brick__GreyBricks_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Brick__GreyBricks_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2026,14 +2034,16 @@
       "ao_map": "up_edf18fb3_GreyBricks2.jpg"
     },
     "created_at": "2026-05-07 18:32:35.880098",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:27:45.159576",
     "sketchup_material_name": null
   },
   {
     "material_id": "rustedmetal__rusted_metal_jpg_mtl",
     "name": "RustedMetal__Rusted_Metal_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "RustedMetal__Rusted_Metal_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2061,14 +2071,16 @@
       "ao_map": null
     },
     "created_at": "2026-05-07 18:32:35.889739",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:11.068878",
     "sketchup_material_name": null
   },
   {
     "material_id": "windowblue2__windowsblue2_jpg_mtl",
     "name": "WindowBlue2__WindowsBlue2_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "WindowBlue2__WindowsBlue2_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2096,14 +2108,16 @@
       "ao_map": "up_68849731_WindowsBlue2.jpg"
     },
     "created_at": "2026-05-07 18:32:35.914640",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:24.009306",
     "sketchup_material_name": null
   },
   {
     "material_id": "doortype1_2__doortype1_2_jpg_mtl",
     "name": "DoorType1_2__DoorType1_2_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "DoorType1_2__DoorType1_2_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2131,14 +2145,16 @@
       "ao_map": "up_1ab81bbc_DoorType1_2.jpg"
     },
     "created_at": "2026-05-07 18:32:35.952150",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:05.412424",
     "sketchup_material_name": null
   },
   {
     "material_id": "plaster__plasterlarge_jpg_mtl",
     "name": "Plaster__PlasterLarge_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Plaster__PlasterLarge_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2166,14 +2182,16 @@
       "ao_map": "up_770f85a4_PlasterLarge.jpg"
     },
     "created_at": "2026-05-07 18:32:36.020404",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:23.140036",
     "sketchup_material_name": null
   },
   {
     "material_id": "greystone2__greystone2_jpg_mtl",
     "name": "GreyStone2__GreyStone2_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "GreyStone2__GreyStone2_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2201,14 +2219,16 @@
       "ao_map": "up_6325ade5_Stone.jpg"
     },
     "created_at": "2026-05-07 18:32:36.049052",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:01.226032",
     "sketchup_material_name": null
   },
   {
     "material_id": "stone__stone_jpg_mtl",
     "name": "Stone__Stone_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Stone__Stone_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2236,14 +2256,16 @@
       "ao_map": "up_96f6f663_Stone.jpg"
     },
     "created_at": "2026-05-07 18:32:36.081283",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:07.038882",
     "sketchup_material_name": null
   },
   {
     "material_id": "greybrick2__greybricks2_jpg_mtl",
     "name": "GreyBrick2__GreyBricks2_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "GreyBrick2__GreyBricks2_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2271,14 +2293,16 @@
       "ao_map": "up_01236f2e_GreyBricks2.jpg"
     },
     "created_at": "2026-05-07 18:32:36.130131",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:09.823622",
     "sketchup_material_name": null
   },
   {
     "material_id": "rooftiles__rooftiles_jpg_mtl",
     "name": "RoofTiles__RoofTiles_jpg",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "RoofTiles__RoofTiles_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -2306,7 +2330,46 @@
       "ao_map": "up_77cbe3dd_RoofTiles.jpg"
     },
     "created_at": "2026-05-07 18:32:36.165905",
-    "updated_at": null,
+    "updated_at": "2026-05-07T19:28:22.490126",
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "ph_rough_wood",
+    "name": "Rough Wood",
+    "category": "wood",
+    "tags": [
+      "Wood__Wood_jpg",
+      "Wood_001",
+      "WindowBlue2__WindowsBlue2_jpg"
+    ],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.8,
+        0.8,
+        0.8,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "ph_rough_wood_base_color_map.jpg",
+      "roughness_map": "ph_rough_wood_roughness_map.jpg",
+      "metallic_map": null,
+      "normal_map": "ph_rough_wood_normal_map.jpg",
+      "displacement_map": "ph_rough_wood_displacement_map.jpg",
+      "ao_map": null
+    },
+    "created_at": "2026-05-07 22:17:06.570617",
+    "updated_at": "2026-05-07T22:19:16.498253",
     "sketchup_material_name": null
   }
 ]

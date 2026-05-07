@@ -446,15 +446,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            let initialSwatchStyle = 'background-color: transparent; border-color: var(--border);';
+            if (match) {
+                const bc = match.pbr_properties?.base_color || [0.5, 0.5, 0.5, 1];
+                initialSwatchStyle = `background-color: rgb(${Math.round(bc[0]*255)},${Math.round(bc[1]*255)},${Math.round(bc[2]*255)}); border-color: var(--accent);`;
+            }
+
             row.innerHTML = `
                 <span class="part-type-icon">${part.type === 'mesh' ? '📦' : '📁'}</span>
                 <span class="part-name" title="${part.name}">${part.name}</span>
-                <div class="part-swatch" id="swatch-${part.name}" style="background-color: ${selectedMatId ? 'var(--success)' : 'transparent'}"></div>
-                <div style="display:flex; gap:0.2rem; align-items:center;">
+                <div style="display:flex; gap:0.5rem; align-items:center; margin-left: auto;">
                     <select class="part-material-select" data-part="${part.name}">
                         <option value="">Padrão do Modelo</option>
                         ${allMaterials.map(m => `<option value="${m.material_id}" ${m.material_id === selectedMatId ? 'selected' : ''}>${m.name}</option>`).join('')}
                     </select>
+                    <div class="part-swatch" id="swatch-${part.name}" style="${initialSwatchStyle}"></div>
                 </div>
             `;
 
