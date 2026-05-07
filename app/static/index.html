@@ -3,99 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cycles | Render Dashboard</title>
+    <title>Frank | Render Dashboard</title>
+    <meta name="description" content="Frank Rendering Engine — Motor de renderização 3D com Blender Cycles, preview interativo e catálogo de materiais PBR.">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+        }
+    }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">
-            CYCLES <span>CORE</span>
+            Frank <span>CORE</span>
         </div>
         <div class="header-status">
             <span id="api-status" class="job-status status-completed">Online</span>
         </div>
     </header>
 
-    <main>
-        <section class="content-area">
-            <div class="card fade-in">
-                <h2>Novo Render</h2>
-                
-                <div class="dropzone" id="dropzone">
-                    <div class="dropzone-icon">📥</div>
-                    <p>Arraste seu arquivo <strong>.glb</strong>, <strong>.gltf</strong>, <strong>.obj</strong>, <strong>.dae</strong> ou <strong>.skp</strong> aqui</p>
-                    <p style="font-size: 0.8rem;">ou clique para selecionar</p>
-                    <input type="file" id="file-input" accept=".glb,.gltf,.obj,.dae,.skp">
-                </div>
+    <!-- ─── Tab Navigation ─────────────────────────────────────── -->
+    <nav class="tab-nav" id="tab-nav">
+        <button class="tab-btn active" data-tab="render">
+            <span class="tab-icon">🎨</span>
+            <span class="tab-label">Render</span>
+        </button>
+        <button class="tab-btn" data-tab="materials">
+            <span class="tab-icon">🧱</span>
+            <span class="tab-label">Materiais</span>
+            <span id="materials-badge" class="tab-badge" style="display:none;">0</span>
+        </button>
+        <button class="tab-btn" data-tab="gallery">
+            <span class="tab-icon">🖼️</span>
+            <span class="tab-label">Galeria</span>
+            <span id="gallery-badge" class="tab-badge" style="display:none;">0</span>
+        </button>
+        <button class="tab-btn" data-tab="queue">
+            <span class="tab-icon">⚡</span>
+            <span class="tab-label">Fila</span>
+            <span id="queue-badge" class="tab-badge" style="display:none;">0</span>
+        </button>
+    </nav>
 
-                <div id="file-info" style="margin-top: 1rem; display: none;">
-                    <p id="filename" style="font-weight: 600;"></p>
-                    <p id="filesize" style="font-size: 0.8rem; color: var(--text-dim);"></p>
-                </div>
+    <!-- ─── Tab Panels ─────────────────────────────────────────── -->
+    <main class="tab-main">
 
-                <div class="settings-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
-                    <div class="form-group">
-                        <label for="samples">Samples (Qualidade)</label>
-                        <input type="number" id="samples" value="64" min="1" max="1024">
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- TAB: RENDER                                           -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <div id="tab-render" class="tab-panel active">
+            <div class="tab-content">
+                <div class="card fade-in">
+                    <h2>Novo Render</h2>
+                    
+                    <div class="dropzone" id="dropzone">
+                        <div class="dropzone-icon">📥</div>
+                        <p>Arraste seu arquivo <strong>.glb</strong>, <strong>.gltf</strong>, <strong>.obj</strong>, <strong>.dae</strong> ou <strong>.skp</strong> aqui</p>
+                        <p style="font-size: 0.8rem;">ou clique para selecionar</p>
+                        <input type="file" id="file-input" hidden multiple accept=".glb,.gltf,.obj,.dae,.skp,.fbx,.mtl,.jpg,.jpeg,.png">
                     </div>
-                    <div class="form-group">
-                        <label for="device">Dispositivo</label>
-                        <select id="device">
-                            <option value="CPU">CPU (Estável)</option>
-                            <option value="GPU">GPU (Rápido)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="res-x">Largura (px)</label>
-                        <input type="number" id="res-x" value="1920">
-                    </div>
-                    <div class="form-group">
-                        <label for="res-y">Altura (px)</label>
-                        <input type="number" id="res-y" value="1080">
-                    </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="camera">Ângulo da Câmera</label>
-                    <select id="camera">
-                        <option value="auto">Automático (Smart Frame)</option>
-                        <option value="perspective">Perspectiva</option>
-                        <option value="front">Frente</option>
-                        <option value="top">Topo</option>
-                        <option value="side">Lateral</option>
-                    </select>
-                </div>
+                    <div id="file-info" style="margin-top: 1rem; display: none;">
+                        <p id="filename" style="font-weight: 600;"></p>
+                        <p id="filesize" style="font-size: 0.8rem; color: var(--text-dim);"></p>
+                    </div>
 
-                <button id="btn-render" class="btn" disabled>Iniciar Renderização</button>
+                    <!-- ─── 3D Preview Viewer ─────────────────────────────── -->
+                    <div id="viewer-section" class="viewer-section" style="display: none;">
+                        <div class="viewer-header">
+                            <h3>
+                                <span class="viewer-icon">🎥</span>
+                                Preview 3D — Posicione a Câmera
+                            </h3>
+                            <div class="viewer-badge">Interativo</div>
+                        </div>
+
+                        <div id="viewer-container" class="viewer-container">
+                            <div id="viewer-loading" class="viewer-loading">
+                                <div class="viewer-spinner"></div>
+                                <p>Carregando modelo...</p>
+                            </div>
+                        </div>
+
+                        <!-- Viewer Toolbar -->
+                        <div class="viewer-toolbar">
+                            <div class="viewer-presets">
+                                <button class="preset-btn active" data-preset="perspective" title="Perspectiva">
+                                    <span>◣</span> Perspectiva
+                                </button>
+                                <button class="preset-btn" data-preset="front" title="Frente">
+                                    <span>▣</span> Frente
+                                </button>
+                                <button class="preset-btn" data-preset="top" title="Topo">
+                                    <span>▥</span> Topo
+                                </button>
+                                <button class="preset-btn" data-preset="side" title="Lateral">
+                                    <span>▤</span> Lateral
+                                </button>
+                                <button class="preset-btn" data-preset="back" title="Traseira">
+                                    <span>▢</span> Traseira
+                                </button>
+                            </div>
+                            <div class="viewer-actions">
+                                <button id="btn-reset-camera" class="viewer-action-btn" title="Resetar câmera">
+                                    ↻ Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ─── Section 1: Material Mapping (Prioritized) ────────── -->
+                        <div class="viewer-section-group" id="model-structure-section">
+                            <div class="section-header-mini">
+                                <span class="v-label">🧱 Mapeamento de Materiais <span id="v-part-badge" class="v-badge">0</span></span>
+                                <button id="btn-open-mtl" class="btn-suggestion">🔗 Importar de .MTL</button>
+                            </div>
+                            <div id="mapping-suggestions" class="mapping-suggestions"></div>
+                            <div id="model-parts-list" class="model-parts-list-mini">
+                                <!-- Populated by JS -->
+                                <div class="parts-empty">Aguardando carregamento do modelo...</div>
+                            </div>
+                        </div>
+
+                        <!-- ─── Section 2: Camera Adjustments (Compact) ───────── -->
+                        <div class="viewer-section-group" style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;">
+                            <div class="camera-compact-grid">
+                                <div class="camera-col">
+                                    <div class="camera-header-row">
+                                        <label>📍 Posição (X, Y, Z)</label>
+                                        <div class="precision-toggle">
+                                            <input type="checkbox" id="check-precision" class="toggle-input">
+                                            <label for="check-precision" class="toggle-label">Precisão</label>
+                                        </div>
+                                    </div>
+                                    <div class="coord-row">
+                                        <div class="input-nudge">
+                                            <input type="number" id="cam-pos-x" step="0.1" class="coord-input" title="X">
+                                            <div class="nudge-btns"><button data-id="cam-pos-x" data-dir="1">▴</button><button data-id="cam-pos-x" data-dir="-1">▾</button></div>
+                                        </div>
+                                        <div class="input-nudge">
+                                            <input type="number" id="cam-pos-y" step="0.1" class="coord-input" title="Y">
+                                            <div class="nudge-btns"><button data-id="cam-pos-y" data-dir="1">▴</button><button data-id="cam-pos-y" data-dir="-1">▾</button></div>
+                                        </div>
+                                        <div class="input-nudge">
+                                            <input type="number" id="cam-pos-z" step="0.1" class="coord-input" title="Z">
+                                            <div class="nudge-btns"><button data-id="cam-pos-z" data-dir="1">▴</button><button data-id="cam-pos-z" data-dir="-1">▾</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="camera-col">
+                                    <label>🎯 Alvo (X, Y, Z)</label>
+                                    <div class="coord-row">
+                                        <div class="input-nudge">
+                                            <input type="number" id="cam-target-x" step="0.1" class="coord-input" title="X">
+                                            <div class="nudge-btns"><button data-id="cam-target-x" data-dir="1">▴</button><button data-id="cam-target-x" data-dir="-1">▾</button></div>
+                                        </div>
+                                        <div class="input-nudge">
+                                            <input type="number" id="cam-target-y" step="0.1" class="coord-input" title="Y">
+                                            <div class="nudge-btns"><button data-id="cam-target-y" data-dir="1">▴</button><button data-id="cam-target-y" data-dir="-1">▾</button></div>
+                                        </div>
+                                        <div class="input-nudge">
+                                            <input type="number" id="cam-target-z" step="0.1" class="coord-input" title="Z">
+                                            <div class="nudge-btns"><button data-id="cam-target-z" data-dir="1">▴</button><button data-id="cam-target-z" data-dir="-1">▾</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="camera-col fov-mini">
+                                    <label for="fov-slider">FOV: <span id="fov-value">60°</span></label>
+                                    <input type="range" id="fov-slider" min="10" max="120" value="60" class="fov-range-mini">
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="viewer-hint">
+                            🖱️ Arrastar = Rotacionar &nbsp;|&nbsp; Scroll = Zoom &nbsp;|&nbsp; Botão direito = Mover
+                        </p>
+
+                        <div class="settings-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
+                            <div class="form-group">
+                                <label for="samples">Samples (Qualidade)</label>
+                                <input type="number" id="samples" value="64" min="1" max="1024">
+                            </div>
+                            <div class="form-group">
+                                <label for="device">Dispositivo</label>
+                                <select id="device">
+                                    <option value="CPU">CPU (Estável)</option>
+                                    <option value="GPU">GPU (Rápido)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-x">Largura (px)</label>
+                                <input type="number" id="res-x" value="1280">
+                            </div>
+                            <div class="form-group">
+                                <label for="res-y">Altura (px)</label>
+                                <input type="number" id="res-y" value="720">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="camera-preset-group" style="margin-top: 1.5rem;">
+                            <label for="camera">Ângulo da Câmera</label>
+                            <select id="camera">
+                                <option value="custom" id="camera-custom-option" style="display: none;">Customizado (via Preview 3D)</option>
+                                <option value="auto">Automático (Smart Frame)</option>
+                                <option value="perspective">Perspectiva</option>
+                                <option value="front">Frente</option>
+                                <option value="top">Topo</option>
+                                <option value="side">Lateral</option>
+                            </select>
+                        </div>
+
+                        <!-- Hidden fields for custom camera data -->
+                        <input type="hidden" id="camera-position" value="">
+                        <input type="hidden" id="camera-target" value="">
+                        <input type="hidden" id="camera-fov" value="">
+
+                        <input type="file" id="mtl-file-input" accept=".mtl" hidden>
+                    </div>
+                    <!-- ─── End 3D Preview ────────────────────────────────── -->
+
+                    <!-- Selected Materials Display (Legacy/Global) -->
+                    <div id="selected-materials-section" class="selected-materials-section" style="display: none; border-color: var(--border); background: none;">
+                        <label>Materiais Selecionados (Global)</label>
+                        <div id="selected-materials-chips" class="material-chips"></div>
+                        <p class="material-chips-hint">Clique em uma parte acima para aplicar um material específico.</p>
+                    </div>
+
+                    <button id="btn-render" class="btn" disabled>Iniciar Renderização</button>
+                </div>
             </div>
+        </div>
 
-            <div class="gallery-container fade-in" style="margin-top: 3rem;">
-                <h2 style="display: flex; justify-content: space-between; align-items: center;">
-                    Galeria de Resultados
-                    <button id="btn-refresh" style="background: none; border: none; color: var(--accent); cursor: pointer; font-size: 0.8rem;">Atualizar</button>
-                </h2>
-                <div class="gallery" id="results-gallery">
-                    <!-- Renders appear here -->
-                    <div id="no-results" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">
-                        Nenhum render concluído ainda.
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- TAB: MATERIALS                                        -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <div id="tab-materials" class="tab-panel">
+            <div class="tab-content">
+                <div class="card fade-in">
+                    <div class="materials-header">
+                        <h2>Catálogo de Materiais PBR</h2>
+                        <button id="btn-new-material" class="btn btn-sm">+ Novo Material</button>
+                    </div>
+
+                    <!-- Search & Filters -->
+                    <div class="materials-toolbar">
+                        <div class="materials-search">
+                            <input type="text" id="material-search" placeholder="Buscar materiais..." class="search-input">
+                        </div>
+                        <div class="materials-categories" id="material-categories">
+                            <button class="cat-btn active" data-category="">Todos</button>
+                            <!-- Categories populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Materials Grid -->
+                    <div class="materials-grid" id="materials-grid">
+                        <!-- Material cards populated by JS -->
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <aside class="sidebar fade-in" style="animation-delay: 0.2s;">
-            <div class="card" style="height: 100%;">
-                <h2>Fila de Processamento</h2>
-                <div class="jobs-list" id="jobs-list">
-                    <!-- Jobs appear here -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- TAB: GALLERY                                          -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <div id="tab-gallery" class="tab-panel">
+            <div class="tab-content">
+                <div class="card fade-in">
+                    <div class="gallery-header-row">
+                        <h2>Galeria de Resultados <span id="gallery-count" class="gallery-count-badge"></span></h2>
+                        <button id="btn-refresh" class="gallery-refresh-btn" title="Atualizar galeria">↻ Atualizar</button>
+                    </div>
+                    <div class="gallery" id="results-gallery">
+                        <!-- Gallery items loaded from database -->
+                    </div>
                 </div>
             </div>
-        </aside>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- TAB: QUEUE                                            -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <div id="tab-queue" class="tab-panel">
+            <div class="tab-content">
+                <div class="card fade-in">
+                    <h2>Fila de Processamento</h2>
+                    <div class="jobs-list" id="jobs-list">
+                        <div class="queue-empty" id="queue-empty">
+                            <div class="queue-empty-icon">⚡</div>
+                            <p>Nenhum job em processamento.</p>
+                            <p class="queue-empty-hint">Envie um render na aba Render para iniciar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <script src="/static/js/script.js"></script>
+    <!-- ─── Material Modal ─────────────────────────────────────── -->
+    <div id="material-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; width: 95%;">
+        <div class="modal-header">
+            <h2 id="modal-title">Novo Material</h2>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        
+        <div class="modal-tabs" style="display: flex; border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+            <button id="tab-btn-manual" class="modal-tab-btn active" onclick="switchModalTab('manual')">Criar / Gerar (IA)</button>
+            <button id="tab-btn-polyhaven" class="modal-tab-btn" onclick="switchModalTab('polyhaven')">Biblioteca Poly Haven</button>
+        </div>
+
+        <!-- TAB: MANUAL / IA -->
+        <div id="modal-tab-manual" class="modal-tab-content">
+            <form id="material-form">
+                <div class="modal-body">
+                    <div class="pbr-gen-section" style="margin-bottom: 1.5rem; padding: 1rem; border: 1px dashed var(--accent); border-radius: 8px;">
+                        <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--accent);">✨ Geração Inteligente (IA/OpenCV)</p>
+                        <div id="gen-dropzone" class="gen-dropzone">
+                            <span>📸 Arraste ou clique para gerar mapas (Albedo, Normal, etc)</span>
+                            <input type="file" id="gen-file-input" accept="image/*" hidden>
+                        </div>
+                        <div id="gen-loading" style="display: none;" class="gen-loading">
+                            <div class="viewer-spinner" style="width: 20px; height: 20px; border-width: 2px;"></div>
+                            <span>Processando imagem com OpenCV...</span>
+                        </div>
+                        <div id="gen-results" style="display: none; margin-top: 1rem; font-size: 0.8rem; color: var(--success);">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="modal-form-grid">
+                        <div class="form-group">
+                            <label for="mat-id">ID (slug)</label>
+                            <input type="text" id="mat-id" placeholder="ex: wood_oak_01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-name">Nome</label>
+                            <input type="text" id="mat-name" placeholder="ex: Carvalho Natural" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-category">Categoria</label>
+                            <select id="mat-category" required>
+                                <option value="concrete">Concreto</option>
+                                <option value="wood">Madeira</option>
+                                <option value="glass">Vidro</option>
+                                <option value="metal">Metal</option>
+                                <option value="wall">Parede</option>
+                                <option value="floor">Piso</option>
+                                <option value="stone">Pedra</option>
+                                <option value="custom">Outra (Digitar nova...)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="mat-category-custom-group" style="display: none;">
+                            <label for="mat-category-custom">Nome da Nova Categoria</label>
+                            <input type="text" id="mat-category-custom" placeholder="ex: Tecido">
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-tags">Tags (vírgula)</label>
+                            <input type="text" id="mat-tags" placeholder="interior, modern, warm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mat-desc">Descrição</label>
+                        <input type="text" id="mat-desc" placeholder="Breve descrição do material">
+                    </div>
+
+                    <h4 class="modal-section-title">Propriedades PBR</h4>
+                    <div class="modal-form-grid modal-form-grid-3">
+                        <div class="form-group">
+                            <label for="mat-color">Cor Base</label>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <input type="color" id="mat-color" value="#888888" class="color-input">
+                                <div id="mat-texture-preview" class="mat-texture-preview-box" title="Textura atual"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-metallic">Metálico</label>
+                            <input type="range" id="mat-metallic" min="0" max="100" value="0" class="pbr-range">
+                            <span class="pbr-range-value" id="mat-metallic-val">0%</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-roughness">Rugosidade</label>
+                            <input type="range" id="mat-roughness" min="0" max="100" value="50" class="pbr-range">
+                            <span class="pbr-range-value" id="mat-roughness-val">50%</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-alpha">Opacidade</label>
+                            <input type="range" id="mat-alpha" min="0" max="100" value="100" class="pbr-range">
+                            <span class="pbr-range-value" id="mat-alpha-val">100%</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-ior">IOR</label>
+                            <input type="number" id="mat-ior" value="1.45" step="0.01" min="1" max="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="mat-transmission">Transmissão</label>
+                            <input type="range" id="mat-transmission" min="0" max="100" value="0" class="pbr-range">
+                            <span class="pbr-range-value" id="mat-transmission-val">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
+                    <button type="submit" class="btn" id="btn-submit-material">Criar Material</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- TAB: POLY HAVEN -->
+        <div id="modal-tab-polyhaven" class="modal-tab-content" style="display: none;">
+            <div class="modal-body">
+                <div class="ph-search-container">
+                    <div class="ph-search-wrapper">
+                        <input type="text" id="ph-search-input" placeholder="O que você está procurando? (ex: wood, brick, concrete)...">
+                        <button class="ph-search-btn" onclick="searchPolyHaven()">
+                            <span>🔍</span> BUSCAR
+                        </button>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 0.85rem;">
+                        <span style="color: var(--text-muted);">Resolução desejada:</span>
+                        <select id="ph-res" class="form-input" style="width: 100px; padding: 4px;">
+                            <option value="1k">1k (Rápido)</option>
+                            <option value="2k">2k (Médio)</option>
+                            <option value="4k">4k (Alta)</option>
+                        </select>
+                    </div>
+                    <div id="ph-results" class="ph-results-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; height: 400px; overflow-y: auto; padding: 0.5rem;">
+                        <div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">
+                            Encontre milhares de materiais PBR profissionais.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="module" src="/static/js/script.js?v=1.0.3"></script>
 </body>
 </html>
