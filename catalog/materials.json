@@ -1958,5 +1958,355 @@
     "created_at": "2026-05-07 16:50:11.551396",
     "updated_at": null,
     "sketchup_material_name": null
+  },
+  {
+    "material_id": "windowblue1__windowblue1_mtl",
+    "name": "WindowBlue1__WindowBlue1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_36762d29_WindowBlue1.jpg",
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": "up_dd302890_WindowBlue1.jpg",
+      "displacement_map": null,
+      "ao_map": "up_da3b3aca_WindowBlue1.jpg"
+    },
+    "created_at": "2026-05-07 18:32:35.827054",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "brick__greybricks_jpg_mtl",
+    "name": "Brick__GreyBricks_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_fdb7dccf_GreyBricks2.jpg",
+      "roughness_map": "up_e738344d_GreyBricks2.jpg",
+      "metallic_map": null,
+      "normal_map": "up_268eb9c3_GreyBricks2.jpg",
+      "displacement_map": null,
+      "ao_map": "up_edf18fb3_GreyBricks2.jpg"
+    },
+    "created_at": "2026-05-07 18:32:35.880098",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "rustedmetal__rusted_metal_jpg_mtl",
+    "name": "RustedMetal__Rusted_Metal_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-07 18:32:35.889739",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "windowblue2__windowsblue2_jpg_mtl",
+    "name": "WindowBlue2__WindowsBlue2_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_24a7b1bf_WindowsBlue2.jpg",
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": "up_c56f1fa1_WindowsBlue2.jpg",
+      "displacement_map": null,
+      "ao_map": "up_68849731_WindowsBlue2.jpg"
+    },
+    "created_at": "2026-05-07 18:32:35.914640",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "doortype1_2__doortype1_2_jpg_mtl",
+    "name": "DoorType1_2__DoorType1_2_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_d9590c0b_DoorType1_2.jpg",
+      "roughness_map": "up_10b7f13a_DoorType1_2.jpg",
+      "metallic_map": null,
+      "normal_map": "up_a717e76f_DoorType1_2.jpg",
+      "displacement_map": null,
+      "ao_map": "up_1ab81bbc_DoorType1_2.jpg"
+    },
+    "created_at": "2026-05-07 18:32:35.952150",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "plaster__plasterlarge_jpg_mtl",
+    "name": "Plaster__PlasterLarge_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_a16f6aca_PlasterLarge.jpg",
+      "roughness_map": "up_fd2d47ba_PlasterLarge.jpg",
+      "metallic_map": null,
+      "normal_map": "up_8570c320_PlasterLarge.jpg",
+      "displacement_map": null,
+      "ao_map": "up_770f85a4_PlasterLarge.jpg"
+    },
+    "created_at": "2026-05-07 18:32:36.020404",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "greystone2__greystone2_jpg_mtl",
+    "name": "GreyStone2__GreyStone2_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_43395d85_Stone.jpg",
+      "roughness_map": "up_c6db2719_Stone.jpg",
+      "metallic_map": null,
+      "normal_map": "up_13ecc899_Stone.jpg",
+      "displacement_map": null,
+      "ao_map": "up_6325ade5_Stone.jpg"
+    },
+    "created_at": "2026-05-07 18:32:36.049052",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "stone__stone_jpg_mtl",
+    "name": "Stone__Stone_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_9b05488b_Stone.jpg",
+      "roughness_map": "up_1f5aa0c6_Stone.jpg",
+      "metallic_map": null,
+      "normal_map": "up_bbc87532_Stone.jpg",
+      "displacement_map": null,
+      "ao_map": "up_96f6f663_Stone.jpg"
+    },
+    "created_at": "2026-05-07 18:32:36.081283",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "greybrick2__greybricks2_jpg_mtl",
+    "name": "GreyBrick2__GreyBricks2_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_1c5dbc8b_GreyBricks2.jpg",
+      "roughness_map": "up_4ff79e2c_GreyBricks2.jpg",
+      "metallic_map": null,
+      "normal_map": "up_4de6a467_GreyBricks2.jpg",
+      "displacement_map": null,
+      "ao_map": "up_01236f2e_GreyBricks2.jpg"
+    },
+    "created_at": "2026-05-07 18:32:36.130131",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "rooftiles__rooftiles_jpg_mtl",
+    "name": "RoofTiles__RoofTiles_jpg",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.96,
+        0.96,
+        0.96,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": "up_afa112ce_RoofTiles.jpg",
+      "roughness_map": "up_25087a1e_RoofTiles.jpg",
+      "metallic_map": null,
+      "normal_map": "up_66c24c7e_RoofTiles.jpg",
+      "displacement_map": null,
+      "ao_map": "up_77cbe3dd_RoofTiles.jpg"
+    },
+    "created_at": "2026-05-07 18:32:36.165905",
+    "updated_at": null,
+    "sketchup_material_name": null
   }
 ]

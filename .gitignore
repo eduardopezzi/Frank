@@ -28,6 +28,8 @@ outputs/*
 !uploads/.gitkeep
 !outputs/.gitkeep
 sample/
+catalog/materials.json
+catalog/textures/*
 
 # OS
 .DS_Store

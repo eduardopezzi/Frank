@@ -207,8 +207,11 @@ O catálogo vem com materiais comuns para projetos de arquitetura:
 - [ ] Storage Cloud services (TBD - AWS S3, Google Cloud 
 Storage, etc.) para produção
 - [ ] Authentication and Authorization: criate a user access with login and register and create a role admin. Think to use some google oauth to make it more easy to use. 
+- [ ] para cada render feito, criar meta dados com os materiais usados, posicao da camera e outros parametros que possamos usar para reconstruir a cena e editar ela depois.
+    - [ ] criar um sistema de versionamento dos renders e materiais 
     
 - [ ] UI/UX Improvement:
+    - [ ] implementar gestao de projetos (cada projeto podera conter renders, materiais, configuracoes, etc) onde cada projeto tera um nome, descricao, data de criacao, data de atualizacao, materiais usados, moodboard, referencia de imagem etc. O usuário tera uma sessao anterior da que existe hoje que tera que selecionar o projeto que ele quer editar ou criar um novo.
     - [ ] Responsive design
     - [ ] Drag and drop improvement
     - [ ] Notifications
