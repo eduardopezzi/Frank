@@ -133,6 +133,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ─── Clear Pool Button ───────────────────────────────────────
+    const btnClearPool = document.getElementById('btn-clear-pool');
+    if (btnClearPool) {
+        btnClearPool.addEventListener('click', () => {
+            selectedFiles = [];
+            mtlMaterials = [];
+            selectedFile = null;
+            
+            fileInfo.style.display = 'none';
+            document.getElementById('model-structure-section').style.display = 'none';
+            btnRender.disabled = true;
+            
+            dropzone.style.borderColor = 'var(--border)';
+            dropzone.querySelector('p').innerHTML = `Arraste seu arquivo <strong>.glb</strong>, <strong>.gltf</strong>, <strong>.obj</strong>, <strong>.dae</strong> ou <strong>.skp</strong> aqui`;
+            
+            hideMtlSuggestions();
+            if (viewer) {
+                viewer.dispose();
+                viewer = null;
+                document.getElementById('viewer-section').style.display = 'none';
+            }
+            console.log('[Frank] Pool de arquivos limpo da memória.');
+        });
+    }
+
     // ─── MTL Import Button ───────────────────────────────────────
     const btnOpenMtl = document.getElementById('btn-open-mtl');
     const mtlFileInput = document.getElementById('mtl-file-input');
