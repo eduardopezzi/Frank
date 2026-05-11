@@ -2,52 +2,39 @@ import os
 import logging
 from typing import List, Dict, Any, Optional
 import numpy as np
-from PIL import Image
-from sentence_transformers import SentenceTransformer, util
+from ai_services.alibaba_adapter import get_alibaba_service
 
 logger = logging.getLogger(__name__)
 
 class EmbeddingEngine:
     """
     Handles multimodal embeddings for material matching.
-    Uses CLIP (Contrastive Language-Image Pre-training).
+    Refactored to use Alibaba Cloud DashScope API instead of local CLIP.
     """
 
-    def __init__(self, model_name: str = "clip-ViT-B-32"):
-        self.model_name = model_name
-        self.model = None
-        self._load_model()
-
-    def _load_model(self):
-        try:
-            logger.info(f"Loading CLIP model: {self.model_name}...")
-            self.model = SentenceTransformer(self.model_name)
-            logger.info("Model loaded successfully.")
-        except Exception as e:
-            logger.error(f"Failed to load embedding model: {e}")
+    def __init__(self, model_name: Optional[str] = None):
+        from app.config import settings
+        self.model_name = model_name or settings.dashscope_embedding_model
+        self.service = get_alibaba_service()
+        logger.info(f"EmbeddingEngine initialized with Alibaba API ({self.model_name})")
 
     def get_text_embedding(self, text: str) -> np.ndarray:
         """Returns normalized embedding for text."""
-        if not self.model: return np.array([])
-        return self.model.encode(text, convert_to_numpy=True, normalize_embeddings=True)
+        emb = self.service.get_multimodal_embedding(text=text)
+        return np.array(emb) if emb else np.array([])
 
     def get_image_embedding(self, image_path: str) -> np.ndarray:
         """Returns normalized embedding for an image."""
-        if not self.model: return np.array([])
-        try:
-            img = Image.open(image_path)
-            return self.model.encode(img, convert_to_numpy=True, normalize_embeddings=True)
-        except Exception as e:
-            logger.error(f"Error encoding image {image_path}: {e}")
-            return np.array([])
+        emb = self.service.get_multimodal_embedding(image_path=image_path)
+        return np.array(emb) if emb else np.array([])
 
     def find_best_matches(self, query_text: str, candidate_materials: List[Dict[str, Any]], top_k: int = 3) -> List[Dict[str, Any]]:
         """
         Ranks materials based on semantic similarity between query text and material metadata.
         """
-        if not self.model: return []
-        
         query_emb = self.get_text_embedding(query_text)
+        if query_emb.size == 0: return []
+        
         results = []
 
         for mat in candidate_materials:
@@ -55,10 +42,15 @@ class EmbeddingEngine:
             mat_info = f"{mat.get('name', '')} {mat.get('category', '')} {' '.join(mat.get('tags', []))}"
             mat_emb = self.get_text_embedding(mat_info)
             
-            score = util.cos_sim(query_emb, mat_emb).item()
+            if mat_emb.size == 0:
+                continue
+
+            # Cosine similarity
+            score = np.dot(query_emb, mat_emb) / (np.linalg.norm(query_emb) * np.linalg.norm(mat_emb) + 1e-8)
+            
             results.append({
                 "material_id": mat.get("material_id"),
-                "score": score,
+                "score": float(score),
                 "material": mat
             })
 

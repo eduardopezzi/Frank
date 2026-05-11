@@ -47,7 +47,7 @@ settings.ensure_directories()
 # Routers
 app.include_router(render.router, prefix="/render", tags=["Rendering"])
 app.include_router(materials.router, prefix="/materials", tags=["Materials"])
-app.include_router(ai_design.router, prefix="/ai", tags=["AI Design"])
+app.include_router(ai_design.router, prefix="/ai-design", tags=["AI Design"])
 
 # Static files
 app.mount("/static", StaticFiles(directory="app/static"), name="static")

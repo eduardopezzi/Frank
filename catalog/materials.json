@@ -38,7 +38,9 @@
     "material_id": "frontcolor_mtl",
     "name": "FrontColor",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "FrontColor"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -66,7 +68,7 @@
       "ao_map": null
     },
     "created_at": "2026-05-04 19:00:51.048794",
-    "updated_at": null,
+    "updated_at": "2026-05-11T11:05:28.083321",
     "sketchup_material_name": null
   },
   {
@@ -493,7 +495,9 @@
     "material_id": "_4_mtl",
     "name": "_4",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "_7Akuminioclaro"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -521,7 +525,7 @@
       "ao_map": null
     },
     "created_at": "2026-05-04 19:00:51.642381",
-    "updated_at": null,
+    "updated_at": "2026-05-11T11:08:02.260469",
     "sketchup_material_name": null
   },
   {
@@ -668,7 +672,9 @@
     "material_id": "madeira_carvalho20__mtl",
     "name": "madeira_carvalho20_",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Wood__Wood_jpg"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -696,7 +702,7 @@
       "ao_map": null
     },
     "created_at": "2026-05-04 19:00:51.908598",
-    "updated_at": null,
+    "updated_at": "2026-05-11T00:27:41.892471",
     "sketchup_material_name": null
   },
   {
@@ -1193,7 +1199,9 @@
     "material_id": "_1_mtl",
     "name": "_1",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "_7Akuminioclaro"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -1221,7 +1229,7 @@
       "ao_map": null
     },
     "created_at": "2026-05-04 19:00:52.868362",
-    "updated_at": null,
+    "updated_at": "2026-05-11T11:08:08.857586",
     "sketchup_material_name": null
   },
   {
@@ -1438,7 +1446,9 @@
     "material_id": "ceramica_mtl",
     "name": "ceramica",
     "category": "other",
-    "tags": [],
+    "tags": [
+      "Wood_001"
+    ],
     "description": null,
     "pbr_properties": {
       "base_color": [
@@ -1466,7 +1476,7 @@
       "ao_map": null
     },
     "created_at": "2026-05-04 19:00:53.241150",
-    "updated_at": null,
+    "updated_at": "2026-05-11T00:27:58.377600",
     "sketchup_material_name": null
   },
   {

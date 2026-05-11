@@ -42,6 +42,12 @@ class Settings(BaseSettings):
     catalog_path: str = "./catalog/materials.json"
     textures_dir: str = "./catalog/textures"
 
+    # Alibaba AI (DashScope)
+    dashscope_api_key: str = "sk-76c49b090c884215aa3f38ec57203a42"
+    dashscope_base_url: str = "https://dashscope-intl.aliyuncs.com/api/v1"
+    dashscope_vision_model: str = "qwen-vl-max"
+    dashscope_embedding_model: str = "text-embedding-v3"
+
     @property
     def max_upload_size_bytes(self) -> int:
         return self.max_upload_size_mb * 1024 * 1024

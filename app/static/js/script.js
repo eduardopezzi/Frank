@@ -1,7 +1,7 @@
-import { Frank3DViewer } from './viewer3d.js?v=1.0.4';
-import { initTabs, switchTab, setBadge } from './tabs.js?v=1.0.4';
-import { initMaterials, getSelectedMaterialIds, removeSelection, getMaterialById, allMaterials, createMaterial, reloadMaterials, setRelevantMaterials } from './materials.js?v=1.0.4';
-import { MTLParser } from './mtl-parser.js?v=1.0.4';
+import { Frank3DViewer } from './viewer3d.js?v=1.0.5';
+import { initTabs, switchTab, setBadge } from './tabs.js?v=1.0.5';
+import { initMaterials, getSelectedMaterialIds, removeSelection, getMaterialById, allMaterials, createMaterial, reloadMaterials, setRelevantMaterials } from './materials.js?v=1.0.5';
+import { MTLParser } from './mtl-parser.js?v=1.0.5';
 
 document.addEventListener('DOMContentLoaded', () => {
     const dropzone = document.getElementById('dropzone');
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeJobs = new Set();
     let viewer = null;
     let useCustomCamera = false;
+    let currentStyleProfile = null;
 
     // ─── Init Tabs ──────────────────────────────────────────────
     initTabs();
@@ -182,6 +183,154 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             };
             reader.readAsText(file);
+        });
+    }
+
+    // ─── AI Auto-Suggestion ─────────────────────────────────────
+    const btnAiMatch = document.getElementById('btn-ai-match');
+    if (btnAiMatch) {
+        btnAiMatch.addEventListener('click', async () => {
+            if (!selectedFile) return;
+            
+            const originalText = btnAiMatch.innerHTML;
+            btnAiMatch.disabled = true;
+            btnAiMatch.innerHTML = '🧬 Analisando Geometria...';
+            
+            try {
+                // 1. Analyze scene geometry
+                const formData = new FormData();
+                formData.append('file', selectedFile);
+                
+                const analyzeRes = await fetch('/ai-design/analyze-scene', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!analyzeRes.ok) throw new Error('Falha na análise geométrica');
+                const analysisResults = await analyzeRes.json();
+                
+                btnAiMatch.innerHTML = '🧠 Cruzando Materiais...';
+                
+                // 2. Match materials based on semantic labels + style
+                const matchRes = await fetch('/ai-design/match-materials', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        analysis_results: analysisResults,
+                        style_profile: currentStyleProfile
+                    })
+                });
+                
+                if (!matchRes.ok) throw new Error('Falha no cruzamento de materiais');
+                const suggestions = await matchRes.json();
+                
+                console.log('[Frank AI] Sugestões recebidas:', suggestions);
+                
+                // 3. Apply suggestions
+                let matchCount = 0;
+                suggestions.forEach(s => {
+                    const select = document.querySelector(`.part-material-select[data-part="${s.mesh_id}"]`);
+                    if (select) {
+                        select.value = s.suggested_material_id;
+                        select.dispatchEvent(new Event('change'));
+                        
+                        // Add a visual highlight
+                        const row = select.closest('.model-part-row');
+                        if (row) {
+                            row.style.borderLeft = '4px solid var(--accent)';
+                            row.title = `IA: ${s.reason} (Confiança: ${Math.round(s.score * 100)}%)`;
+                        }
+                        matchCount++;
+                    }
+                });
+                
+                btnAiMatch.innerHTML = `✨ ${matchCount} Sugestões Aplicadas!`;
+                setTimeout(() => { btnAiMatch.innerHTML = originalText; btnAiMatch.disabled = false; }, 3000);
+                
+            } catch (err) {
+                console.error('[Frank AI] Erro:', err);
+                alert(`Erro na IA: ${err.message}`);
+                btnAiMatch.innerHTML = originalText;
+                btnAiMatch.disabled = false;
+            }
+        });
+    }
+
+    // ─── Visual Reference & Mood ──────────────────────────────
+    const refDropzone = document.getElementById('ref-dropzone');
+    const refFileInput = document.getElementById('ref-file-input');
+    const refPreview = document.getElementById('ref-preview');
+    const refImg = document.getElementById('ref-img');
+
+    if (refDropzone && refFileInput) {
+        refDropzone.addEventListener('click', () => refFileInput.click());
+        refDropzone.addEventListener('dragover', (e) => { e.preventDefault(); refDropzone.classList.add('active'); });
+        refDropzone.addEventListener('dragleave', () => refDropzone.classList.remove('active'));
+        refDropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            refDropzone.classList.remove('active');
+            if (e.dataTransfer.files[0]) handleReferenceImage(e.dataTransfer.files[0]);
+        });
+        refFileInput.addEventListener('change', (e) => {
+            if (e.target.files[0]) handleReferenceImage(e.target.files[0]);
+        });
+    }
+
+    async function handleReferenceImage(file) {
+        if (!file.type.startsWith('image/')) return;
+
+        // Show local preview immediately
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            refImg.src = e.target.result;
+            refPreview.style.display = 'flex';
+            refDropzone.style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+
+        // Send to backend for analysis
+        try {
+            document.getElementById('ref-hint').textContent = '⌛ Analisando estilo...';
+            const formData = new FormData();
+            formData.append('file', file);
+            
+            const res = await fetch('/ai-design/analyze-reference', {
+                method: 'POST',
+                body: formData
+            });
+            
+            if (!res.ok) throw new Error('Falha na análise de referência');
+            const profile = await res.json();
+            currentStyleProfile = profile;
+            
+            renderReferenceAnalysis(profile);
+            console.log('[Frank AI] Perfil de estilo extraído:', profile);
+            
+        } catch (err) {
+            console.error('[Frank AI] Erro na referência:', err);
+            alert('Erro ao analisar imagem de referência.');
+        }
+    }
+
+    function renderReferenceAnalysis(profile) {
+        const palette = document.getElementById('ref-palette');
+        const tags = document.getElementById('ref-tags');
+        
+        palette.innerHTML = '';
+        profile.palette.forEach(color => {
+            const chip = document.createElement('div');
+            chip.className = 'color-chip';
+            chip.style.backgroundColor = color;
+            chip.title = color;
+            palette.appendChild(chip);
+        });
+        
+        tags.innerHTML = '';
+        profile.tags.forEach(tag => {
+            const span = document.createElement('span');
+            span.className = 'style-tag';
+            span.textContent = tag;
+            tags.appendChild(span);
         });
     }
 
@@ -484,30 +633,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         swatch.style.background = `rgb(${Math.round(bc[0]*255)},${Math.round(bc[1]*255)},${Math.round(bc[2]*255)})`;
                         swatch.style.borderColor = 'var(--accent)';
                         row.classList.add('mapped');
-                        
-                        // Auto-Prompt for Material Learning
-                        if (part.materialName) {
-                            const origMat = part.materialName;
-                            const currentTags = matObj.tags || [];
-                            if (!currentTags.includes(origMat)) {
-                                if (confirm(`Deseja que o Frank memorize a tag '${origMat}' para sempre usar o material '${matObj.name}' automaticamente?`)) {
-                                    const newTags = [...currentTags, origMat];
-                                    try {
-                                        const res = await fetch(`/materials/${mid}`, {
-                                            method: 'PUT',
-                                            headers: { 'Content-Type': 'application/json' },
-                                            body: JSON.stringify({ tags: newTags })
-                                        });
-                                        if (res.ok) {
-                                            console.log(`[Frank] Vínculo salvo: '${origMat}' -> '${matObj.name}'`);
-                                            await reloadMaterials();
-                                        }
-                                    } catch (err) {
-                                        console.error("Erro ao salvar vínculo", err);
-                                    }
-                                }
-                            }
-                        }
                     }
                 } else {
                     // Reset to default

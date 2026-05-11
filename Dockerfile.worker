@@ -50,6 +50,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Copy worker code
 COPY worker/ ./worker/
 COPY app/ ./app/
+COPY ai_services/ ./ai_services/
 COPY catalog/ ./catalog/
 
 # Create storage directories
@@ -61,6 +62,6 @@ ENV PYTHONUNBUFFERED=1
 
 # Run Celery worker
 CMD ["celery", "-A", "worker.celery_app", "worker", \
-     "--loglevel=info", \
-     "--concurrency=1", \
-     "--max-tasks-per-child=5"]
+    "--loglevel=info", \
+    "--concurrency=1", \
+    "--max-tasks-per-child=5"]

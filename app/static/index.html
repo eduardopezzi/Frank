@@ -122,7 +122,10 @@
                         <div class="viewer-section-group" id="model-structure-section">
                             <div class="section-header-mini">
                                 <span class="v-label">🧱 Mapeamento de Materiais <span id="v-part-badge" class="v-badge">0</span></span>
-                                <button id="btn-open-mtl" class="btn-suggestion">🔗 Importar de .MTL</button>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button id="btn-ai-match" class="btn-suggestion" style="background: var(--accent-gradient); border: none;">✨ Auto-Sugestão IA</button>
+                                    <button id="btn-open-mtl" class="btn-suggestion">🔗 Importar de .MTL</button>
+                                </div>
                             </div>
                             <div id="mapping-suggestions" class="mapping-suggestions"></div>
                             <div id="model-parts-list" class="model-parts-list-mini">
@@ -233,6 +236,26 @@
                         <label>Materiais Selecionados (Global)</label>
                         <div id="selected-materials-chips" class="material-chips"></div>
                         <p class="material-chips-hint">Clique em uma parte acima para aplicar um material específico.</p>
+                    </div>
+
+                    <!-- ─── Visual Reference & Mood ─────────────────────────── -->
+                    <div class="viewer-section-group" style="margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
+                        <div class="section-header-mini">
+                            <span class="v-label">🖼️ Referência Visual & Mood</span>
+                        </div>
+                        <div class="reference-upload-container">
+                            <div class="dropzone-mini" id="ref-dropzone">
+                                <span id="ref-hint">📸 Arraste uma imagem de inspiração</span>
+                                <input type="file" id="ref-file-input" accept="image/*" hidden>
+                            </div>
+                            <div id="ref-preview" class="ref-preview-container" style="display: none;">
+                                <img id="ref-img" src="" alt="Referência">
+                                <div class="ref-analysis" id="ref-analysis">
+                                    <div class="palette-container" id="ref-palette"></div>
+                                    <div class="tags-container" id="ref-tags"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <button id="btn-render" class="btn" disabled>Iniciar Renderização</button>
@@ -446,6 +469,6 @@
     </div>
 </div>
 
-    <script type="module" src="/static/js/script.js?v=1.0.4"></script>
+    <script type="module" src="/static/js/script.js?v=1.0.5"></script>
 </body>
 </html>

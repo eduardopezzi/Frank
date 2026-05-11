@@ -49,64 +49,74 @@ class GeometryAnalyzer:
 
     def classify_mesh(self, mesh: trimesh.Trimesh, scene_bbox: np.ndarray) -> Dict[str, Any]:
         """
-        Heuristic-based classification of a single mesh.
+        Stage 2: Geometric Feature Extraction
+        Stage 3 Layer 1: Heuristic-based classification (Geometry Engine)
         """
-        # 1. Feature Extraction
+        # 1. Feature Extraction (Stage 2)
         centroid = mesh.centroid
         min_z = scene_bbox[0][2]
         max_z = scene_bbox[1][2]
         total_height = max_z - min_z
         
+        # Extents and Dimensions
+        extents = mesh.extents
+        width, depth, height = extents[0], extents[1], extents[2]
+        surface_area = mesh.area
+        
         # Relative height (0 to 1)
         rel_z = (centroid[2] - min_z) / total_height if total_height > 0 else 0
         
-        # Normals analysis
+        # Slopes and Normals
         face_normals = mesh.face_normals
-        avg_normal = np.mean(face_normals, axis=0)
+        # Calculate avg slope (angle with UP vector [0,0,1])
+        up_vector = np.array([0, 0, 1])
+        # Use dot product to find angle with up vector
+        cos_angles = np.clip(np.dot(face_normals, up_vector), -1.0, 1.0)
+        angles = np.arccos(cos_angles)
+        avg_slope_deg = np.degrees(np.mean(angles))
         
-        # Bounding box of the mesh itself
-        mesh_extents = mesh.extents
-        is_flat_horizontal = mesh_extents[2] < 0.1 * max(mesh_extents[0], mesh_extents[1])
-        is_flat_vertical = mesh_extents[0] < 0.1 * max(mesh_extents[1], mesh_extents[2]) or \
-                           mesh_extents[1] < 0.1 * max(mesh_extents[0], mesh_extents[2])
+        # Normal variance (to detect complexity vs flat surfaces)
+        normal_variance = float(np.var(face_normals, axis=0).mean())
+        
+        # Spatial Context (simplified)
+        is_at_top = rel_z > 0.8
+        is_at_bottom = rel_z < 0.2
+        is_flat_horizontal = height < 0.1 * max(width, depth)
+        is_flat_vertical = width < 0.1 * max(depth, height) or depth < 0.1 * max(width, height)
 
-        # 2. Heuristics
+        # 2. Heuristics (Stage 3 Layer 1: Geometry Engine)
         label = "other"
         confidence = 0.5
         
-        # ROOF: High up, horizontal-ish or slanted, pointing UP
-        if rel_z > 0.6 and avg_normal[2] > 0.4:
+        if is_at_top and avg_slope_deg > 5 and surface_area > 1.0:
             label = "roof"
             confidence = 0.85
-            if is_flat_horizontal: confidence += 0.1
-            
-        # FLOOR: Low down, flat, horizontal, pointing UP
-        elif rel_z < 0.3 and avg_normal[2] > 0.9 and is_flat_horizontal:
+        elif is_at_bottom and is_flat_horizontal and surface_area > 2.0:
             label = "floor"
             confidence = 0.95
-            
-        # WALL: Vertical, usually spanning multiple heights
-        elif abs(avg_normal[2]) < 0.3 and is_flat_vertical:
+        elif is_flat_vertical and height > 1.0:
             label = "wall"
             confidence = 0.8
-            
-        # WINDOW/DOOR: Vertical, smaller areas, often repeated
-        elif is_flat_vertical and (mesh_extents[0] * mesh_extents[1] * mesh_extents[2] < 2.0):
-            # Complex logic for windows vs doors (size/position)
+        elif is_flat_vertical and height < 3.0 and width < 2.0:
             if rel_z > 0.2 and rel_z < 0.8:
                 label = "window"
-                confidence = 0.7
             else:
                 label = "door"
-                confidence = 0.6
+            confidence = 0.7
 
         return {
             "label": label,
             "confidence": min(confidence, 1.0),
             "features": {
+                "height": float(height),
+                "width": float(width),
+                "depth": float(depth),
+                "surface_area": float(surface_area),
+                "avg_slope": float(avg_slope_deg),
+                "normal_variance": normal_variance,
                 "rel_z": float(rel_z),
-                "avg_normal": avg_normal.tolist(),
-                "extents": mesh_extents.tolist()
+                "is_at_top": bool(is_at_top),
+                "is_at_bottom": bool(is_at_bottom)
             }
         }
 
