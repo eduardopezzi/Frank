@@ -25,6 +25,7 @@ class RenderSettings(BaseModel):
     resolution_x: int = Field(default=1920, ge=100, le=7680, description="Output width in pixels")
     resolution_y: int = Field(default=1080, ge=100, le=4320, description="Output height in pixels")
     device: str = Field(default="CPU", pattern="^(CPU|GPU)$", description="Render device")
+    engine: str = Field(default="CYCLES", pattern="^(CYCLES|EEVEE)$", description="Render engine")
     camera_angle: str = Field(
         default="auto",
         description="Camera angle preset: auto, front, top, side, perspective",

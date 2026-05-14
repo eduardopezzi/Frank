@@ -34,6 +34,13 @@ class GeometryAnalyzer:
                 if not isinstance(mesh, trimesh.Trimesh):
                     continue
                 
+                # OPTIMIZATION: Skip very small objects (noise/hardware)
+                # If bounding box volume is < 0.0001 m3 (approx 4x4x4 cm)
+                bbox_volume = np.prod(mesh.extents)
+                if bbox_volume < 0.0001:
+                    logger.debug(f"Skipping tiny mesh '{name}' (volume: {bbox_volume:.6f})")
+                    continue
+
                 classification = self.classify_mesh(mesh, scene_bbox)
                 results.append({
                     "mesh_id": name,
@@ -42,6 +49,7 @@ class GeometryAnalyzer:
                     "features": classification["features"]
                 })
             
+            logger.info(f"Analyzed {len(results)} meshes (skipped {len(geometries) - len(results)} small objects)")
             return results
         except Exception as e:
             logger.error(f"Error analyzing scene {scene_path}: {e}")

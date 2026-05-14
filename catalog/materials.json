@@ -2381,5 +2381,3575 @@
     "created_at": "2026-05-07 22:17:06.570617",
     "updated_at": "2026-05-07T22:19:16.498253",
     "sketchup_material_name": null
+  },
+  {
+    "material_id": "_7akuminioclaro_mtl",
+    "name": "_7Akuminioclaro",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.651967",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_26_mtl",
+    "name": "_26",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.772549,
+        0.756863,
+        0.729412,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.677354",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "translucent_glass_gray_mtl",
+    "name": "Translucent_Glass_Gray",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.478431,
+        0.478431,
+        0.478431,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.724585",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "formica_laminate_dark_mtl",
+    "name": "Formica_Laminate_Dark",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.196078,
+        0.207843,
+        0.235294,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.769255",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_black__mtl",
+    "name": "_Black_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.8,
+        0.8,
+        0.8,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.816875",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "black_mtl",
+    "name": "black",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.8,
+        0.8,
+        0.8,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.862619",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "metal_corrugated_shiny_mtl",
+    "name": "Metal_Corrugated_Shiny",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.666667,
+        0.666667,
+        0.666667,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.906632",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_22_mtl",
+    "name": "_22",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.94902,
+        0.941176,
+        0.921569,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.946945",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_auto_4_mtl",
+    "name": "_auto_4",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:09.993022",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "areia_guararapes2_mtl",
+    "name": "areia_guararapes2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.870588,
+        0.854902,
+        0.827451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.033935",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira_carvalho89__mtl",
+    "name": "madeira_carvalho89_",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.8,
+        0.741176,
+        0.639216,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.076366",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "mf_vidro1_mtl",
+    "name": "MF_Vidro1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.54902,
+        0.54902,
+        0.54902,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.120842",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "mf_lareira_material_mtl",
+    "name": "MF_Lareira_Material",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.14902,
+        0.14902,
+        0.14902,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.178687",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "lareiraaluminum_anodized_clear_mtl",
+    "name": "LareiraAluminum_Anodized_Clear",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.898039,
+        0.898039,
+        0.87451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.236597",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "light_beam2_mtl",
+    "name": "light_beam2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.988235,
+        0.917647,
+        0.72549,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.295236",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_h08_mtl",
+    "name": "Color_H08",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.588235,
+        0.580392,
+        0.580392,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.355550",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "linho_branco1_mtl",
+    "name": "linho_branco1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.917647,
+        0.909804,
+        0.898039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.412011",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "m_0053_ivory_mtl",
+    "name": "M_0053_Ivory",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        0.941176,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.467749",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_20_mtl",
+    "name": "_20",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.992157,
+        1.0,
+        0.988235,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.524092",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "m_0128_white_mtl",
+    "name": "M_0128_White",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.580773",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_metal_corrugated_shiny_2_mtl",
+    "name": "_Metal_Corrugated_Shiny_2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.647059,
+        0.647059,
+        0.647059,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.635985",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_m04_mtl",
+    "name": "Color_M04",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.556863,
+        0.556863,
+        0.556863,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.716039",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_auto_11_mtl",
+    "name": "_auto_11",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.8,
+        0.8,
+        0.8,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.759311",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_auto_12_mtl",
+    "name": "_auto_12",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.070588,
+        0.070588,
+        0.070588,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.806854",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_translucent_glass_gray_4_mtl",
+    "name": "_Translucent_Glass_Gray_4",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.223529,
+        0.137255,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.851000",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_10_mtl",
+    "name": "Material_10",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.903704",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_21_mtl",
+    "name": "Material_21",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.898039,
+        0.886275,
+        0.839216,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.947208",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_25_mtl",
+    "name": "Material_25",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:10.991465",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_22_mtl",
+    "name": "Material_22",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.929412,
+        0.929412,
+        0.92549,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.036691",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_26_mtl",
+    "name": "Material_26",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.388235,
+        0.388235,
+        0.388235,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.080911",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_luz_aluminio_marrom2_mtl",
+    "name": "_luz_aluminio_marrom2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.431373,
+        0.34902,
+        0.286275,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.125616",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "leaf2_smaller_clean_mtl",
+    "name": "leaf2_smaller_clean",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.14902,
+        0.168627,
+        0.086275,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.165901",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "leaf1_smaller_clean_mtl",
+    "name": "leaf1_smaller_clean",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.34902,
+        0.372549,
+        0.235294,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.206972",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_darkgoldenrod_1_mtl",
+    "name": "_DarkGoldenrod_1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.447059,
+        0.478431,
+        0.219608,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.249961",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "asdfasdfasdfasdf_mtl",
+    "name": "asdfasdfasdfasdf",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.313725,
+        0.329412,
+        0.188235,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.293098",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "asdfasdfasdfasdf1_mtl",
+    "name": "asdfasdfasdfasdf1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.729412,
+        0.776471,
+        0.356863,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.334513",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_19_mtl",
+    "name": "_19",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.882353,
+        0.870588,
+        0.85098,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.377723",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "tanah_mtl",
+    "name": "tanah",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.12549,
+        0.12549,
+        0.12549,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.419403",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_116_mtl",
+    "name": "_116",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.461186",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daun3_mtl",
+    "name": "daun3",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.176471,
+        0.278431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.505215",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "batang_pisang_mtl",
+    "name": "batang_pisang",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.313725,
+        0.403922,
+        0.176471,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.546097",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daun7back_mtl",
+    "name": "daun7back",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.588187",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daun7_mtl",
+    "name": "daun7",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.176471,
+        0.278431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.629921",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daunback2_mtl",
+    "name": "daunback2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.672815",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daun2_mtl",
+    "name": "daun2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.176471,
+        0.278431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.729946",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daunback4_mtl",
+    "name": "daunback4",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.771095",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_118_mtl",
+    "name": "_118",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.176471,
+        0.278431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.813158",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "daun_back5_mtl",
+    "name": "daun_back5",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.855407",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_117_mtl",
+    "name": "_117",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.176471,
+        0.278431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.896378",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "bana7_mtl",
+    "name": "bana7",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.937808",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "bana6back_mtl",
+    "name": "bana6back",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:11.978932",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_119_mtl",
+    "name": "_119",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.172549,
+        0.239216,
+        0.098039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.018513",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "banana1_mtl",
+    "name": "banana1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.176471,
+        0.278431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.063376",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "translucent_glass_blue_mtl",
+    "name": "Translucent_Glass_Blue",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.106694",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "caule_planta_fdsdfsdwsssssssssssssssssssssssssssssssssssssssssssss5555_mtl",
+    "name": "caule_planta_fdsdfsdwsssssssssssssssssssssssssssssssssssssssssssss5555",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.392157,
+        0.494118,
+        0.156863,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.148670",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "folha_planta_hd_fdsfad0fas65df0a16s50r1e2a01s2df10asd1af5sd4f4w8_mtl",
+    "name": "folha_planta_hd_fdsfad0fas65df0a16s50r1e2a01s2df10asd1af5sd4f4w8",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.301961,
+        0.376471,
+        0.188235,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.191237",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "m_01_madeira_4_mtl",
+    "name": "M_01_MADEIRA_4",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.596078,
+        0.490196,
+        0.380392,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.235345",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "cover_63_mtl",
+    "name": "Cover_63",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.65098,
+        0.576471,
+        0.486275,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.277586",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "pages_17_mtl",
+    "name": "pages_17",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.823529,
+        0.823529,
+        0.823529,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.321630",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "cover_59_mtl",
+    "name": "Cover_59",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.917647,
+        0.913725,
+        0.878431,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.362771",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "imagescaoj1j3s_mtl",
+    "name": "imagesCAOJ1J3S",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.576471,
+        0.576471,
+        0.517647,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.404744",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_21_mtl",
+    "name": "_21",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.85098,
+        0.835294,
+        0.827451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.446945",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_49_mtl",
+    "name": "_49",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.831373,
+        0.819608,
+        0.811765,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.488176",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_24_mtl",
+    "name": "_24",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.564706,
+        0.47451,
+        0.34902,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.529447",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vp_ficus_elastica_bark1_mtl",
+    "name": "VP_Ficus_Elastica_bark1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.333333,
+        0.301961,
+        0.211765,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.572524",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vp_ficus_elastica_leaf_5_mtl",
+    "name": "VP_ficus_elastica_leaf_5",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.239216,
+        0.305882,
+        0.188235,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.613593",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vp_ficus_elastica_leaf_4_mtl",
+    "name": "VP_ficus_elastica_leaf_4",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.32549,
+        0.396078,
+        0.258824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.656486",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vp_ficus_elastica_leaf_3_mtl",
+    "name": "VP_ficus_elastica_leaf_3",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.211765,
+        0.258824,
+        0.160784,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.697509",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vp_ficus_elastica_cone1_mtl",
+    "name": "VP_Ficus_Elastica_cone1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.505882,
+        0.360784,
+        0.227451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.752075",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vp_ficus_elastica_branches1_mtl",
+    "name": "VP_ficus_elastica_branches1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.129412,
+        0.203922,
+        0.019608,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.789400",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "soil1_mtl",
+    "name": "soil1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.360784,
+        0.321569,
+        0.294118,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.830698",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "wood__floor_mtl",
+    "name": "Wood__Floor",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.603922,
+        0.411765,
+        0.231373,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.871803",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "ceramics_glaze1_mtl",
+    "name": "ceramics_glaze1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.870588,
+        0.866667,
+        0.847059,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.912582",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_31_mtl",
+    "name": "_31",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.929412,
+        0.929412,
+        0.929412,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.955271",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "soil2_mtl",
+    "name": "soil2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.266667,
+        0.215686,
+        0.184314,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:12.995107",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "travelersstem1_mtl",
+    "name": "TravelersStem1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.070588,
+        0.078431,
+        0.058824,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.038124",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "splitleaf3small1_mtl",
+    "name": "Splitleaf3small1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.145098,
+        0.168627,
+        0.12549,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.078101",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "aluminum_mtl",
+    "name": "Aluminum",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.701961,
+        0.701961,
+        0.701961,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.182593",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_5_mtl",
+    "name": "Material_5",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.670588,
+        0.466667,
+        0.313725,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.320978",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material_6_mtl",
+    "name": "Material_6",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.490196,
+        0.454902,
+        0.435294,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.387501",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material__44_mtl",
+    "name": "Material__44",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.796078,
+        0.823529,
+        0.937255,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.442840",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material__46_mtl",
+    "name": "Material__46",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.752941,
+        0.752941,
+        0.752941,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.488403",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "sextavada_grossa1_mtl",
+    "name": "SEXTAVADA_GROSSA1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.592157,
+        0.556863,
+        0.47451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.533172",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "chris_skin_mtl",
+    "name": "Chris_Skin",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.752941,
+        0.643137,
+        0.45098,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.577452",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "madeira1_mtl",
+    "name": "madeira1",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.603922,
+        0.490196,
+        0.352941,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.622908",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "book_4_kem2_mtl",
+    "name": "book_4_kem2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.839216,
+        0.831373,
+        0.780392,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.665223",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "book_kem_mtl",
+    "name": "book_kem",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.886275,
+        0.87451,
+        0.85098,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.710789",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "fabric_linen_transperant_mtl",
+    "name": "Fabric_Linen_Transperant",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.766980",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_48_mtl",
+    "name": "_48",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.541176,
+        0.584314,
+        0.447059,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.811112",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "sofatorus2lugares_estofado_fabric_mtl",
+    "name": "SofaTorus2Lugares_Estofado_Fabric",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.580392,
+        0.439216,
+        0.352941,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.850966",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "walnut_mtl",
+    "name": "Walnut",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.556863,
+        0.415686,
+        0.266667,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.897875",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_translucent_glass_gray_2_mtl",
+    "name": "_Translucent_Glass_Gray_2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.027451,
+        0.027451,
+        0.027451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.943457",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "xadrez_entreosto_mtl",
+    "name": "xadrez_entreosto",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.627451,
+        0.658824,
+        0.623529,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:13.987142",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "base_mtl",
+    "name": "base",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.152941,
+        0.152941,
+        0.152941,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.031108",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "vidro_transl_cido_mtl",
+    "name": "vidro_transl_cido",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.729412,
+        0.729412,
+        0.729412,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.078734",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "aluminio_bronze_mtl",
+    "name": "aluminio_bronze",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.545098,
+        0.517647,
+        0.427451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.117467",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "color_l03_mtl",
+    "name": "Color_L03",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.529412,
+        0.482353,
+        0.309804,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.163118",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "folha_alecrim_mtl",
+    "name": "Folha_Alecrim",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.466667,
+        0.513725,
+        0.380392,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.206531",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "tex_deirada_2_mtl",
+    "name": "tex_deirada_2",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.658824,
+        0.564706,
+        0.466667,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.253975",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "material42_mtl",
+    "name": "Material42",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.2,
+        0.2,
+        0.2,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.296571",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "wood_wicker_mtl",
+    "name": "Wood_Wicker",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.670588,
+        0.541176,
+        0.403922,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.338564",
+    "updated_at": null,
+    "sketchup_material_name": null
+  },
+  {
+    "material_id": "_23_mtl",
+    "name": "_23",
+    "category": "other",
+    "tags": [],
+    "description": null,
+    "pbr_properties": {
+      "base_color": [
+        0.796078,
+        0.756863,
+        0.698039,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "emission": 0.0,
+      "emission_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alpha": 1.0,
+      "ior": 1.45,
+      "transmission": 0.0,
+      "base_color_map": null,
+      "roughness_map": null,
+      "metallic_map": null,
+      "normal_map": null,
+      "displacement_map": null,
+      "ao_map": null
+    },
+    "created_at": "2026-05-13 16:21:14.379696",
+    "updated_at": null,
+    "sketchup_material_name": null
   }
 ]

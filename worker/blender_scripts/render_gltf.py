@@ -483,7 +483,8 @@ def main():
 
     device = render_settings.get("device", "CPU")
     samples = render_settings.get("samples", 64)
-    configure_render_engine(scene, device=device, samples=samples)
+    engine = render_settings.get("engine", "CYCLES")
+    configure_render_engine(scene, device=device, samples=samples, engine=engine)
 
     # ─── 4. Set resolution ──────────────────────────────────────────
     print("[Frank] Step 4: Setting resolution...")

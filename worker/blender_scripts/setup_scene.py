@@ -383,58 +383,79 @@ def apply_pbr_materials(materials_data):
             break  # Found and applied, move to next material
 
 
-def configure_render_engine(scene, device="CPU", samples=64):
+def configure_render_engine(scene, device="CPU", samples=64, engine="CYCLES"):
     """
-    Configure the Cycles render engine with optimal settings.
-    Falls back to CPU if GPU is requested but not available.
-
-    Args:
-        scene: bpy.context.scene
-        device: "CPU" or "GPU"
-        samples: Number of render samples
+    Configure the render engine with optimal settings.
+    Supports CYCLES and EEVEE.
     """
     import bpy
+    import sys
 
-    scene.render.engine = "CYCLES"
-    scene.cycles.samples = samples
-    scene.cycles.use_denoising = True
-    scene.cycles.preview_samples = max(16, samples // 4)
+    # Normalizar nome do motor
+    engine = engine.upper()
+    if engine not in ["CYCLES", "EEVEE"]:
+        engine = "CYCLES"
 
-    # Transparent background (useful for compositing)
-    scene.render.film_transparent = False
+    scene.render.engine = engine
+    
+    if engine == "CYCLES":
+        scene.cycles.samples = samples
+        scene.cycles.use_denoising = True
+        scene.cycles.preview_samples = max(16, samples // 4)
+        scene.cycles.use_fast_gi = True
+        
+        # Color management
+        scene.view_settings.view_transform = "Filmic"
+        scene.view_settings.look = "Medium Contrast"
 
-    # Color management
-    scene.view_settings.view_transform = "Filmic"
-    scene.view_settings.look = "Medium Contrast"
+        if device == "GPU":
+            try:
+                prefs = bpy.context.preferences.addons["cycles"].preferences
+                
+                # Definir ordem de prioridade (Metal primeiro se for Mac)
+                is_mac = sys.platform == "darwin"
+                compute_types = ["METAL", "OPTIX", "CUDA", "HIP"] if is_mac else ["OPTIX", "CUDA", "HIP", "METAL"]
+                
+                for compute_type in compute_types:
+                    try:
+                        prefs.compute_device_type = compute_type
+                        prefs.get_devices()
 
-    if device == "GPU":
-        try:
-            prefs = bpy.context.preferences.addons["cycles"].preferences
+                        # Enable all available devices
+                        enabled = False
+                        for dev in prefs.devices:
+                            dev.use = True
+                            enabled = True
 
-            # Try CUDA first, then OptiX, then Metal (macOS)
-            for compute_type in ["OPTIX", "CUDA", "METAL", "HIP"]:
-                try:
-                    prefs.compute_device_type = compute_type
-                    prefs.get_devices()
+                        if enabled:
+                            scene.cycles.device = "GPU"
+                            print(f"[Frank] Using GPU with {compute_type}")
+                            return
+                    except Exception:
+                        continue
 
-                    # Enable all available devices
-                    for dev in prefs.devices:
-                        dev.use = True
-
-                    scene.cycles.device = "GPU"
-                    print(f"[Frank] Using GPU with {compute_type}")
-                    return
-                except Exception:
-                    continue
-
-            # Fallback to CPU
-            print("[Frank] No GPU available, falling back to CPU")
+                # Fallback to CPU
+                print("[Frank] No compatible GPU found, using CPU")
+                scene.cycles.device = "CPU"
+            except Exception as e:
+                print(f"[Frank] GPU setup failed: {e}, using CPU")
+                scene.cycles.device = "CPU"
+        else:
             scene.cycles.device = "CPU"
-        except Exception as e:
-            print(f"[Frank] GPU setup failed: {e}, using CPU")
-            scene.cycles.device = "CPU"
-    else:
-        print("[Frank] Using CPU rendering")
+            print("[Frank] Using CPU rendering")
+            
+    else: # EEVEE
+        print(f"[Frank] Configuring EEVEE (Modo Rápido)")
+        scene.eevee.taa_render_samples = samples
+        scene.eevee.use_gtao = True
+        scene.eevee.gtao_distance = 1.0
+        scene.eevee.use_ssr = True # Screen Space Reflections
+        scene.eevee.use_ssr_refraction = True
+        scene.eevee.use_bloom = True
+        scene.eevee.use_volumetric_shadows = True
+        
+        # Eevee sempre usa GPU se disponível no sistema
+        print("[Frank] EEVEE initialized")
 
 
 def apply_high_end_realism(target_objects, textures_path, hdri_path):

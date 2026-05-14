@@ -834,6 +834,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('resolution_x', document.getElementById('res-x').value);
         formData.append('resolution_y', document.getElementById('res-y').value);
         formData.append('device', document.getElementById('device').value);
+        formData.append('engine', document.getElementById('engine').value);
 
         if (useCustomCamera) {
             formData.append('camera_angle', 'custom');

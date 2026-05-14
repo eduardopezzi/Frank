@@ -44,6 +44,7 @@ async def submit_render(
     camera_target: str = Form(default=None, description="Camera look-at [x,y,z] target as JSON array (Blender coords)"),
     camera_fov: float = Form(default=None, description="Camera field of view in degrees"),
     material_overrides: str = Form(default=None, description="JSON list of material_ids to apply"),
+    engine: str = Form(default=None, description="Render engine: CYCLES or EEVEE"),
     db: Session = Depends(get_db),
 ):
     """Submit a .glb/.gltf/.skp file for rendering via Blender Cycles."""
@@ -103,6 +104,7 @@ async def submit_render(
         resolution_x=resolution_x or settings.render_resolution_x,
         resolution_y=resolution_y or settings.render_resolution_y,
         device=device or settings.render_device,
+        engine=engine or settings.render_engine,
         camera_angle=camera_angle or "auto",
     )
 

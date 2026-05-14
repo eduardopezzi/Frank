@@ -32,6 +32,7 @@ class Settings(BaseSettings):
     render_resolution_x: int = 1280
     render_resolution_y: int = 720
     render_device: str = "CPU"  # CPU or GPU
+    render_engine: str = "CYCLES"  # CYCLES or EEVEE
 
     # API
     api_host: str = "0.0.0.0"

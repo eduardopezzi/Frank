@@ -118,6 +118,35 @@ class AlibabaAIService:
             logger.exception("Failed to call Alibaba Embedding API")
             return []
 
+    def get_text_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
+        """
+        Generates embeddings for a list of texts in a single batch request.
+        Only supported for text-embedding models.
+        """
+        if not self.api_key or not texts:
+            return []
+
+        try:
+            if self.embedding_model.startswith("text-embedding"):
+                response = dashscope.TextEmbedding.call(
+                    model=self.embedding_model,
+                    input=texts
+                )
+                if response.status_code == HTTPStatus.OK:
+                    # Return list of embeddings in the same order as input
+                    return [item['embedding'] for item in response.output['embeddings']]
+                else:
+                    msg = f"Alibaba Batch Text Embedding Error: {response.code} - {response.message}"
+                    logger.error(msg)
+                    raise Exception(msg)
+            else:
+                # Fallback to sequential for models that don't support batching in this way
+                logger.warning(f"Batching not natively supported for {self.embedding_model}, falling back to sequential.")
+                return [self.get_multimodal_embedding(text=t) for t in texts]
+        except Exception as e:
+            logger.exception("Failed to call Alibaba Batch Embedding API")
+            return []
+
     def get_completion(self, prompt: str, model: str = "qwen-plus") -> str:
         """
         Generic text completion using Qwen text models.
